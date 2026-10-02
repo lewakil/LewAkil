@@ -7,7 +7,7 @@
     <title>SonaSteps | Lew Akil</title>
     <meta
       name="description"
-      content="A production-style AI support platform exploring RAG, agentic workflows, APIs, integrations, and automation inside customer support."
+      content="A family-focused learning prototype for DHH families, with planned AI assistance grounded in approved educational content, application context, and human expertise."
     />
     <link rel="canonical" href="https://lewakil.com/sonasteps.html" />
     <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="SonaSteps | Lew Akil" />
     <meta
       property="og:description"
-      content="A production-style AI support platform exploring RAG, agentic workflows, APIs, integrations, and automation inside customer support."
+      content="A family-focused learning prototype for DHH families, with planned AI assistance grounded in approved educational content, application context, and human expertise."
     />
     <meta property="og:url" content="https://lewakil.com/sonasteps.html" />
     <meta
@@ -80,361 +80,656 @@
             ><span aria-hidden="true">←</span> Back to Work</a
           >
           <h1>SonaSteps</h1>
-          <p class="project-subtitle">AI-powered support workflows</p>
+          <p class="project-subtitle">
+            AI-assisted learning and guidance for DHH families
+          </p>
           <p class="hero-description">
-            A production-style AI support platform exploring how RAG, agentic
-            workflows, APIs, automation, and traditional SaaS architecture can
-            work together inside a customer support experience.
+            SonaSteps is a family-focused learning platform for parents and
+            caregivers of children who are deaf or hard of hearing. The project
+            explores how AI can make specialized educational content easier to
+            understand, navigate, and apply while keeping trusted program
+            content, family context, and human expertise at the center of the
+            experience.
+          </p>
+          <p class="project-status">
+            Current prototype · AI architecture planned
           </p>
           <ul class="tags" aria-label="Project topics">
             <li>AI</li>
             <li>RAG</li>
-            <li>Agents</li>
-            <li>APIs</li>
-            <li>Webhooks</li>
             <li>SaaS</li>
-            <li>Support Automation</li>
+            <li>Accessibility</li>
+            <li>Education</li>
+            <li>APIs</li>
           </ul>
-          <a class="button button-primary" href="#video-walkthrough"
-            >Watch Video <span aria-hidden="true">↓</span></a
-          >
+          <div class="button-group">
+            <a class="button button-primary" href="#video-walkthrough"
+              >Watch Video <span aria-hidden="true">↓</span></a
+            ><a class="button" href="#architecture"
+              >Explore Architecture <span aria-hidden="true">↓</span></a
+            >
+          </div>
         </div>
       </section>
-
       <div class="container case-layout">
         <aside class="case-nav" aria-label="Case study sections">
           <p class="case-nav-title">In this case study</p>
           <nav aria-label="SonaSteps case study">
-            <a href="#overview">Overview</a>
-            <a href="#the-problem">The Problem</a>
-            <a href="#the-approach">The Approach</a>
-            <a href="#architecture">Architecture</a>
-            <a href="#what-i-built">What I Built</a>
-            <a href="#video-walkthrough">Video Walkthrough</a>
-            <a href="#business-value">Business Value</a>
-            <a href="#lessons-learned">Lessons Learned</a>
-            <a href="#next-iteration">Next Iteration</a>
+            <a href="#overview">Overview</a
+            ><a href="#the-problem">The Problem</a
+            ><a href="#product-approach">Product Approach</a
+            ><a href="#where-ai-helps">Where AI Helps</a
+            ><a href="#architecture">System Architecture</a
+            ><a href="#family-ai-workflow">Family AI Workflow</a
+            ><a href="#responsibilities">Deterministic vs. AI</a
+            ><a href="#safety-and-trust">Safety and Trust</a
+            ><a href="#product-support-ai">Product Support AI</a
+            ><a href="#video-walkthrough">Video Walkthrough</a
+            ><a href="#what-this-project-demonstrates"
+              >What This Project Demonstrates</a
+            ><a href="#lessons-learned">Lessons / Design Principles</a
+            ><a href="#next-iteration">Next Iteration</a>
           </nav>
         </aside>
         <article class="case-content" aria-label="SonaSteps case study">
           <section class="case-section" id="overview">
             <h2>Overview</h2>
             <p>
-              SonaSteps explores how AI agents, retrieval, APIs, and automation
-              can work together inside a customer support platform to improve
-              efficiency, routing, troubleshooting, and response quality.
+              SonaSteps is designed around families and caregivers of children
+              who are deaf or hard of hearing (DHH). The product brings
+              educational information, practical activities, resources, and
+              caregiver practice history into one structured experience.
             </p>
+            <p>
+              The AI product question is specific: how can AI reduce the
+              searching, interpreting, and translating families have to do while
+              working through specialized learning material?
+            </p>
+            <div
+              class="implementation-status"
+              aria-labelledby="implementation-status-title"
+            >
+              <h3 id="implementation-status-title">
+                Current prototype and planned AI
+              </h3>
+              <p>
+                <strong>Implemented in source:</strong> family profiles and
+                preferences; browsing, searching, and saving activities and
+                guides; deterministic activity suggestions; routine-based quick
+                help; and saved caregiver practice attempts, optional
+                reflections, and Journey history.
+              </p>
+              <p>
+                <strong>Backend implementation:</strong> authentication, account
+                persistence, and ownership controls exist in source. Hosted
+                database deployment and actual authentication delivery remain
+                unverified.
+              </p>
+              <p>
+                <strong>Planned / exploratory:</strong> the family AI companion,
+                RAG, model calls, structured responses, AI guardrails, and AI
+                evaluation and observability. The diagrams below describe this
+                proposed architecture.
+              </p>
+              <p class="status-note">
+                Current educational materials are draft/demo content requiring
+                professional and language review. Journey reflects caregiver
+                practice; it does not measure a child’s development or mastery.
+              </p>
+            </div>
           </section>
-
           <section class="case-section" id="the-problem">
             <h2>The Problem</h2>
             <p>
-              Support workflows often span disconnected systems. A ticket may
-              require someone to:
+              Families may encounter unfamiliar terminology, developmental
+              concepts, educational material, activities, and recommendations.
+              Reading a lesson does not always make its practical meaning clear.
             </p>
-            <ul class="content-list">
-              <li>Understand the customer's message</li>
-              <li>Determine category and severity</li>
-              <li>Search product knowledge</li>
-              <li>Inspect integration context</li>
-              <li>Determine escalation risk</li>
-              <li>Route the issue</li>
-              <li>Troubleshoot failures</li>
-              <li>Recommend next actions</li>
+            <p>A parent or caregiver may still be asking:</p>
+            <ul class="question-list">
+              <li>What does this mean?</li>
+              <li>Why does this matter?</li>
+              <li>Can you explain this more simply?</li>
+              <li>Can you give me an example?</li>
+              <li>How can we practice this during everyday life?</li>
+              <li>What have we already worked on?</li>
+              <li>What should I look at next?</li>
+              <li>Where can I find information about this?</li>
+              <li>How does this relate to another lesson?</li>
             </ul>
             <p>
-              The goal was to explore how those steps could become more
-              intelligent without reducing the product to a generic chatbot.
+              The AI exploration focuses on the gap between information and
+              practical understanding. Its intended role is educational
+              explanation and content discovery.
             </p>
           </section>
-
-          <section class="case-section" id="the-approach">
-            <h2>The Approach</h2>
+          <section class="case-section" id="product-approach">
+            <h2>Product Approach</h2>
             <p>
-              Design SonaSteps around workflows rather than isolated AI
-              features.
+              The foundation remains structured software. The current prototype
+              already stores family preferences and practice records and uses
+              deterministic logic to suggest activities. AI would add
+              language-based assistance to that foundation.
             </p>
             <p>
-              AI should augment an actual SaaS support process and work
-              alongside deterministic application logic, APIs, business rules,
-              and human review.
+              In the target architecture, the application owns users,
+              authentication, permissions, family profiles, curriculum
+              structure, lessons, progress, content relationships, application
+              state, authorization, persistent data, and deterministic
+              workflows.
+            </p>
+            <p>
+              AI would help with explanation, retrieval, summarization,
+              contextual examples, and conversational navigation. Application
+              services would continue to enforce permissions, validate actions,
+              and persist facts. The model has a bounded role in a larger
+              product.
             </p>
           </section>
-
-          <section class="case-section" id="architecture">
-            <h2>Architecture</h2>
+          <section class="case-section" id="where-ai-helps">
+            <h2>Where AI Helps</h2>
+            <p class="section-status">Planned family-facing AI capabilities</p>
             <p>
-              The logical architecture separates the support application,
-              retrieval, agent orchestration, data stores, and external systems.
-              The workflow below follows a ticket through those components.
+              These six capabilities describe the proposed AI experience. They
+              are design work, with approved content and appropriate controls
+              required before release.
             </p>
-            <figure
-              class="architecture-diagram"
-              data-diagram
-              style="--diagram-width: 1100px"
-            >
-              <figcaption class="diagram-heading">
-                <h3 id="sonasteps-system-title">System architecture</h3>
+            <div class="capability-grid">
+              <article class="feature-card">
+                <p class="capability-label">01 · EXPLAIN</p>
+                <h3>Explain</h3>
                 <p>
-                  A logical view of the support application, its AI workflows,
-                  and the systems that provide context and tools.
+                  Would explain terminology, lesson concepts, and educational
+                  information in clearer language, using approved material.
                 </p>
-              </figcaption>
-              <div
-                class="diagram-tools"
-                aria-label="System architecture view controls"
-              >
-                <button
-                  class="diagram-toggle"
-                  type="button"
-                  data-diagram-view="fit"
-                  aria-pressed="true"
-                  aria-controls="sonasteps-system-canvas"
-                  hidden
-                >
-                  Fit diagram
-                </button>
-                <button
-                  class="diagram-toggle"
-                  type="button"
-                  data-diagram-view="detail"
-                  aria-pressed="false"
-                  aria-controls="sonasteps-system-canvas"
-                  hidden
-                >
-                  Read labels
-                </button>
-                <a
-                  class="diagram-source"
-                  href="img/diagrams/sonasteps-architecture.svg"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open System architecture as an SVG"
-                  >Open SVG <span aria-hidden="true">↗</span></a
-                >
-              </div>
-              <div
-                class="diagram-canvas"
-                id="sonasteps-system-canvas"
-                role="region"
-                aria-labelledby="sonasteps-system-title"
-                tabindex="0"
-              >
-                <img
-                  src="img/diagrams/sonasteps-architecture.svg"
-                  alt="SonaSteps logical system architecture, showing support channels, SaaS services, retrieval, agent orchestration, data stores, monitoring, and external dependencies."
-                  width="1100"
-                  height="864"
-                  loading="lazy"
-                />
-              </div>
-              <p class="diagram-help">
-                Open the SVG to inspect labels, or read the diagram description
-                below.
-              </p>
-              <details class="diagram-description">
-                <summary>Diagram description</summary>
+                <p class="capability-example">
+                  “Explain this without the technical terminology.”<br />“Give
+                  me an example of what this could look like at home.”
+                </p>
+              </article>
+              <article class="feature-card">
+                <p class="capability-label">02 · ASK</p>
+                <h3>Ask</h3>
                 <p>
-                  Customer and support channels send tickets into the support
-                  application. Ticket services, classification, and routing
-                  connect the support experience to ticket and workflow data.
+                  Would answer natural-language questions about SonaSteps
+                  educational content. Retrieval would provide relevant approved
+                  sources and the answer would link back to that content.
                 </p>
+              </article>
+              <article class="feature-card">
+                <p class="capability-label">03 · PRACTICE</p>
+                <h3>Practice</h3>
                 <p>
-                  Agent orchestration retrieves product knowledge through the
-                  RAG layer, uses a model for decisions, and connects to
-                  external APIs and webhooks through tool calls. Retrieved
-                  context and tool results inform recommended actions, with
-                  human review or automated resolution in the application
-                  workflow.
+                  Would translate approved lesson concepts into everyday
+                  examples for play, meals, reading, getting ready, and family
+                  routines. Generated examples must stay within reviewed
+                  educational material.
                 </p>
+              </article>
+              <article class="feature-card">
+                <p class="capability-label">04 · NAVIGATE</p>
+                <h3>Navigate</h3>
                 <p>
-                  Knowledge and ticket stores supply context and state.
-                  Integration activity and failures feed monitoring,
-                  troubleshooting, and replay workflows.
+                  Would help families find relevant lessons, resources, and
+                  previously explored concepts without requiring an exact term
+                  or knowledge of the navigation structure.
                 </p>
-              </details>
-            </figure>
-            <figure
-              class="architecture-diagram"
-              data-diagram
-              style="--diagram-width: 1100px"
-            >
-              <figcaption class="diagram-heading">
-                <h3 id="sonasteps-workflow-title">Ticket to resolution</h3>
+              </article>
+              <article class="feature-card">
+                <p class="capability-label">05 · UNDERSTAND PROGRESS</p>
+                <h3>Understand Progress</h3>
                 <p>
-                  The operational path through the architecture, with human
-                  review available at resolution.
+                  Would explain structured practice history and content
+                  explored. The database owns those facts; AI would describe
+                  them conversationally. Planned lesson-completion features
+                  would need explicit application records.
                 </p>
-              </figcaption>
-              <div
-                class="diagram-tools"
-                aria-label="Ticket to resolution view controls"
-              >
-                <button
-                  class="diagram-toggle"
-                  type="button"
-                  data-diagram-view="fit"
-                  aria-pressed="true"
-                  aria-controls="sonasteps-workflow-canvas"
-                  hidden
-                >
-                  Fit diagram
-                </button>
-                <button
-                  class="diagram-toggle"
-                  type="button"
-                  data-diagram-view="detail"
-                  aria-pressed="false"
-                  aria-controls="sonasteps-workflow-canvas"
-                  hidden
-                >
-                  Read labels
-                </button>
-                <a
-                  class="diagram-source"
-                  href="img/diagrams/sonasteps-workflow.svg"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open Ticket to resolution as an SVG"
-                  >Open SVG <span aria-hidden="true">↗</span></a
-                >
-              </div>
-              <div
-                class="diagram-canvas"
-                id="sonasteps-workflow-canvas"
-                role="region"
-                aria-labelledby="sonasteps-workflow-title"
-                tabindex="0"
-              >
-                <img
-                  src="img/diagrams/sonasteps-workflow.svg"
-                  alt="SonaSteps ticket workflow from classification and context retrieval through agent decisions, API calls, and human or automated resolution."
-                  width="1100"
-                  height="468"
-                  loading="lazy"
-                />
-              </div>
-              <p class="diagram-help">
-                Open the SVG to inspect labels, or read the diagram description
-                below.
-              </p>
-              <details class="diagram-description">
-                <summary>Diagram description</summary>
+              </article>
+              <article class="feature-card">
+                <p class="capability-label">06 · GET HELP</p>
+                <h3>Get Help</h3>
                 <p>
-                  Ticket → Classification → Context Retrieval → Agent Decision →
-                  Tool/API Call → Recommended Action → Human or Automated
-                  Resolution.
+                  Would assist with navigation, account/product questions,
+                  finding features, and troubleshooting, with escalation to
+                  normal support. Product support is a secondary workflow.
                 </p>
-                <p>
-                  AI works alongside deterministic application logic and
-                  business rules; high-impact actions can remain available for
-                  human review.
-                </p>
-              </details>
-            </figure>
-          </section>
-
-          <section class="case-section" id="what-i-built">
-            <h2>What I Built</h2>
-            <div class="feature-grid">
-              <article class="feature-card">
-                <h3>AI-assisted ticket classification</h3>
-                <p>Classification within the support workflow.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Severity and escalation analysis</h3>
-                <p>Severity and escalation context for incoming issues.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Routing recommendations</h3>
-                <p>Recommended routing for support tickets.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Retrieval-augmented knowledge</h3>
-                <p>Product knowledge as context for support work.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Agentic workflows</h3>
-                <p>AI workflows connected to the support process.</p>
-              </article>
-              <article class="feature-card">
-                <h3>API and webhook integrations</h3>
-                <p>Connections between support and application systems.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Integration monitoring</h3>
-                <p>Visibility into integration activity.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Troubleshooting / replay workflows</h3>
-                <p>Workflows for inspecting and replaying failures.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Recommended actions</h3>
-                <p>Suggested next steps within the support workflow.</p>
-              </article>
-              <article class="feature-card">
-                <h3>Customer-facing support experiences</h3>
-                <p>Support experiences built around customer problems.</p>
               </article>
             </div>
           </section>
-
+          <section class="case-section" id="architecture">
+            <h2>System Architecture</h2>
+            <p>
+              The proposed design separates the family experience, AI request
+              handling, trusted-content retrieval, permitted application tools,
+              and an external model provider. Application services own state and
+              authorization throughout.
+            </p>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="sonasteps-ai-system-title">Proposed AI architecture</h3>
+                <p>
+                  Family-facing learning is the primary path. The model receives
+                  bounded context and returns output for application validation.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="Proposed AI architecture view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="sonasteps-ai-system-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="sonasteps-ai-system-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/sonasteps-ai-architecture.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open Proposed AI architecture as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="sonasteps-ai-system-canvas"
+                role="region"
+                aria-labelledby="sonasteps-ai-system-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/sonasteps-ai-architecture.svg"
+                  alt="Proposed SonaSteps family AI architecture, with a bounded application, permission-aware AI layer, approved-content retrieval, application tools, an external model, data stores, validation, and observability."
+                  width="1100"
+                  height="1100"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  A family or caregiver uses the SonaSteps learning experience,
+                  lessons, progress, resources, and proposed AI companion. The
+                  application owns family/profile context and persistent data.
+                </p>
+                <p>
+                  A conversation/request handler builds permitted context and
+                  passes the request through orchestration and policy controls.
+                  Retrieval supplies approved curriculum, lessons, resources,
+                  and related content. Permitted tools use SonaSteps APIs for
+                  progress, content lookup, search, and navigation.
+                </p>
+                <p>
+                  The external model provider generates a response from the
+                  assembled context. The AI application layer validates
+                  structured output and applies guardrails before an answer or
+                  recommendation reaches the family experience. Questions
+                  outside scope follow an appropriate referral or support
+                  escalation path.
+                </p>
+                <p>
+                  The application database holds family/profile data, progress
+                  state, and content metadata. Proposed AI observability records
+                  redacted request/step metadata, retrieval diagnostics,
+                  latency, failures, model/tool activity, and evaluation data.
+                  Optional application integrations remain bounded external
+                  dependencies.
+                </p>
+              </details>
+            </figure>
+            <div class="case-subsection">
+              <h3>RAG and trusted knowledge</h3>
+              <p>
+                A general-purpose model is not an authoritative source for
+                specialized SonaSteps material. The proposed retrieval layer
+                would select approved curriculum, lessons, educational
+                resources, program documentation, FAQs, and product
+                documentation for the question at hand.
+              </p>
+              <p>
+                The current materials are draft/demo content. Professional and
+                language review are prerequisites for an approved knowledge
+                base. Content quality, retrieval relevance, permissions,
+                versioning, and source attribution matter alongside model
+                capability. Weak or missing evidence should produce a clear
+                limitation or escalation.
+              </p>
+              <p>
+                No vector database or RAG service has been implemented.
+                Ingestion, retrieval, and citation handling remain planned
+                engineering work.
+              </p>
+            </div>
+          </section>
+          <section class="case-section" id="family-ai-workflow">
+            <h2>Family AI Workflow</h2>
+            <p>
+              The proposed request path keeps family context permission-aware,
+              answers grounded in approved content, and application actions
+              subject to software checks.
+            </p>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="sonasteps-family-workflow-title">
+                  Proposed family AI workflow
+                </h3>
+                <p>
+                  A question moves through context, retrieval, generation, and
+                  validation before the family sees an answer or chooses an
+                  application action.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="Proposed family AI workflow view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="sonasteps-family-workflow-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="sonasteps-family-workflow-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/sonasteps-family-ai-workflow.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open Proposed family AI workflow as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="sonasteps-family-workflow-canvas"
+                role="region"
+                aria-labelledby="sonasteps-family-workflow-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/sonasteps-family-ai-workflow.svg"
+                  alt="Proposed family AI workflow: question, intent, permitted context, trusted-content retrieval, grounded model context, structured response, guardrails, source-linked answer, and an optional permitted application action."
+                  width="1100"
+                  height="840"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  Family asks a question → Understand intent → Build permitted
+                  family/application context → Retrieve trusted SonaSteps
+                  content → Assemble grounded model context → Generate
+                  structured response → Validate and apply guardrails → Present
+                  answer and relevant source/content → Optional permitted
+                  application action.
+                </p>
+                <p>
+                  Permitted actions could open a lesson, find a resource, show
+                  recorded practice progress, or navigate to relevant content.
+                  Application authorization and business rules would decide
+                  whether each action is allowed. The flow excludes autonomous
+                  clinical actions.
+                </p>
+              </details>
+            </figure>
+          </section>
+          <section class="case-section" id="responsibilities">
+            <h2>Deterministic vs. AI Responsibilities</h2>
+            <p>
+              The target boundary assigns durable facts and enforceable rules to
+              the application. AI handles requests whose wording or explanation
+              needs interpretation.
+            </p>
+            <div class="responsibility-grid">
+              <article class="responsibility-card">
+                <h3>Deterministic application</h3>
+                <p>Owns facts, permissions, and execution:</p>
+                <ul class="content-list">
+                  <li>Authentication</li>
+                  <li>Authorization and permissions</li>
+                  <li>User and family data</li>
+                  <li>Lesson-completion records, when implemented</li>
+                  <li>Progress state</li>
+                  <li>Curriculum structure</li>
+                  <li>Database writes</li>
+                  <li>Navigation rules</li>
+                  <li>Business rules</li>
+                  <li>Audit state</li>
+                  <li>Application actions</li>
+                </ul>
+              </article>
+              <article class="responsibility-card">
+                <h3>AI layer</h3>
+                <p>Helps interpret and explain:</p>
+                <ul class="content-list">
+                  <li>Natural-language understanding</li>
+                  <li>Explanation and question answering</li>
+                  <li>Retrieval query generation</li>
+                  <li>Summarization</li>
+                  <li>Content discovery</li>
+                  <li>Contextual examples</li>
+                  <li>Conversational navigation</li>
+                  <li>Structured recommendations</li>
+                </ul>
+              </article>
+            </div>
+            <div class="design-principle">
+              <h3>Use AI for ambiguity. Use software for guarantees.</h3>
+              <p>
+                A model can interpret a family’s question or explain a concept
+                in different words. Software must decide which records are
+                accessible, validate referenced content and action parameters,
+                preserve progress facts, and control every write. A plausible
+                answer does not establish permission or turn a recommendation
+                into an executed action.
+              </p>
+            </div>
+          </section>
+          <section class="case-section" id="safety-and-trust">
+            <h2>Safety and Trust</h2>
+            <p>
+              These are requirements for the proposed AI implementation. They
+              need verification before the companion is enabled for families.
+            </p>
+            <div class="trust-grid">
+              <article class="feature-card">
+                <h3>Grounding and scope</h3>
+                <ul class="content-list">
+                  <li>
+                    Use professionally and linguistically reviewed content; show
+                    relevant sources where practical.
+                  </li>
+                  <li>
+                    Separate educational explanation from professional advice.
+                    Avoid diagnosis, clinical decisions, and legal advice.
+                  </li>
+                  <li>
+                    Refer or escalate questions that exceed the product’s
+                    intended scope. Human expertise remains central.
+                  </li>
+                </ul>
+              </article>
+              <article class="feature-card">
+                <h3>Family information and tools</h3>
+                <ul class="content-list">
+                  <li>
+                    Build permission-aware context from a minimal allowlist of
+                    relevant application data.
+                  </li>
+                  <li>
+                    Keep unnecessary identifiers and private free-text
+                    reflections out of model context and the retrieval corpus.
+                  </li>
+                  <li>
+                    Limit tools to defined actions; verify authorization and
+                    business rules in application services.
+                  </li>
+                </ul>
+              </article>
+              <article class="feature-card">
+                <h3>Validation and failure handling</h3>
+                <ul class="content-list">
+                  <li>
+                    Validate structured output, source references, content IDs,
+                    and action parameters.
+                  </li>
+                  <li>
+                    Use bounded failures and fallbacks when retrieval is weak,
+                    the model fails, or an action is invalid.
+                  </li>
+                  <li>
+                    Log useful failure and timing metadata with redaction and
+                    controlled access, avoiding unnecessary exposure of family
+                    information.
+                  </li>
+                </ul>
+              </article>
+            </div>
+            <p class="case-note">
+              Educational assistance should work alongside audiologists, SLPs,
+              Teachers of the Deaf, early-intervention specialists, physicians,
+              and other professionals. SonaSteps is not designed to replace that
+              expertise.
+            </p>
+          </section>
+          <section class="case-section" id="product-support-ai">
+            <h2>Product Support AI</h2>
+            <p>
+              Product support is a secondary planned use of the same request,
+              retrieval, and validation infrastructure. It could help with
+              product navigation, FAQs, troubleshooting, technical issues,
+              finding features, and account/product questions.
+            </p>
+            <p>
+              A separate product-support path could classify and route support
+              tickets or escalate to normal support. Account access and account
+              changes would remain within authorized application workflows.
+            </p>
+            <div class="secondary-workflow">
+              <h3>Secondary support workflow</h3>
+              <ol class="support-workflow">
+                <li>Identify a product-use question or technical issue.</li>
+                <li>Retrieve approved FAQs and product documentation.</li>
+                <li>Offer a bounded troubleshooting or navigation answer.</li>
+                <li>Classify and route an unresolved support request.</li>
+                <li>Escalate to normal support when appropriate.</li>
+              </ol>
+            </div>
+          </section>
           <section class="case-section" id="video-walkthrough">
             <h2>Video Walkthrough</h2>
             <!-- Add the YouTube video ID to data-youtube-id when ready -->
             <div
               class="youtube-embed"
               data-youtube-id=""
-              data-title="SonaSteps Project Walkthrough"
+              data-title="SonaSteps Product &amp; Architecture Walkthrough"
             >
               <div class="video-placeholder">
-                <span class="play-icon" aria-hidden="true"></span>
-                <strong>Video Walkthrough</strong>
-                <span>YouTube video coming soon</span>
+                <span class="play-icon" aria-hidden="true"></span
+                ><strong>Video Walkthrough</strong
+                ><span>Product and architecture walkthrough coming soon.</span>
               </div>
             </div>
           </section>
-
-          <section class="case-section" id="business-value">
-            <h2>Business Value</h2>
+          <section class="case-section" id="what-this-project-demonstrates">
+            <h2>What This Project Demonstrates</h2>
             <p>
-              SonaSteps demonstrates how AI can be integrated into an actual
-              SaaS workflow. Retrieval, classification, routing, integrations,
-              and recommended actions connect model capabilities to the work a
-              support team needs to do.
+              The implemented learning prototype and proposed AI design connect
+              product reasoning to software boundaries. The work brings together
+              family-centered product design, accessibility, SaaS architecture,
+              application state, deterministic recommendations, and APIs.
             </p>
             <p>
-              The project brings more useful context and clearer next steps to a
-              support process that combines AI, application logic, and human
-              judgment.
+              The AI exploration adds RAG and retrieval design, context
+              management, permissions, structured outputs, observability, safety
+              boundaries, and the interaction between deterministic and
+              probabilistic systems. Its portfolio value is the reasoning about
+              those responsibilities and tradeoffs; AI quality and operational
+              results still require implementation and evaluation.
             </p>
           </section>
-
           <section class="case-section" id="lessons-learned">
-            <h2>Lessons Learned</h2>
-            <ul class="content-list">
+            <h2>Lessons / Design Principles</h2>
+            <ul class="principle-list">
               <li>
-                AI features become more useful when they have access to context,
-                workflows, business rules, and tools.
+                AI is most useful when it reduces a real cognitive burden.
               </li>
-              <li>Deterministic application logic still matters.</li>
+              <li>The model should remain a component of the application.</li>
               <li>
-                Observability and failure handling matter as much as model
-                capability.
+                Trusted context matters more than access to a powerful model.
+              </li>
+              <li>Deterministic systems should own facts and guarantees.</li>
+              <li>
+                AI can make structured educational content easier to access
+                while preserving the role of the people who created and teach
+                it.
               </li>
               <li>
-                Human review should remain available for high-impact actions.
+                The amount of autonomy should depend on the cost of being wrong.
               </li>
             </ul>
           </section>
-
           <section class="case-section" id="next-iteration">
             <h2>Next Iteration</h2>
             <p>
-              The next iteration would focus on evaluation, permissions, model
-              observability, tenant isolation, failure handling, and
-              human-in-the-loop controls.
+              The AI implementation remains future engineering work. Priorities
+              include reviewed content and source citations; retrieval and
+              answer-quality evaluation; model selection; latency and token/cost
+              management; bounded context; permissions; prompt/version
+              management; observability; failure handling; privacy controls;
+              human escalation; accessibility testing; and structured output
+              validation.
+            </p>
+            <p>
+              The current deterministic experience should remain usable through
+              AI timeouts, missing knowledge, or rejected output. Backend
+              deployment, live authentication, reviewed educational content, and
+              release verification also remain separate core-product work.
             </p>
           </section>
         </article>

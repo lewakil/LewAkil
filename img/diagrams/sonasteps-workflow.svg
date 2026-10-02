@@ -6,14 +6,13 @@
   role="img"
   aria-labelledby="title desc"
 >
-  <title id="title">SonaSteps — ticket-to-resolution workflow</title>
+  <title id="title">
+    SonaSteps — proposed secondary product support workflow
+  </title>
   <desc id="desc">
-    A support ticket is classified by category and severity. Relevant context is
-    retrieved, then an agent chooses the next action. The agent uses a tool or
-    API, and the platform produces a recommended action such as routing or
-    troubleshooting. The workflow then branches to human review and resolution
-    or an automated workflow action. Read the first row left to right, then the
-    second row right to left.
+    Archived proposed secondary product-support workflow. Ticket classification
+    and routing are exploratory, not implemented family-facing functionality.
+    The primary planned family AI flow is in sonasteps-family-ai-workflow.svg.
   </desc>
   <defs>
     <marker
@@ -89,9 +88,11 @@
     </style>
   </defs>
   <rect width="1100" height="468" fill="white" />
-  <text x="28" y="38" class="heading">SonaSteps · Ticket to resolution</text>
+  <text x="28" y="38" class="heading">
+    SonaSteps · Product support workflow (proposed)
+  </text>
   <text x="28" y="67" class="sub">
-    A support workflow connecting AI, application logic, and execution
+    Secondary operational exploration · AI ticket workflows are planned
   </text>
   <rect
     x="28"

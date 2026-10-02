@@ -1,0 +1,647 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="1100"
+  viewBox="0 0 1100 1100"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">SonaSteps — proposed family-facing AI architecture</title>
+  <desc id="desc">
+    Proposed AI architecture, not a claim of shipped functionality. A family or
+    caregiver uses the SonaSteps application, which owns learning, lessons,
+    progress, resources, the AI companion, and family context. A permitted
+    request enters the AI application layer through a request handler, context
+    builder, and orchestration. Policy and guardrails govern orchestration.
+    Retrieval grounds responses in approved curriculum, lessons, and resources.
+    Permitted application tools call SonaSteps APIs for progress, content
+    lookup, search, and navigation. The application owns database state: family
+    profiles, progress, and content metadata. Database access uses application
+    permissions. The external model provider receives grounded context and
+    returns output to structured output validation; it never writes directly to
+    the application database. Validated answers and recommendations return to
+    the family experience, or refer or escalate when a question exceeds the
+    intended product scope. Proposed observability covers request logs,
+    retrieval diagnostics, latency and failures, model and tool activity, and
+    evaluation data. Optional application integrations are external
+    dependencies. All AI components, integrations, and controls shown here are
+    proposed design work.
+  </desc>
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#2563EB"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <marker
+      id="gray-arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#64748B"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <style>
+      text {
+        font-family: Arial, Helvetica, sans-serif;
+        fill: #0f172a;
+      }
+      .heading {
+        font-size: 25px;
+        font-weight: 700;
+      }
+      .domain {
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .node {
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .detail {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .flow {
+        font-size: 19px;
+        fill: #2563eb;
+      }
+      .small-heading {
+        font-size: 21px;
+        font-weight: 700;
+      }
+      .blue {
+        fill: #2563eb;
+      }
+    </style>
+  </defs>
+  <rect width="1100" height="1100" fill="white" />
+
+  <text x="28" y="37" class="heading">
+    SonaSteps · Proposed AI architecture
+  </text>
+  <text x="28" y="66" class="detail">
+    Family-facing learning guidance, grounded in application state and approved
+    content
+  </text>
+  <rect
+    x="216"
+    y="95"
+    width="620"
+    height="995"
+    rx="23"
+    fill="#fff"
+    stroke="#94A3B8"
+    stroke-width="1.5"
+  />
+  <text x="240" y="124" class="domain">SonaSteps product boundary</text>
+  <rect
+    x="234"
+    y="140"
+    width="582"
+    height="151"
+    rx="16"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="250" y="169" class="domain">SonaSteps application</text>
+  <rect
+    x="250"
+    y="181"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="339.5" y="200" class="node" text-anchor="middle">Learning</text>
+  <text x="339.5" y="222" class="node" text-anchor="middle">experience</text>
+  <rect
+    x="435"
+    y="181"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="524.5" y="210" class="node" text-anchor="middle">Lessons</text>
+  <rect
+    x="620"
+    y="181"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="709.5" y="210" class="node" text-anchor="middle">Progress</text>
+  <rect
+    x="250"
+    y="235"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="339.5" y="264" class="node" text-anchor="middle">Resources</text>
+  <rect
+    x="435"
+    y="235"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="524.5" y="264" class="node" text-anchor="middle">AI companion</text>
+  <rect
+    x="620"
+    y="235"
+    width="179"
+    height="44"
+    rx="9"
+    fill="#FFF"
+    stroke="#DBEAFE"
+    stroke-width="1.5"
+  />
+  <text x="709.5" y="254" class="node" text-anchor="middle">
+    Family/profile
+  </text>
+  <text x="709.5" y="276" class="node" text-anchor="middle">context</text>
+  <rect
+    x="234"
+    y="340"
+    width="582"
+    height="267"
+    rx="16"
+    fill="#EFF6FF"
+    stroke="#93C5FD"
+    stroke-width="1.5"
+  />
+  <text x="250" y="368" class="domain">AI application layer</text>
+  <rect
+    x="250"
+    y="382"
+    width="550"
+    height="43"
+    rx="9"
+    fill="#fff"
+    stroke="#BFDBFE"
+    stroke-width="1.5"
+  />
+  <text x="525" y="410" class="node" text-anchor="middle">
+    Conversation / request handler
+  </text>
+  <rect
+    x="250"
+    y="436"
+    width="550"
+    height="43"
+    rx="9"
+    fill="#fff"
+    stroke="#BFDBFE"
+    stroke-width="1.5"
+  />
+  <text x="525" y="464" class="node" text-anchor="middle">Context builder</text>
+  <rect
+    x="250"
+    y="490"
+    width="550"
+    height="43"
+    rx="9"
+    fill="#fff"
+    stroke="#BFDBFE"
+    stroke-width="1.5"
+  />
+  <text x="525" y="518" class="node" text-anchor="middle">
+    AI orchestration
+  </text>
+  <rect
+    x="250"
+    y="546"
+    width="255"
+    height="47"
+    rx="9"
+    fill="#fff"
+    stroke="#BFDBFE"
+    stroke-width="1.5"
+  />
+  <text x="377.5" y="566" class="node" text-anchor="middle">
+    Policy / guardrail
+  </text>
+  <text x="377.5" y="588" class="node" text-anchor="middle">layer</text>
+  <rect
+    x="545"
+    y="546"
+    width="255"
+    height="47"
+    rx="9"
+    fill="#fff"
+    stroke="#BFDBFE"
+    stroke-width="1.5"
+  />
+  <text x="672.5" y="566" class="node" text-anchor="middle">
+    Structured output
+  </text>
+  <text x="672.5" y="588" class="node" text-anchor="middle">validation</text>
+  <path
+    d="M525 291 V340"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <text x="537" y="322" class="flow">Permitted request + context</text>
+  <path
+    d="M525 425 V436"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M525 479 V490"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M377 546 V533"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.7"
+    marker-end="url(#gray-arrow)"
+    stroke-dasharray="5 5"
+  />
+  <rect
+    x="24"
+    y="140"
+    width="160"
+    height="125"
+    rx="15"
+    fill="#fff"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <circle
+    cx="104"
+    cy="169"
+    r="10"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+  />
+  <path
+    d="M87 199 V190 Q104 174 121 190 V199"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+  />
+  <text x="104" y="224" class="node" text-anchor="middle">Family /</text>
+  <text x="104" y="249" class="node" text-anchor="middle">caregiver</text>
+  <path
+    d="M184 204 H234"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <text x="25" y="297" class="detail">Uses learning</text>
+  <text x="25" y="322" class="detail">experience</text>
+  <rect
+    x="24"
+    y="368"
+    width="180"
+    height="247"
+    rx="15"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <ellipse
+    cx="114"
+    cy="392"
+    rx="20"
+    ry="7"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+  />
+  <path
+    d="M94 392 V411 C94 420 134 420 134 411 V392 M94 402 C94 411 134 411 134 402"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+  />
+  <text x="38" y="445" class="node">Application</text>
+  <text x="38" y="470" class="node">database</text>
+  <text x="38" y="504" class="detail">Family/profile</text>
+  <text x="38" y="529" class="detail">Progress state</text>
+  <text x="38" y="554" class="detail">Content metadata</text>
+  <text x="38" y="583" class="detail">Permission-aware</text>
+  <text x="38" y="605" class="detail">app data access</text>
+  <path
+    d="M234 253 H214 V395 H204"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.7"
+    marker-end="url(#gray-arrow)"
+  />
+  <text x="25" y="346" class="flow">App owns state</text>
+  <path
+    d="M204 457 H250"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.7"
+    marker-end="url(#gray-arrow)"
+  />
+  <rect
+    x="234"
+    y="659"
+    width="277"
+    height="70"
+    rx="13"
+    fill="#fff"
+    stroke="#93C5FD"
+    stroke-width="1.5"
+  />
+  <text x="372.5" y="687" class="node" text-anchor="middle">
+    Retrieval / RAG
+  </text>
+  <text x="372.5" y="712" class="node" text-anchor="middle">
+    Trusted context
+  </text>
+  <rect
+    x="539"
+    y="659"
+    width="277"
+    height="70"
+    rx="13"
+    fill="#fff"
+    stroke="#93C5FD"
+    stroke-width="1.5"
+  />
+  <text x="677.5" y="687" class="node" text-anchor="middle">
+    Application tools
+  </text>
+  <text x="677.5" y="712" class="node" text-anchor="middle">
+    Permitted actions
+  </text>
+  <path
+    d="M250 511 H241 V635 H372 V659"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <text x="250" y="628" class="flow">Retrieve / context</text>
+  <path
+    d="M800 518 H809 V635 H677 V659"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <text x="616" y="628" class="flow">Tool call / result</text>
+  <rect
+    x="234"
+    y="776"
+    width="277"
+    height="112"
+    rx="13"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="250" y="805" class="node">Trusted content</text>
+  <text x="250" y="831" class="detail">Curriculum · Lessons</text>
+  <text x="250" y="854" class="detail">Resources</text>
+  <text x="250" y="877" class="detail">Approved content</text>
+  <rect
+    x="539"
+    y="776"
+    width="277"
+    height="112"
+    rx="13"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="555" y="805" class="node">SonaSteps APIs</text>
+  <text x="555" y="837" class="detail">Progress · Content lookup</text>
+  <text x="555" y="863" class="detail">Search · Navigation</text>
+  <path
+    d="M372 729 V776"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <text x="248" y="758" class="flow">Approved material</text>
+  <path
+    d="M677 729 V776"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <text x="555" y="758" class="flow">App permissions</text>
+  <rect
+    x="885"
+    y="413"
+    width="191"
+    height="204"
+    rx="15"
+    fill="#fff"
+    stroke="#94A3B8"
+    stroke-width="1.5"
+    stroke-dasharray="6 5"
+  />
+  <text x="981" y="444" class="detail" text-anchor="middle">EXTERNAL</text>
+  <text x="981" y="477" class="node" text-anchor="middle">Model</text>
+  <text x="981" y="503" class="node" text-anchor="middle">provider</text>
+  <text x="900" y="533" class="detail">Generate output</text>
+  <text x="900" y="558" class="detail">from grounded</text>
+  <text x="900" y="583" class="detail">context</text>
+  <text x="900" y="606" class="detail">No state ownership</text>
+  <path
+    d="M800 511 H885"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <text x="818" y="500" class="flow">Context</text>
+  <path
+    d="M885 571 H800"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <text x="818" y="558" class="flow">Output</text>
+  <path
+    d="M800 586 H826 V918 H678 V934"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <text x="600" y="909" class="flow">Validated answer</text>
+  <rect
+    x="234"
+    y="934"
+    width="582"
+    height="51"
+    rx="12"
+    fill="#EFF6FF"
+    stroke="#93C5FD"
+    stroke-width="1.5"
+  />
+  <text x="525" y="966" class="node" text-anchor="middle">
+    Response / recommendation
+  </text>
+  <path
+    d="M525 985 V995 H372 V1010"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M525 995 H677 V1010"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.7"
+    marker-end="url(#arrow)"
+  />
+  <rect
+    x="234"
+    y="1010"
+    width="277"
+    height="65"
+    rx="12"
+    fill="#fff"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="372.5" y="1038" class="node" text-anchor="middle">
+    Family experience
+  </text>
+  <text x="372.5" y="1062" class="detail" text-anchor="middle">
+    Answer + relevant sources
+  </text>
+  <rect
+    x="539"
+    y="1010"
+    width="277"
+    height="65"
+    rx="12"
+    fill="#fff"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="677.5" y="1038" class="node" text-anchor="middle">
+    Refer / escalate
+  </text>
+  <text x="677.5" y="1062" class="detail" text-anchor="middle">
+    When outside product scope
+  </text>
+  <rect
+    x="885"
+    y="650"
+    width="191"
+    height="107"
+    rx="13"
+    fill="#fff"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+    stroke-dasharray="6 5"
+  />
+  <text x="900" y="675" class="node">Optional</text>
+  <text x="900" y="698" class="node">application</text>
+  <text x="900" y="721" class="node">integrations</text>
+  <text x="900" y="750" class="detail">External service</text>
+  <path
+    d="M816 829 H852 V695 H885"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.7"
+    marker-end="url(#gray-arrow)"
+    stroke-dasharray="5 5"
+  />
+  <rect
+    x="885"
+    y="788"
+    width="191"
+    height="280"
+    rx="15"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="900" y="818" class="node">Observability</text>
+  <text x="900" y="853" class="detail">AI request logs</text>
+  <text x="900" y="880" class="detail">Retrieval</text>
+  <text x="900" y="907" class="detail">diagnostics</text>
+  <text x="900" y="934" class="detail">Latency / failures</text>
+  <text x="900" y="961" class="detail">Model / tool activity</text>
+  <text x="900" y="988" class="detail">Evaluation data</text>
+  <text x="900" y="1040" class="detail">Proposed telemetry</text>
+  <text x="900" y="1063" class="detail">and evaluation</text>
+  <path
+    d="M816 375 H865 V805 H885"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.7"
+    marker-end="url(#gray-arrow)"
+    stroke-dasharray="5 5"
+  />
+  <text x="894" y="775" class="detail">Request telemetry</text>
+  <text x="28" y="698" class="detail">The application owns</text>
+  <text x="28" y="725" class="detail">facts, permissions,</text>
+  <text x="28" y="752" class="detail">and persistent state.</text>
+  <text x="28" y="811" class="detail">The model receives</text>
+  <text x="28" y="838" class="detail">permitted context</text>
+  <text x="28" y="865" class="detail">and returns output.</text>
+  <text x="28" y="950" class="detail">AI controls and</text>
+  <text x="28" y="977" class="detail">services shown here</text>
+  <text x="28" y="1004" class="detail">are proposed</text>
+  <text x="28" y="1031" class="detail">design work.</text>
+</svg>

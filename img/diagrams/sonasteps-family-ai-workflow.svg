@@ -1,0 +1,230 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="840"
+  viewBox="0 0 1100 840"
+  role="img"
+  aria-labelledby="workflow-title workflow-desc"
+>
+  <title id="workflow-title">SonaSteps · Proposed family AI workflow</title>
+  <desc id="workflow-desc">
+    Proposed design; AI and retrieval are not implemented in the current
+    SonaSteps prototype. Read the first lane from left to right, the second from
+    right to left, and the third from left to right. A family asks a question.
+    The request layer understands intent. The application builds only permitted,
+    minimal family and application context. Retrieval selects approved,
+    professionally reviewed SonaSteps content. The AI layer assembles grounded
+    model context and asks an external model provider for a structured response.
+    The application validates the schema, sources, scope, and guardrails, then
+    presents an answer with relevant source content. Optional actions are
+    limited to application-authorized lesson opening, resource finding, progress
+    viewing, or navigation. Missing approved evidence or out-of-scope requests
+    use a limitation or appropriate referral. The application remains the owner
+    of permissions, curriculum, progress, persistent state, and allowed actions.
+  </desc>
+  <defs>
+    <marker
+      id="flow-arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto"
+    >
+      <path
+        d="M1 1L9 5L1 9"
+        fill="none"
+        stroke="#2563EB"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <style>
+      text {
+        font-family: Arial, Helvetica, sans-serif;
+        fill: #0f172a;
+      }
+      .title {
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+      }
+      .subtitle {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .lane-title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .lane {
+        fill: #f8fafc;
+        stroke: #cbd5e1;
+        stroke-width: 1.4;
+      }
+      .node {
+        fill: #ffffff;
+        stroke: #cbd5e1;
+        stroke-width: 1.5;
+      }
+      .node-title {
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .body {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .step {
+        font-size: 18px;
+        font-weight: 700;
+        fill: #2563eb;
+      }
+      .edge {
+        fill: none;
+        stroke: #2563eb;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#flow-arrow);
+      }
+      .label {
+        font-size: 17px;
+        fill: #64748b;
+      }
+      .note {
+        font-size: 18px;
+        fill: #475569;
+      }
+    </style>
+  </defs>
+  <rect width="1100" height="840" fill="#FFFFFF" />
+  <text x="28" y="38" class="title">
+    SonaSteps · Proposed family AI workflow
+  </text>
+  <text x="28" y="68" class="subtitle">
+    Design exploration · AI and retrieval are not implemented in the current
+    prototype
+  </text>
+
+  <rect x="25" y="106" width="1050" height="184" rx="18" class="lane" />
+  <text x="44" y="134" class="lane-title">Application + AI request layer</text>
+  <rect x="25" y="334" width="1050" height="185" rx="18" class="lane" />
+  <text x="44" y="362" class="lane-title">
+    Approved-content retrieval + external model
+  </text>
+  <rect x="25" y="565" width="1050" height="186" rx="18" class="lane" />
+  <text x="44" y="593" class="lane-title">
+    Application validation + family experience
+  </text>
+
+  <path d="M333 206H405" class="edge" />
+  <path d="M695 206H767" class="edge" />
+  <path d="M912 262V380" class="edge" />
+  <text x="928" y="320" class="label">ground in sources</text>
+  <path d="M767 439H695" class="edge" />
+  <path d="M405 439H333" class="edge" />
+  <path d="M188 503V548H35V674H43" class="edge" />
+  <text x="204" y="554" class="label">validate before display</text>
+  <path d="M333 674H405" class="edge" />
+  <path d="M695 674H767" class="edge" />
+
+  <rect x="43" y="150" width="290" height="112" rx="12" class="node" />
+  <circle cx="66" cy="174" r="13" fill="#EFF6FF" />
+  <text x="66" y="180" class="step" text-anchor="middle">1</text>
+  <text x="90" y="181" class="node-title">Family asks a question</text>
+  <text x="61" y="218" class="body">Lesson, resource, or</text>
+  <text x="61" y="242" class="body">application question</text>
+
+  <rect x="405" y="150" width="290" height="112" rx="12" class="node" />
+  <circle cx="428" cy="174" r="13" fill="#EFF6FF" />
+  <text x="428" y="180" class="step" text-anchor="middle">2</text>
+  <text x="452" y="181" class="node-title">Understand intent</text>
+  <text x="423" y="218" class="body">Explain · find · navigate</text>
+  <text x="423" y="242" class="body">Route requests by scope</text>
+
+  <rect
+    x="767"
+    y="150"
+    width="290"
+    height="112"
+    rx="12"
+    fill="#FFFFFF"
+    stroke="#93B4E9"
+    stroke-width="1.6"
+  />
+  <circle cx="790" cy="174" r="13" fill="#EFF6FF" />
+  <text x="790" y="180" class="step" text-anchor="middle">3</text>
+  <text x="814" y="181" class="node-title">Build permitted</text>
+  <text x="814" y="205" class="node-title">family/app context</text>
+  <text x="785" y="230" class="body">App-authorized data only</text>
+  <text x="785" y="252" class="body">Minimal, allowlisted facts</text>
+
+  <rect x="767" y="380" width="290" height="123" rx="12" class="node" />
+  <circle cx="790" cy="404" r="13" fill="#EFF6FF" />
+  <text x="790" y="410" class="step" text-anchor="middle">4</text>
+  <text x="814" y="411" class="node-title">Retrieve approved</text>
+  <text x="814" y="435" class="node-title">SonaSteps content</text>
+  <text x="785" y="469" class="body">Reviewed sources only</text>
+  <text x="785" y="493" class="body">No sources → fallback</text>
+
+  <rect x="405" y="380" width="290" height="123" rx="12" class="node" />
+  <circle cx="428" cy="404" r="13" fill="#EFF6FF" />
+  <text x="428" y="410" class="step" text-anchor="middle">5</text>
+  <text x="452" y="411" class="node-title">Assemble grounded</text>
+  <text x="452" y="435" class="node-title">model context</text>
+  <text x="423" y="469" class="body">Source content + minimal</text>
+  <text x="423" y="493" class="body">permitted application facts</text>
+
+  <rect x="43" y="380" width="290" height="123" rx="12" class="node" />
+  <circle cx="66" cy="404" r="13" fill="#EFF6FF" />
+  <text x="66" y="410" class="step" text-anchor="middle">6</text>
+  <text x="90" y="411" class="node-title">Generate structured</text>
+  <text x="90" y="435" class="node-title">response</text>
+  <text x="61" y="469" class="body">External model provider</text>
+  <text x="61" y="493" class="body">No ownership of app state</text>
+
+  <rect
+    x="43"
+    y="613"
+    width="290"
+    height="122"
+    rx="12"
+    fill="#EFF6FF"
+    stroke="#93B4E9"
+    stroke-width="1.6"
+  />
+  <circle cx="66" cy="637" r="13" fill="#DBEAFE" />
+  <text x="66" y="643" class="step" text-anchor="middle">7</text>
+  <text x="90" y="644" class="node-title">Validate + apply</text>
+  <text x="90" y="668" class="node-title">guardrails</text>
+  <text x="61" y="701" class="body">Schema · sources · scope</text>
+  <text x="61" y="725" class="body">App rules gate the result</text>
+
+  <rect x="405" y="613" width="290" height="122" rx="12" class="node" />
+  <circle cx="428" cy="637" r="13" fill="#EFF6FF" />
+  <text x="428" y="643" class="step" text-anchor="middle">8</text>
+  <text x="452" y="644" class="node-title">Present answer +</text>
+  <text x="452" y="668" class="node-title">relevant sources</text>
+  <text x="423" y="701" class="body">Link to approved content</text>
+  <text x="423" y="725" class="body">Explain limits or refer</text>
+
+  <rect x="767" y="613" width="290" height="122" rx="12" class="node" />
+  <circle cx="790" cy="637" r="13" fill="#EFF6FF" />
+  <text x="790" y="643" class="step" text-anchor="middle">9</text>
+  <text x="814" y="644" class="node-title">Optional permitted</text>
+  <text x="814" y="668" class="node-title">application action</text>
+  <text x="785" y="701" class="body">Open lesson · find resource</text>
+  <text x="785" y="725" class="body">Show progress · navigate</text>
+
+  <text x="28" y="785" class="note">
+    Only approved, reviewed content is eligible. Missing evidence or
+    out-of-scope requests use a safe fallback.
+  </text>
+  <text x="28" y="814" class="note">
+    The application owns permissions, curriculum, progress, persistent state,
+    and allowed actions.
+  </text>
+</svg>

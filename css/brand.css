@@ -341,6 +341,22 @@ strong {
   font-size: 16px;
   line-height: 1.7;
 }
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  padding: 4px 9px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.page-hero .button-group .button {
+  margin-top: 0;
+}
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -873,6 +889,94 @@ strong {
   margin-top: 10px;
   font-size: 15px;
 }
+.implementation-status {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 10px;
+}
+.implementation-status .status-note {
+  font-size: 16px;
+}
+.case-section .question-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 32px;
+}
+.case-section .question-list li + li {
+  margin-top: 0;
+}
+.section-status {
+  margin-bottom: 12px;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+}
+.capability-grid,
+.responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.capability-grid .feature-card h3 {
+  font-size: 20px;
+}
+.capability-grid .feature-card p {
+  font-size: 16px;
+}
+.capability-grid .feature-card .capability-label {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.065em;
+}
+.capability-example {
+  padding: 12px;
+  border-left: 2px solid #bfdbfe;
+  background: #f8fafc;
+}
+.case-subsection {
+  margin-top: 28px;
+}
+.responsibility-card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.design-principle {
+  margin-top: 24px;
+  padding: 24px;
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  background: #eff6ff;
+}
+.case-section .design-principle h3 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+.trust-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+.case-section .trust-grid .feature-card h3 {
+  font-size: 18px;
+}
+.case-note {
+  margin-top: 24px;
+}
+.secondary-workflow {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
 .youtube-embed {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -1013,6 +1117,13 @@ strong {
 }
 
 @media (max-width: 767px) {
+  .capability-grid,
+  .responsibility-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-section .question-list {
+    grid-template-columns: 1fr;
+  }
   .container {
     width: calc(100% - 40px);
   }

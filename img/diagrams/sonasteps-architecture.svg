@@ -6,18 +6,14 @@
   role="img"
   aria-labelledby="title desc"
 >
-  <title id="title">SonaSteps — logical system architecture</title>
+  <title id="title">
+    SonaSteps — proposed secondary product support AI architecture
+  </title>
   <desc id="desc">
-    Customers send support requests through support channels to the SonaSteps
-    support experience. The SaaS application contains ticket and API services,
-    classification and routing, a retrieval layer, and agent orchestration.
-    Ticket services and agent workflows use ticket and workflow state. The
-    retrieval layer queries a product knowledge index and returns context to the
-    agent. The agent returns recommendations to the support experience, calls
-    external model services, and uses external APIs and webhooks. Support teams
-    use the support experience. Integration events feed monitoring,
-    troubleshooting, and replay. This is a vendor-neutral logical view of the
-    case study, not a cloud deployment diagram.
+    Archived proposed product-support architecture. This secondary operational
+    exploration is not implemented. Family-facing learning is the primary
+    SonaSteps use case; the current architecture is shown in
+    sonasteps-ai-architecture.svg.
   </desc>
   <defs>
     <marker
@@ -93,9 +89,11 @@
     </style>
   </defs>
   <rect width="1100" height="864" fill="white" />
-  <text x="28" y="38" class="heading">SonaSteps · System architecture</text>
+  <text x="28" y="38" class="heading">
+    SonaSteps · Product support AI (proposed)
+  </text>
   <text x="28" y="67" class="sub">
-    Logical view of the support platform, its dependencies, and data paths
+    Secondary operational exploration · family-facing learning remains primary
   </text>
   <rect
     x="220"
