@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>SonaSteps | Lew Akil</title>
+    <meta
+      name="description"
+      content="A production-style AI support platform exploring RAG, agentic workflows, APIs, integrations, and automation inside customer support."
+    />
+    <link rel="canonical" href="https://lewakil.com/sonasteps.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta property="og:title" content="SonaSteps | Lew Akil" />
+    <meta
+      property="og:description"
+      content="A production-style AI support platform exploring RAG, agentic workflows, APIs, integrations, and automation inside customer support."
+    />
+    <meta property="og:url" content="https://lewakil.com/sonasteps.html" />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/main_photo.jpg"
+    />
+    <meta property="og:image:alt" content="Portrait of Lew Akil" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <script src="js/brand.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html" aria-current="page">Work</a
+          ><a href="writing.html">Writing</a><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero wave-hero">
+        <img
+          class="brand-wave"
+          src="img/brand-wave.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="container">
+          <a class="back-link" href="portfolio.html"
+            ><span aria-hidden="true">←</span> Back to Work</a
+          >
+          <h1>SonaSteps</h1>
+          <p class="project-subtitle">AI-powered support workflows</p>
+          <p class="hero-description">
+            A production-style AI support platform exploring how RAG, agentic
+            workflows, APIs, automation, and traditional SaaS architecture can
+            work together inside a customer support experience.
+          </p>
+          <ul class="tags" aria-label="Project topics">
+            <li>AI</li>
+            <li>RAG</li>
+            <li>Agents</li>
+            <li>APIs</li>
+            <li>Webhooks</li>
+            <li>SaaS</li>
+            <li>Support Automation</li>
+          </ul>
+          <a class="button button-primary" href="#video-walkthrough"
+            >Watch Video <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+
+      <div class="container case-layout">
+        <aside class="case-nav" aria-label="Case study sections">
+          <p class="case-nav-title">In this case study</p>
+          <nav aria-label="SonaSteps case study">
+            <a href="#overview">Overview</a>
+            <a href="#the-problem">The Problem</a>
+            <a href="#the-approach">The Approach</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#what-i-built">What I Built</a>
+            <a href="#video-walkthrough">Video Walkthrough</a>
+            <a href="#business-value">Business Value</a>
+            <a href="#lessons-learned">Lessons Learned</a>
+            <a href="#next-iteration">Next Iteration</a>
+          </nav>
+        </aside>
+        <article class="case-content" aria-label="SonaSteps case study">
+          <section class="case-section" id="overview">
+            <h2>Overview</h2>
+            <p>
+              SonaSteps explores how AI agents, retrieval, APIs, and automation
+              can work together inside a customer support platform to improve
+              efficiency, routing, troubleshooting, and response quality.
+            </p>
+          </section>
+
+          <section class="case-section" id="the-problem">
+            <h2>The Problem</h2>
+            <p>
+              Support workflows often span disconnected systems. A ticket may
+              require someone to:
+            </p>
+            <ul class="content-list">
+              <li>Understand the customer's message</li>
+              <li>Determine category and severity</li>
+              <li>Search product knowledge</li>
+              <li>Inspect integration context</li>
+              <li>Determine escalation risk</li>
+              <li>Route the issue</li>
+              <li>Troubleshoot failures</li>
+              <li>Recommend next actions</li>
+            </ul>
+            <p>
+              The goal was to explore how those steps could become more
+              intelligent without reducing the product to a generic chatbot.
+            </p>
+          </section>
+
+          <section class="case-section" id="the-approach">
+            <h2>The Approach</h2>
+            <p>
+              Design SonaSteps around workflows rather than isolated AI
+              features.
+            </p>
+            <p>
+              AI should augment an actual SaaS support process and work
+              alongside deterministic application logic, APIs, business rules,
+              and human review.
+            </p>
+          </section>
+
+          <section class="case-section" id="architecture">
+            <h2>Architecture</h2>
+            <p>
+              The logical architecture separates the support application,
+              retrieval, agent orchestration, data stores, and external systems.
+              The workflow below follows a ticket through those components.
+            </p>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="sonasteps-system-title">System architecture</h3>
+                <p>
+                  A logical view of the support application, its AI workflows,
+                  and the systems that provide context and tools.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="System architecture view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="sonasteps-system-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="sonasteps-system-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/sonasteps-architecture.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open System architecture as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="sonasteps-system-canvas"
+                role="region"
+                aria-labelledby="sonasteps-system-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/sonasteps-architecture.svg"
+                  alt="SonaSteps logical system architecture, showing support channels, SaaS services, retrieval, agent orchestration, data stores, monitoring, and external dependencies."
+                  width="1100"
+                  height="864"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  Customer and support channels send tickets into the support
+                  application. Ticket services, classification, and routing
+                  connect the support experience to ticket and workflow data.
+                </p>
+                <p>
+                  Agent orchestration retrieves product knowledge through the
+                  RAG layer, uses a model for decisions, and connects to
+                  external APIs and webhooks through tool calls. Retrieved
+                  context and tool results inform recommended actions, with
+                  human review or automated resolution in the application
+                  workflow.
+                </p>
+                <p>
+                  Knowledge and ticket stores supply context and state.
+                  Integration activity and failures feed monitoring,
+                  troubleshooting, and replay workflows.
+                </p>
+              </details>
+            </figure>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="sonasteps-workflow-title">Ticket to resolution</h3>
+                <p>
+                  The operational path through the architecture, with human
+                  review available at resolution.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="Ticket to resolution view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="sonasteps-workflow-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="sonasteps-workflow-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/sonasteps-workflow.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open Ticket to resolution as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="sonasteps-workflow-canvas"
+                role="region"
+                aria-labelledby="sonasteps-workflow-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/sonasteps-workflow.svg"
+                  alt="SonaSteps ticket workflow from classification and context retrieval through agent decisions, API calls, and human or automated resolution."
+                  width="1100"
+                  height="468"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  Ticket → Classification → Context Retrieval → Agent Decision →
+                  Tool/API Call → Recommended Action → Human or Automated
+                  Resolution.
+                </p>
+                <p>
+                  AI works alongside deterministic application logic and
+                  business rules; high-impact actions can remain available for
+                  human review.
+                </p>
+              </details>
+            </figure>
+          </section>
+
+          <section class="case-section" id="what-i-built">
+            <h2>What I Built</h2>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>AI-assisted ticket classification</h3>
+                <p>Classification within the support workflow.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Severity and escalation analysis</h3>
+                <p>Severity and escalation context for incoming issues.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Routing recommendations</h3>
+                <p>Recommended routing for support tickets.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Retrieval-augmented knowledge</h3>
+                <p>Product knowledge as context for support work.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Agentic workflows</h3>
+                <p>AI workflows connected to the support process.</p>
+              </article>
+              <article class="feature-card">
+                <h3>API and webhook integrations</h3>
+                <p>Connections between support and application systems.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Integration monitoring</h3>
+                <p>Visibility into integration activity.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Troubleshooting / replay workflows</h3>
+                <p>Workflows for inspecting and replaying failures.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Recommended actions</h3>
+                <p>Suggested next steps within the support workflow.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Customer-facing support experiences</h3>
+                <p>Support experiences built around customer problems.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-section" id="video-walkthrough">
+            <h2>Video Walkthrough</h2>
+            <!-- Add the YouTube video ID to data-youtube-id when ready -->
+            <div
+              class="youtube-embed"
+              data-youtube-id=""
+              data-title="SonaSteps Project Walkthrough"
+            >
+              <div class="video-placeholder">
+                <span class="play-icon" aria-hidden="true"></span>
+                <strong>Video Walkthrough</strong>
+                <span>YouTube video coming soon</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="business-value">
+            <h2>Business Value</h2>
+            <p>
+              SonaSteps demonstrates how AI can be integrated into an actual
+              SaaS workflow. Retrieval, classification, routing, integrations,
+              and recommended actions connect model capabilities to the work a
+              support team needs to do.
+            </p>
+            <p>
+              The project brings more useful context and clearer next steps to a
+              support process that combines AI, application logic, and human
+              judgment.
+            </p>
+          </section>
+
+          <section class="case-section" id="lessons-learned">
+            <h2>Lessons Learned</h2>
+            <ul class="content-list">
+              <li>
+                AI features become more useful when they have access to context,
+                workflows, business rules, and tools.
+              </li>
+              <li>Deterministic application logic still matters.</li>
+              <li>
+                Observability and failure handling matter as much as model
+                capability.
+              </li>
+              <li>
+                Human review should remain available for high-impact actions.
+              </li>
+            </ul>
+          </section>
+
+          <section class="case-section" id="next-iteration">
+            <h2>Next Iteration</h2>
+            <p>
+              The next iteration would focus on evaluation, permissions, model
+              observability, tenant isolation, failure handling, and
+              human-in-the-loop controls.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

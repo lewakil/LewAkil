@@ -1,0 +1,577 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 864"
+  width="1100"
+  height="864"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">SonaSteps — logical system architecture</title>
+  <desc id="desc">
+    Customers send support requests through support channels to the SonaSteps
+    support experience. The SaaS application contains ticket and API services,
+    classification and routing, a retrieval layer, and agent orchestration.
+    Ticket services and agent workflows use ticket and workflow state. The
+    retrieval layer queries a product knowledge index and returns context to the
+    agent. The agent returns recommendations to the support experience, calls
+    external model services, and uses external APIs and webhooks. Support teams
+    use the support experience. Integration events feed monitoring,
+    troubleshooting, and replay. This is a vendor-neutral logical view of the
+    case study, not a cloud deployment diagram.
+  </desc>
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#2563EB"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <marker
+      id="gray-arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#64748B"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <style>
+      text {
+        font-family: Arial, Helvetica, sans-serif;
+        fill: #0f172a;
+      }
+      .heading {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .sub {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .domain {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .node {
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .detail {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .edge-label {
+        font-size: 17px;
+        fill: #64748b;
+      }
+      .num {
+        font-size: 18px;
+        fill: #2563eb;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect width="1100" height="864" fill="white" />
+  <text x="28" y="38" class="heading">SonaSteps · System architecture</text>
+  <text x="28" y="67" class="sub">
+    Logical view of the support platform, its dependencies, and data paths
+  </text>
+  <rect
+    x="220"
+    y="105"
+    width="670"
+    height="620"
+    rx="25"
+    fill="white"
+    stroke="#94A3B8"
+    stroke-width="1.4"
+  />
+  <text x="244" y="133" class="domain">SonaSteps application</text>
+  <rect
+    x="242"
+    y="151"
+    width="626"
+    height="165"
+    rx="17"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <text x="263" y="179" class="domain">Core SaaS services</text>
+  <rect
+    x="242"
+    y="373"
+    width="626"
+    height="166"
+    rx="17"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <text x="263" y="401" class="domain">Retrieval + agent layer</text>
+  <rect
+    x="242"
+    y="578"
+    width="626"
+    height="127"
+    rx="17"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <text x="263" y="605" class="domain">Application data stores</text>
+  <rect
+    x="913"
+    y="151"
+    width="171"
+    height="554"
+    rx="18"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+    stroke-dasharray="6 5"
+  />
+  <text x="998" y="179" class="domain" text-anchor="middle">Dependencies</text>
+  <circle
+    cx="97"
+    cy="171"
+    r="9"
+    fill="#EFF6FF"
+    stroke="#2563EB"
+    stroke-width="1.8"
+  />
+  <path
+    d="M82 200v-6a15 15 0 0 1 30 0v6"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+  />
+  <text x="97" y="226" class="node" text-anchor="middle">Customer</text>
+  <rect
+    x="20"
+    y="269"
+    width="155"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M84 283h24v8a4 4 0 0 0 0 8v8h-24v-8a4 4 0 0 0 0-8z M93 289h7 M93 296h7 M93 303h7"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="97" y="328" class="detail" text-anchor="middle">
+    Support channels
+  </text>
+  <text x="97" y="351" class="detail" text-anchor="middle">Ticket events</text>
+  <circle
+    cx="97"
+    cy="451"
+    r="9"
+    fill="#EFF6FF"
+    stroke="#2563EB"
+    stroke-width="1.8"
+  />
+  <path
+    d="M82 480v-6a15 15 0 0 1 30 0v6"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+  />
+  <text x="97" y="506" class="node" text-anchor="middle">Support team</text>
+  <text x="97" y="532" class="detail" text-anchor="middle">
+    Review + resolve
+  </text>
+  <rect
+    x="261"
+    y="198"
+    width="170"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M274 211h24v17h-24z M286 228v6 M280 234h12"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="346" y="252" class="node" text-anchor="middle">Support</text>
+  <text x="346" y="277" class="node" text-anchor="middle">experience</text>
+  <rect
+    x="456"
+    y="198"
+    width="180"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M469 211h24v8a4 4 0 0 0 0 8v8h-24v-8a4 4 0 0 0 0-8z M478 217h7 M478 224h7 M478 231h7"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="546" y="252" class="node" text-anchor="middle">Ticket + API</text>
+  <text x="546" y="277" class="node" text-anchor="middle">services</text>
+  <rect
+    x="661"
+    y="198"
+    width="186"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M687 213v10 M677 233v-10h20v10 M684 211h6v5h-6z M674 232h6v5h-6z M694 232h6v5h-6z"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="754" y="252" class="node" text-anchor="middle">Classification</text>
+  <text x="754" y="277" class="node" text-anchor="middle">+ routing</text>
+  <rect
+    x="261"
+    y="422"
+    width="220"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M294 452l8 8 M295 444a10 10 0 1 1-20 0a10 10 0 1 1 20 0"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="371" y="475" class="node" text-anchor="middle">RAG / retrieval</text>
+  <text x="371" y="500" class="node" text-anchor="middle">Product context</text>
+  <rect
+    x="562"
+    y="422"
+    width="285"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M583 438h16v18h-16z M591 433v5 M583 445h-5 M599 445h5 M587 445h1 M594 445h1 M587 451h8"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="704" y="475" class="node" text-anchor="middle">
+    Agent orchestration
+  </text>
+  <text x="704" y="500" class="node" text-anchor="middle">
+    Decision + tool calls
+  </text>
+  <path
+    d="M262 630v48c0 12 220 12 220 0v-48"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <ellipse
+    cx="372.0"
+    cy="630"
+    rx="110.0"
+    ry="10"
+    fill="#EFF6FF"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <text x="372.0" y="657" class="node" text-anchor="middle">
+    Knowledge index
+  </text>
+  <path
+    d="M562 630v48c0 12 285 12 285 0v-48"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <ellipse
+    cx="704.5"
+    cy="630"
+    rx="142.5"
+    ry="10"
+    fill="#EFF6FF"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <text x="704.5" y="657" class="node" text-anchor="middle">
+    Tickets + workflow state
+  </text>
+  <rect
+    x="928"
+    y="199"
+    width="141"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M986 236a8 8 0 0 1-1-16a11 11 0 0 1 21-1a8 8 0 0 1 0 17z"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="998" y="254" class="node" text-anchor="middle">Model</text>
+  <text x="998" y="278" class="node" text-anchor="middle">service</text>
+  <rect
+    x="928"
+    y="422"
+    width="141"
+    height="97"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M992 435v7 M1004 435v7 M988 442h20v7a10 10 0 0 1-20 0z M998 459v5"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="998" y="476" class="node" text-anchor="middle">APIs +</text>
+  <text x="998" y="500" class="node" text-anchor="middle">webhooks</text>
+  <path
+    d="M97 242V269"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M175 317H190V245H261"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M111 461H207V277H261"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="146" y="449" class="edge-label">use app</text>
+  <path
+    d="M431 248H456"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M636 248H661"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M754 295V389H714V422"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="622" y="380" class="edge-label">workflow rules</text>
+  <path
+    d="M596 422V348H346V295"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="372" y="339" class="edge-label">recommendations</text>
+  <path
+    d="M481 471H562"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="499" y="458" class="edge-label">context</text>
+  <path
+    d="M371 519V558H520V654H482"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#gray-arrow)"
+    marker-start="url(#gray-arrow)"
+  />
+  <text x="399" y="549" class="edge-label">retrieve</text>
+  <path
+    d="M546 295V328H878V655H847"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#gray-arrow)"
+    marker-start="url(#gray-arrow)"
+  />
+  <text x="585" y="322" class="edge-label">ticket state</text>
+  <path
+    d="M704 519V620"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#gray-arrow)"
+    marker-start="url(#gray-arrow)"
+  />
+  <text x="718" y="560" class="edge-label">workflow state</text>
+  <path
+    d="M806 422V348H901V247H928"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <text x="934" y="328" class="edge-label">model calls</text>
+  <path
+    d="M847 471H928"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+    marker-start="url(#arrow)"
+  />
+  <rect
+    x="220"
+    y="762"
+    width="670"
+    height="74"
+    rx="15"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <path
+    d="M243 789h26v20h-26z M247 802l5-6 5 7 4-8 4 3"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text x="285" y="792" class="node">Integration observability</text>
+  <text x="285" y="819" class="detail">
+    Monitor activity · inspect failures · replay integrations
+  </text>
+  <path
+    d="M555 725V762"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#gray-arrow)"
+    stroke-dasharray="5 5"
+  />
+  <text x="572" y="748" class="edge-label">integration events</text>
+  <path
+    d="M26 799H57"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="66" y="805" class="edge-label">Workflow</text>
+  <path
+    d="M26 827H57"
+    fill="none"
+    stroke="#64748B"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#gray-arrow)"
+    marker-start="url(#gray-arrow)"
+  />
+  <text x="66" y="833" class="edge-label">Data access</text>
+</svg>

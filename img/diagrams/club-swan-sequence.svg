@@ -1,0 +1,220 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1100"
+  height="662"
+  viewBox="0 0 1100 662"
+  role="img"
+  aria-labelledby="diagram-title diagram-desc"
+>
+  <title id="diagram-title">Club Swan sequence: one purchase, one NFT</title>
+  <desc id="diagram-desc">
+    Logical transaction sequence with customer, application backend, mint
+    controls, ERC-721 contract on Ethereum, and metadata plus wallet experience
+    lifelines. A card purchase with a correlation ID is checked for eligibility
+    and mint authorization. A controlled transaction is submitted; a confirmed
+    mint result yields a token ID. Ownership and metadata support the wallet
+    digital twin. If the same purchase is retried, idempotent correlation
+    controls return the existing token result rather than submit a second mint
+    transaction. Authorization and idempotency are responsibilities, not
+    asserted separate deployed services.
+  </desc>
+  <style>
+    text {
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      fill: #0f172a;
+    }
+    .title {
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.35px;
+    }
+    .subtitle {
+      font-size: 19px;
+      fill: #64748b;
+    }
+    .boundary {
+      fill: #f8fafc;
+      stroke: #cbd5e1;
+      stroke-width: 1.4;
+    }
+    .boundary-title {
+      font-size: 21px;
+      font-weight: 650;
+    }
+    .node {
+      fill: #ffffff;
+      stroke: #cbd5e1;
+      stroke-width: 1.5;
+    }
+    .node-title {
+      font-size: 21px;
+      font-weight: 650;
+    }
+    .body {
+      font-size: 19px;
+      fill: #64748b;
+    }
+    .edge {
+      fill: none;
+      stroke: #2563eb;
+      stroke-width: 1.7;
+      stroke-linejoin: round;
+      marker-end: url(#arrow);
+    }
+    .reference {
+      fill: none;
+      stroke: #64748b;
+      stroke-width: 1.5;
+      stroke-dasharray: 5 5;
+      stroke-linejoin: round;
+      marker-end: url(#gray-arrow);
+    }
+    .edge-label {
+      font-size: 17px;
+      fill: #475569;
+      paint-order: stroke;
+      stroke: #ffffff;
+      stroke-width: 5px;
+      stroke-linejoin: round;
+    }
+    .icon {
+      fill: none;
+      stroke: #2563eb;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .note {
+      font-size: 17px;
+      fill: #64748b;
+    }
+    .lifeline {
+      stroke: #cbd5e1;
+      stroke-width: 1.5;
+      stroke-dasharray: 5 6;
+    }
+    .message-label {
+      font-size: 18px;
+      fill: #334155;
+      paint-order: stroke;
+      stroke: white;
+      stroke-width: 5px;
+    }
+  </style>
+  <defs>
+    <marker
+      id="arrow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+      markerUnits="userSpaceOnUse"
+    >
+      <path d="M1 1L7 4L1 7" fill="none" stroke="#2563EB" stroke-width="1.6" />
+    </marker>
+    <marker
+      id="gray-arrow"
+      markerWidth="8"
+      markerHeight="8"
+      refX="7"
+      refY="4"
+      orient="auto"
+      markerUnits="userSpaceOnUse"
+    >
+      <path d="M1 1L7 4L1 7" fill="none" stroke="#64748B" stroke-width="1.6" />
+    </marker>
+  </defs>
+  <rect width="1100" height="662" fill="#FFFFFF" />
+  <text x="24" y="32" class="title">Club Swan · one purchase → one NFT</text>
+  <text x="24" y="61" class="subtitle">
+    Logical transaction sequence · correlation protects mint integrity
+  </text>
+  <rect class="node" x="14" y="88" width="182" height="76" rx="10" />
+  <text x="105" y="133" class="node-title" text-anchor="middle">Customer</text>
+  <path class="lifeline" d="M105 164V626" />
+  <rect class="node" x="219" y="88" width="182" height="76" rx="10" />
+  <text x="310" y="120" class="node-title" text-anchor="middle">
+    Application
+  </text>
+  <text x="310" y="145" class="node-title" text-anchor="middle">backend</text>
+  <path class="lifeline" d="M310 164V626" />
+  <rect class="node" x="444" y="88" width="182" height="76" rx="10" />
+  <text x="535" y="133" class="node-title" text-anchor="middle">
+    Mint controls
+  </text>
+  <path class="lifeline" d="M535 164V626" />
+  <rect class="node" x="669" y="88" width="182" height="76" rx="10" />
+  <text x="760" y="120" class="node-title" text-anchor="middle">
+    ERC-721 contract
+  </text>
+  <text x="760" y="145" class="node-title" text-anchor="middle">Ethereum</text>
+  <path class="lifeline" d="M760 164V626" />
+  <rect class="node" x="894" y="88" width="182" height="76" rx="10" />
+  <text x="985" y="120" class="node-title" text-anchor="middle">
+    Metadata + wallet
+  </text>
+  <text x="985" y="145" class="node-title" text-anchor="middle">
+    experience
+  </text>
+  <path class="lifeline" d="M985 164V626" />
+  <path class="edge" d="M105 211H310" />
+  <path class="edge" d="M310 267H535" />
+  <path class="edge" d="M535 323H760" />
+  <path class="edge" d="M760 435H985" />
+  <path class="reference" d="M760 379H535" />
+  <path class="reference" d="M985 491H105" />
+  <text x="208" y="198" class="message-label" text-anchor="middle">
+    1 Purchase + ID
+  </text>
+  <text x="422" y="254" class="message-label" text-anchor="middle">
+    2 Validate + authorize
+  </text>
+  <text x="647" y="310" class="message-label" text-anchor="middle">
+    3 Submit mint transaction
+  </text>
+  <text x="647" y="366" class="message-label" text-anchor="middle">
+    4 Confirmed mint + token ID
+  </text>
+  <text x="872" y="422" class="message-label" text-anchor="middle">
+    5 Ownership + token URI
+  </text>
+  <text x="545" y="478" class="message-label" text-anchor="middle">
+    6 View the NFT digital twin
+  </text>
+  <rect
+    x="210"
+    y="519"
+    width="648"
+    height="106"
+    rx="10"
+    fill="#F8FAFC"
+    stroke="#CBD5E1"
+    stroke-width="1.5"
+  />
+  <text x="228" y="540" class="body">
+    Retry / partial failure · same purchase correlation ID
+  </text>
+  <path class="edge" d="M310 576H535" />
+  <text x="422" y="566" class="message-label" text-anchor="middle">
+    Repeat request
+  </text>
+  <path class="reference" d="M535 616H310" />
+  <text x="422" y="607" class="message-label" text-anchor="middle">
+    Existing token result
+  </text>
+  <text x="699" y="581" class="node-title" text-anchor="middle">
+    No second NFT
+  </text>
+  <text x="699" y="605" class="note" text-anchor="middle">
+    Idempotent mint controls
+  </text>
+  <text x="24" y="650" class="note">
+    Mint controls include eligibility, authorization and purchase ↔ NFT
+    correlation.
+  </text>
+  <text x="1075" y="650" class="note" text-anchor="end">
+    Responsibilities, not deployment units.
+  </text>
+</svg>

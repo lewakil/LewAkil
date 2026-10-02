@@ -1,0 +1,277 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1100 468"
+  width="1100"
+  height="468"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">SonaSteps — ticket-to-resolution workflow</title>
+  <desc id="desc">
+    A support ticket is classified by category and severity. Relevant context is
+    retrieved, then an agent chooses the next action. The agent uses a tool or
+    API, and the platform produces a recommended action such as routing or
+    troubleshooting. The workflow then branches to human review and resolution
+    or an automated workflow action. Read the first row left to right, then the
+    second row right to left.
+  </desc>
+  <defs>
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#2563EB"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <marker
+      id="gray-arrow"
+      viewBox="0 0 10 10"
+      refX="9"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path
+        d="M1 1 9 5 1 9"
+        fill="none"
+        stroke="#64748B"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+    <style>
+      text {
+        font-family: Arial, Helvetica, sans-serif;
+        fill: #0f172a;
+      }
+      .heading {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .sub {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .domain {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .node {
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .detail {
+        font-size: 19px;
+        fill: #64748b;
+      }
+      .edge-label {
+        font-size: 17px;
+        fill: #64748b;
+      }
+      .num {
+        font-size: 18px;
+        fill: #2563eb;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect width="1100" height="468" fill="white" />
+  <text x="28" y="38" class="heading">SonaSteps · Ticket to resolution</text>
+  <text x="28" y="67" class="sub">
+    A support workflow connecting AI, application logic, and execution
+  </text>
+  <rect
+    x="28"
+    y="112"
+    width="221"
+    height="87"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="50" cy="136" r="13" fill="#EFF6FF" />
+  <text x="50" y="142" class="num" text-anchor="middle">1</text>
+  <text x="74" y="143" class="node">Ticket</text>
+  <text x="47" y="179" class="detail">Support request</text>
+  <rect
+    x="303"
+    y="112"
+    width="221"
+    height="87"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="325" cy="136" r="13" fill="#EFF6FF" />
+  <text x="325" y="142" class="num" text-anchor="middle">2</text>
+  <text x="349" y="143" class="node">Classification</text>
+  <text x="322" y="179" class="detail">Category + severity</text>
+  <rect
+    x="577"
+    y="112"
+    width="221"
+    height="87"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="599" cy="136" r="13" fill="#EFF6FF" />
+  <text x="599" y="142" class="num" text-anchor="middle">3</text>
+  <text x="623" y="143" class="node">Context retrieval</text>
+  <text x="596" y="179" class="detail">Relevant knowledge</text>
+  <rect
+    x="851"
+    y="112"
+    width="221"
+    height="87"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="873" cy="136" r="13" fill="#EFF6FF" />
+  <text x="873" y="142" class="num" text-anchor="middle">4</text>
+  <text x="897" y="143" class="node">Agent decision</text>
+  <text x="870" y="179" class="detail">Choose next action</text>
+  <rect
+    x="851"
+    y="284"
+    width="221"
+    height="96"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="873" cy="308" r="13" fill="#EFF6FF" />
+  <text x="873" y="314" class="num" text-anchor="middle">5</text>
+  <text x="897" y="315" class="node">Tool / API call</text>
+  <text x="870" y="360" class="detail">Integration interaction</text>
+  <rect
+    x="577"
+    y="284"
+    width="221"
+    height="96"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="599" cy="308" r="13" fill="#EFF6FF" />
+  <text x="599" y="314" class="num" text-anchor="middle">6</text>
+  <text x="623" y="315" class="node">Recommended</text>
+  <text x="623" y="339" class="node">action</text>
+  <text x="596" y="360" class="detail">Route / troubleshoot</text>
+  <rect
+    x="28"
+    y="245"
+    width="261"
+    height="82"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="50" cy="269" r="13" fill="#EFF6FF" />
+  <text x="50" y="275" class="num" text-anchor="middle">7</text>
+  <text x="74" y="276" class="node">Human resolution</text>
+  <text x="47" y="307" class="detail">Review + execute</text>
+  <rect
+    x="28"
+    y="355"
+    width="261"
+    height="96"
+    rx="14"
+    fill="white"
+    stroke="#CBD5E1"
+    stroke-width="1.4"
+  />
+  <circle cx="50" cy="379" r="13" fill="#EFF6FF" />
+  <text x="50" y="385" class="num" text-anchor="middle">7</text>
+  <text x="74" y="386" class="node">Automated</text>
+  <text x="74" y="410" class="node">resolution</text>
+  <text x="47" y="431" class="detail">Workflow action</text>
+  <path
+    d="M249 155H303"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M524 155H577"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M798 155H851"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M962 199V284"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <text x="978" y="247" class="edge-label">execute</text>
+  <path
+    d="M851 333H798"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M577 333H431V286H289"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <path
+    d="M431 333V403H289"
+    fill="none"
+    stroke="#2563EB"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    marker-end="url(#arrow)"
+  />
+  <circle cx="431" cy="333" r="4" fill="#2563EB" />
+  <text x="346" y="270" class="edge-label">review</text>
+  <text x="318" y="393" class="edge-label">automate</text>
+</svg>

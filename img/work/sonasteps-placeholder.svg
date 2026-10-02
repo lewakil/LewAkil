@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <title>SonaSteps support workflow concept — screenshots coming soon</title>
+  <rect width="960" height="540" fill="#EDF2F8" />
+  <rect
+    x="44"
+    y="32"
+    width="872"
+    height="476"
+    rx="12"
+    fill="#fff"
+    stroke="#DCE4EE"
+  />
+  <path d="M44 91h872M217 91v417" stroke="#E2E8F0" />
+  <rect x="68" y="52" width="22" height="22" rx="6" fill="#2563EB" />
+  <path
+    d="m73 63 4 4 8-9"
+    stroke="#fff"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text
+    x="100"
+    y="70"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="18"
+    font-weight="650"
+    fill="#0F172A"
+  >
+    SonaSteps
+  </text>
+  <text
+    x="242"
+    y="69"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="13"
+    fill="#64748B"
+  >
+    Support workflows
+  </text>
+  <rect x="69" y="120" width="122" height="30" rx="5" fill="#EFF6FF" />
+  <rect x="83" y="131" width="71" height="7" rx="3" fill="#93B4E9" />
+  <g fill="#E2E8F0">
+    <rect x="83" y="175" width="83" height="7" rx="3" />
+    <rect x="83" y="212" width="61" height="7" rx="3" />
+    <rect x="83" y="249" width="91" height="7" rx="3" />
+    <rect x="83" y="286" width="68" height="7" rx="3" />
+  </g>
+  <text
+    x="247"
+    y="136"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="20"
+    font-weight="650"
+    fill="#0F172A"
+  >
+    From context to action
+  </text>
+  <text
+    x="247"
+    y="162"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="13"
+    fill="#64748B"
+  >
+    A connected customer support experience
+  </text>
+  <rect
+    x="246"
+    y="187"
+    width="293"
+    height="229"
+    rx="8"
+    fill="#F8FAFC"
+    stroke="#E2E8F0"
+  />
+  <text
+    x="263"
+    y="213"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#475569"
+  >
+    TICKET INTAKE
+  </text>
+  <g fill="#fff" stroke="#E2E8F0">
+    <rect x="263" y="230" width="259" height="46" rx="5" />
+    <rect x="263" y="288" width="259" height="46" rx="5" />
+    <rect x="263" y="346" width="259" height="46" rx="5" />
+  </g>
+  <g fill="#DBEAFE">
+    <rect x="277" y="243" width="19" height="19" rx="5" />
+    <rect x="277" y="301" width="19" height="19" rx="5" />
+    <rect x="277" y="359" width="19" height="19" rx="5" />
+  </g>
+  <g fill="#CBD5E1">
+    <rect x="309" y="243" width="113" height="6" rx="3" />
+    <rect x="309" y="301" width="128" height="6" rx="3" />
+    <rect x="309" y="359" width="100" height="6" rx="3" />
+  </g>
+  <g fill="#E2E8F0">
+    <rect x="309" y="255" width="165" height="5" rx="2" />
+    <rect x="309" y="313" width="147" height="5" rx="2" />
+    <rect x="309" y="371" width="162" height="5" rx="2" />
+  </g>
+  <rect
+    x="560"
+    y="187"
+    width="330"
+    height="229"
+    rx="8"
+    fill="#F8FAFC"
+    stroke="#E2E8F0"
+  />
+  <text
+    x="579"
+    y="213"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12"
+    font-weight="600"
+    fill="#475569"
+  >
+    WORKFLOW
+  </text>
+  <g fill="#fff" stroke="#DCE4EE">
+    <rect x="579" y="232" width="290" height="38" rx="5" />
+    <rect x="579" y="289" width="290" height="38" rx="5" />
+    <rect x="579" y="346" width="290" height="38" rx="5" />
+  </g>
+  <g
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="13"
+    fill="#475569"
+  >
+    <text x="596" y="256">Classify + retrieve context</text>
+    <text x="596" y="313">Recommend a next action</text>
+    <text x="596" y="370">Review + route</text>
+  </g>
+  <path d="M725 271v17m0 39v18" stroke="#93B4E9" stroke-width="1.5" />
+  <rect x="385" y="447" width="363" height="32" rx="16" fill="#EFF3F8" />
+  <text
+    x="566"
+    y="468"
+    text-anchor="middle"
+    font-family="system-ui,-apple-system,sans-serif"
+    font-size="12"
+    fill="#64748B"
+  >
+    Concept placeholder · Product screenshots coming soon
+  </text>
+</svg>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>Club Swan | Lew Akil</title>
+    <meta
+      name="description"
+      content="A case study in connecting prepaid card purchases to ERC-721 digital twins through controlled minting, portable metadata, and secure authorization."
+    />
+    <link rel="canonical" href="https://lewakil.com/club-swan.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta property="og:title" content="Club Swan | Lew Akil" />
+    <meta
+      property="og:description"
+      content="A case study in connecting prepaid card purchases to ERC-721 digital twins through controlled minting, portable metadata, and secure authorization."
+    />
+    <meta property="og:url" content="https://lewakil.com/club-swan.html" />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/main_photo.jpg"
+    />
+    <meta property="og:image:alt" content="Portrait of Lew Akil" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <script src="js/brand.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html" aria-current="page">Work</a
+          ><a href="writing.html">Writing</a><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero wave-hero">
+        <img
+          class="brand-wave"
+          src="img/brand-wave.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="container">
+          <a class="back-link" href="portfolio.html"
+            ><span aria-hidden="true">←</span> Back to Work</a
+          >
+          <h1>Club Swan</h1>
+          <p class="project-subtitle">Physical card → NFT digital twin</p>
+          <p class="hero-description">
+            A system that connected purchased prepaid cards to ERC-721 digital
+            assets, linking real-world ownership with blockchain-based digital
+            experiences.
+          </p>
+          <ul class="tags" aria-label="Project topics">
+            <li>Ethereum</li>
+            <li>ERC-721</li>
+            <li>Solidity</li>
+            <li>OpenZeppelin</li>
+            <li>IPFS</li>
+            <li>Web3</li>
+            <li>Architecture</li>
+          </ul>
+          <a class="button button-primary" href="#video-walkthrough"
+            >Watch Video <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+
+      <div class="container case-layout">
+        <aside class="case-nav" aria-label="Case study sections">
+          <p class="case-nav-title">In this case study</p>
+          <nav aria-label="Club Swan case study">
+            <a href="#overview">Overview</a>
+            <a href="#the-problem">The Problem</a>
+            <a href="#my-role">My Role</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#implementation">Implementation</a>
+            <a href="#video-walkthrough">Video Walkthrough</a>
+            <a href="#outcome">Outcome</a>
+            <a href="#lessons-learned">Lessons Learned</a>
+          </nav>
+        </aside>
+        <article class="case-content" aria-label="Club Swan case study">
+          <section class="case-section" id="overview">
+            <h2>Overview</h2>
+            <p>
+              Designed and delivered a system that minted an ERC-721 NFT as a
+              “digital twin” for each purchased prepaid card, connecting
+              real-world purchases to on-chain proof of ownership and enabling
+              digital-first experiences through verifiable tokenization.
+            </p>
+            <img
+              class="case-image"
+              src="img/portfolio/project1/1.jpg"
+              alt="Club Swan mobile account interface showing a prepaid card alongside the Club Swan wordmark"
+              width="678"
+              height="381"
+              loading="lazy"
+            />
+            <p>
+              <a
+                class="text-link"
+                href="https://clubswan.com"
+                target="_blank"
+                rel="noopener"
+                >Visit Club Swan <span aria-hidden="true">↗</span></a
+              >
+            </p>
+          </section>
+
+          <section class="case-section" id="the-problem">
+            <h2>The Problem</h2>
+            <p>
+              A prepaid card purchase needed to trigger a controlled mint
+              request that connected a real-world commercial event to an
+              on-chain asset.
+            </p>
+            <p>
+              The system needed to validate eligibility and authorization,
+              preserve one purchase → one NFT through retries or partial
+              failures, and provide metadata that could travel across compatible
+              digital experiences.
+            </p>
+          </section>
+
+          <section class="case-section" id="my-role">
+            <h2>My Role</h2>
+            <p>
+              <strong>Technical Lead + Hands-on Engineer.</strong> Co-owned
+              end-to-end architecture decisions, delivery planning, and
+              implementation support across blockchain and application teams.
+            </p>
+            <ul class="content-list">
+              <li>
+                Mapped purchase event → mint authorization → on-chain mint →
+                metadata publication, aligning contracts, services, and
+                operational controls.
+              </li>
+              <li>
+                Evaluated platforms and tooling, including IPFS, and documented
+                constraints, tradeoffs, and recommended integration patterns.
+              </li>
+              <li>
+                Provided PR reviews and implementation support, contributed code
+                when needed, and unblocked issues across smart contract and
+                integration layers.
+              </li>
+              <li>
+                Authored architecture documentation, implementation
+                specifications, and workflows to keep delivery consistent and
+                extensible.
+              </li>
+              <li>
+                Worked across blockchain, backend, frontend, and QA, translating
+                progress into executive-ready updates and de-risking milestones.
+              </li>
+            </ul>
+          </section>
+
+          <section class="case-section" id="architecture">
+            <h2>Architecture</h2>
+            <p>
+              The system connects a real-world purchase to controlled mint
+              authorization, an ERC-721 asset on Ethereum, and the customer’s
+              digital experience. The application, blockchain, and external
+              services have distinct responsibilities.
+            </p>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="club-swan-system-title">System architecture</h3>
+                <p>
+                  Application services authorize the purchase-to-mint flow;
+                  Ethereum maintains the ERC-721 asset and its ownership.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="System architecture view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="club-swan-system-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="club-swan-system-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/club-swan-architecture.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open System architecture as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="club-swan-system-canvas"
+                role="region"
+                aria-labelledby="club-swan-system-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/club-swan-architecture.svg"
+                  alt="Club Swan logical architecture with application, Ethereum blockchain, and external-service boundaries connecting prepaid card purchases to NFT ownership."
+                  width="1100"
+                  height="752"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  A physical card purchase generates an event for the
+                  application/backend. Eligibility checks and controlled mint
+                  authorization connect the purchase to an ERC-721 mint request,
+                  with correlation identifiers supporting one purchase → one
+                  NFT.
+                </p>
+                <p>
+                  The OpenZeppelin-based ERC-721 contract operates on Ethereum.
+                  On-chain mint results, ownership, and metadata references
+                  support the customer wallet and digital experience.
+                </p>
+                <p>
+                  Metadata publication supports portability. IPFS is shown as an
+                  evaluated storage option, matching the project’s integration
+                  research.
+                </p>
+              </details>
+            </figure>
+            <figure
+              class="architecture-diagram"
+              data-diagram
+              style="--diagram-width: 1100px"
+            >
+              <figcaption class="diagram-heading">
+                <h3 id="club-swan-sequence-title">One purchase → one NFT</h3>
+                <p>
+                  The transaction sequence preserves the purchase-to-token
+                  relationship through retries and partial failures.
+                </p>
+              </figcaption>
+              <div
+                class="diagram-tools"
+                aria-label="One purchase → one NFT view controls"
+              >
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="fit"
+                  aria-pressed="true"
+                  aria-controls="club-swan-sequence-canvas"
+                  hidden
+                >
+                  Fit diagram
+                </button>
+                <button
+                  class="diagram-toggle"
+                  type="button"
+                  data-diagram-view="detail"
+                  aria-pressed="false"
+                  aria-controls="club-swan-sequence-canvas"
+                  hidden
+                >
+                  Read labels
+                </button>
+                <a
+                  class="diagram-source"
+                  href="img/diagrams/club-swan-sequence.svg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open One purchase → one NFT as an SVG"
+                  >Open SVG <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div
+                class="diagram-canvas"
+                id="club-swan-sequence-canvas"
+                role="region"
+                aria-labelledby="club-swan-sequence-title"
+                tabindex="0"
+              >
+                <img
+                  src="img/diagrams/club-swan-sequence.svg"
+                  alt="Club Swan purchase-to-NFT sequence showing eligibility, controlled minting, metadata, ownership, and an idempotent retry path."
+                  width="1100"
+                  height="662"
+                  loading="lazy"
+                />
+              </div>
+              <p class="diagram-help">
+                Open the SVG to inspect labels, or read the diagram description
+                below.
+              </p>
+              <details class="diagram-description">
+                <summary>Diagram description</summary>
+                <p>
+                  A purchase event and its correlation identifier reach the
+                  backend. The system checks eligibility and prior mint state,
+                  authorizes a controlled request, and submits the ERC-721 mint
+                  transaction on Ethereum.
+                </p>
+                <p>
+                  The resulting token and transaction are correlated with the
+                  purchase. Metadata and ownership support the wallet’s digital
+                  experience. A repeated purchase event uses the existing mint
+                  result rather than creating a second NFT.
+                </p>
+              </details>
+            </figure>
+          </section>
+
+          <section class="case-section" id="implementation">
+            <h2>Implementation</h2>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>ERC-721 minting</h3>
+                <p>
+                  Implemented ERC-721 minting patterns using OpenZeppelin, with
+                  token metadata structured for marketplace interoperability.
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3>Mint integrity</h3>
+                <p>
+                  Designed idempotent mint logic and correlation identifiers to
+                  preserve one purchase → one NFT under retries or partial
+                  failures.
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3>Metadata portability</h3>
+                <p>
+                  Evaluated IPFS storage and metadata formats for portability
+                  and compatibility with marketplace ingestion requirements.
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3>Authorization boundaries</h3>
+                <p>
+                  Considered mint permissions and verification controls to
+                  protect the minting process and contract interactions.
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3>Wallet and access foundations</h3>
+                <p>
+                  Defined wallet ownership and access assumptions for viewing
+                  and transferring NFTs as digital counterparts to physical
+                  cards.
+                </p>
+              </article>
+              <article class="feature-card">
+                <h3>Delivery support</h3>
+                <p>
+                  Connected architecture documentation, implementation
+                  specifications, PR reviews, and cross-functional engineering
+                  work.
+                </p>
+              </article>
+            </div>
+            <img
+              class="case-image"
+              src="img/portfolio/project1/2.jpg"
+              alt="Club Swan prepaid card artwork featuring three physical card designs and cryptocurrency imagery"
+              width="980"
+              height="653"
+              loading="lazy"
+            />
+          </section>
+
+          <section class="case-section" id="video-walkthrough">
+            <h2>Video Walkthrough</h2>
+            <!-- Add the YouTube video ID to data-youtube-id when ready -->
+            <div
+              class="youtube-embed"
+              data-youtube-id=""
+              data-title="Club Swan Project Walkthrough"
+            >
+              <div class="video-placeholder">
+                <span class="play-icon" aria-hidden="true"></span>
+                <strong>Video Walkthrough</strong>
+                <span>YouTube video coming soon</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="outcome">
+            <h2>Outcome</h2>
+            <p>
+              Delivered a production-ready architecture that reliably connected
+              prepaid card purchases to ERC-721 minting, enabling verifiable
+              digital twin ownership and marketplace-compatible metadata.
+            </p>
+            <p>
+              The design emphasized mint integrity, secure authorization
+              boundaries, and portable storage patterns, providing a foundation
+              that could be extended for future card programs, loyalty
+              experiences, or digital benefits tied to verified ownership.
+            </p>
+          </section>
+
+          <section class="case-section" id="lessons-learned">
+            <h2>Lessons Learned</h2>
+            <p>
+              The interesting part wasn’t simply minting an NFT. The harder
+              problem was reliably connecting a real-world commercial event to
+              blockchain infrastructure while keeping the experience
+              understandable and controlled.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
