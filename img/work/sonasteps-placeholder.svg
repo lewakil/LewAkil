@@ -7,10 +7,10 @@
   aria-labelledby="concept-title concept-desc"
 >
   <title id="concept-title">
-    SonaSteps family learning concept · Screenshots coming soon
+    SonaSteps family learning concept illustration
   </title>
   <desc id="concept-desc">
-    A neutral concept placeholder for a family learning experience, showing
+    A concept illustration of a family learning experience, showing
     activities, learning resources, and caregiver practice history. This is an
     illustration, not a product screenshot or a claim of implemented AI or
     approved educational content.
@@ -184,6 +184,6 @@
   <rect x="649" y="428" width="86" height="15" rx="5" fill="#E2E8F0" />
   <rect x="744" y="428" width="127" height="15" rx="5" fill="#E2E8F0" />
   <text x="480" y="491" text-anchor="middle" font-size="13" class="muted">
-    Concept placeholder · Screenshots coming soon
+    Family learning concept illustration
   </text>
 </svg>
