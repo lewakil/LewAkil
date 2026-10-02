@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>
+      What Building SonaSteps Taught Me About AI Product Design | Lew Akil
+    </title>
+    <meta
+      name="description"
+      content="Designing for DHH families has made the boundaries around AI more interesting than the model call itself."
+    />
+    <link
+      rel="canonical"
+      href="https://lewakil.com/sonasteps-ai-product-design.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta
+      property="og:title"
+      content="What Building SonaSteps Taught Me About AI Product Design"
+    />
+    <meta
+      property="og:description"
+      content="Designing for DHH families has made the boundaries around AI more interesting than the model call itself."
+    />
+    <meta
+      property="og:url"
+      content="https://lewakil.com/sonasteps-ai-product-design.html"
+    />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/writing/sonasteps-ai-design-social.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="An open book of learning material beside a family question, with bounded AI help and separate application-owned state."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/writing.css" />
+    <script src="js/brand.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What Building SonaSteps Taught Me About AI Product Design",
+        "description": "Designing for DHH families has made the boundaries around AI more interesting than the model call itself.",
+        "author": {
+          "@type": "Person",
+          "name": "Lew Akil",
+          "url": "https://lewakil.com/about.html"
+        },
+        "mainEntityOfPage": "https://lewakil.com/sonasteps-ai-product-design.html",
+        "image": "https://lewakil.com/img/writing/sonasteps-ai-design-social.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body class="essay-sona">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html">Work</a
+          ><a href="writing.html" aria-current="page">Writing</a
+          ><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <header class="essay-hero" id="article-top">
+          <div class="container">
+            <a
+              class="essay-back"
+              href="writing.html#sonasteps-ai-product-design"
+              ><span aria-hidden="true">←</span> Back to Writing</a
+            >
+            <div class="essay-hero-grid">
+              <div class="essay-hero-copy">
+                <p class="essay-kicker">AI &amp; product design</p>
+                <h1 id="article-title">
+                  What Building SonaSteps Taught Me About AI Product Design
+                </h1>
+                <p class="essay-deck">
+                  Designing for DHH families has made the boundaries around AI
+                  more interesting than the model call itself.
+                </p>
+                <div class="essay-meta">
+                  <img
+                    src="img/main_photo.jpg"
+                    alt=""
+                    width="36"
+                    height="36"
+                  /><span>By <a href="about.html">Lew Akil</a> · Essay</span>
+                </div>
+              </div>
+              <figure class="essay-art">
+                <img
+                  src="img/writing/sonasteps-ai-design.svg"
+                  alt="An open book of learning material beside a family question, with bounded AI help and separate application-owned state."
+                  width="960"
+                  height="640"
+                  fetchpriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+        </header>
+        <div class="container essay-layout">
+          <aside class="essay-aside">
+            <p class="essay-toc-title">In this article</p>
+            <nav class="essay-toc" aria-label="Article sections">
+              <a href="#start-with-cognitive-work-not-ai-features"
+                >Start with cognitive work, not AI features</a
+              ><a href="#the-model-should-not-become-the-application"
+                >The model should not become the application</a
+              ><a
+                href="#a-family-shouldn-t-need-to-speak-the-application-s-language"
+                >A family shouldn't need to speak the application's language</a
+              ><a href="#rag-is-useful-when-the-knowledge-boundary-matters"
+                >RAG is useful when the knowledge boundary matters</a
+              ><a
+                href="#retrieval-and-generation-should-be-evaluated-separately"
+                >Retrieval and generation should be evaluated separately</a
+              ><a
+                href="#personalization-doesn-t-mean-sending-everything-to-the-model"
+                >Personalization doesn't mean sending everything to the model</a
+              ><a href="#generated-examples-need-a-source-boundary"
+                >Generated examples need a source boundary</a
+              ><a href="#agents-are-really-about-controlled-tool-access"
+                >Agents are really about controlled tool access</a
+              ><a href="#human-in-the-loop-isn-t-a-weakness"
+                >Human-in-the-loop isn't a weakness</a
+              ><a href="#ai-safety-is-partly-an-architecture-problem"
+                >AI safety is partly an architecture problem</a
+              ><a href="#ai-observability-is-product-infrastructure"
+                >AI observability is product infrastructure</a
+              ><a href="#model-selection-should-come-after-the-task"
+                >Model selection should come after the task</a
+              ><a href="#a-good-ai-interface-doesn-t-have-to-look-like-chat"
+                >A good AI interface doesn't have to look like chat</a
+              ><a href="#the-system-around-the-model-is-the-product"
+                >The system around the model is the product</a
+              >
+            </nav>
+            <a href="#article-top">Back to top ↑</a>
+          </aside>
+          <div>
+            <details class="essay-mobile-toc">
+              <summary>In this article · 14 sections</summary>
+              <nav class="essay-toc" aria-label="Article sections on mobile">
+                <a href="#start-with-cognitive-work-not-ai-features"
+                  >Start with cognitive work, not AI features</a
+                ><a href="#the-model-should-not-become-the-application"
+                  >The model should not become the application</a
+                ><a
+                  href="#a-family-shouldn-t-need-to-speak-the-application-s-language"
+                  >A family shouldn't need to speak the application's
+                  language</a
+                ><a href="#rag-is-useful-when-the-knowledge-boundary-matters"
+                  >RAG is useful when the knowledge boundary matters</a
+                ><a
+                  href="#retrieval-and-generation-should-be-evaluated-separately"
+                  >Retrieval and generation should be evaluated separately</a
+                ><a
+                  href="#personalization-doesn-t-mean-sending-everything-to-the-model"
+                  >Personalization doesn't mean sending everything to the
+                  model</a
+                ><a href="#generated-examples-need-a-source-boundary"
+                  >Generated examples need a source boundary</a
+                ><a href="#agents-are-really-about-controlled-tool-access"
+                  >Agents are really about controlled tool access</a
+                ><a href="#human-in-the-loop-isn-t-a-weakness"
+                  >Human-in-the-loop isn't a weakness</a
+                ><a href="#ai-safety-is-partly-an-architecture-problem"
+                  >AI safety is partly an architecture problem</a
+                ><a href="#ai-observability-is-product-infrastructure"
+                  >AI observability is product infrastructure</a
+                ><a href="#model-selection-should-come-after-the-task"
+                  >Model selection should come after the task</a
+                ><a href="#a-good-ai-interface-doesn-t-have-to-look-like-chat"
+                  >A good AI interface doesn't have to look like chat</a
+                ><a href="#the-system-around-the-model-is-the-product"
+                  >The system around the model is the product</a
+                >
+              </nav>
+            </details>
+            <div class="essay-prose">
+              <div data-draft>
+                <p>The easiest AI product to build is a text box.</p>
+                <p>Give the user an input.</p>
+                <p>Send their message to a model.</p>
+                <p>Display the response.</p>
+                <p>You can build something impressive surprisingly quickly.</p>
+                <p>The harder question comes afterwards:</p>
+                <p><strong>What exactly did we build?</strong></p>
+                <p>
+                  That question has shaped how I&#39;m thinking about SonaSteps.
+                </p>
+                <p>
+                  SonaSteps is a product for families and caregivers of children
+                  who are deaf or hard of hearing. The broader product problem
+                  isn&#39;t “How do we put a chatbot in the application?”
+                </p>
+                <p>The more useful question is:</p>
+                <p>
+                  <strong
+                    >Where can AI reduce the effort required for families to
+                    understand and use specialized information?</strong
+                  >
+                </p>
+                <p>That distinction matters.</p>
+                <p>It changes the architecture.</p>
+                <p>It changes what data the model should see.</p>
+                <p>It changes where deterministic software belongs.</p>
+                <p>It changes how retrieval should work.</p>
+                <p>And it changes where AI should stop.</p>
+                <p>
+                  Some of the architecture I&#39;m describing here is the
+                  direction I&#39;m designing toward rather than a claim that
+                  every component is already operating in production. That&#39;s
+                  important because AI prototypes have a tendency to become
+                  architecture diagrams before they become systems.
+                </p>
+                <p>
+                  The interesting part is deciding what deserves to become part
+                  of the system.
+                </p>
+                <aside
+                  class="essay-context"
+                  data-editor-note
+                  aria-label="SonaSteps implementation context"
+                >
+                  <strong>Prototype and planned AI</strong>
+                  <p>
+                    The current SonaSteps prototype includes activities and
+                    guides, family profiles, deterministic suggestions, and
+                    caregiver practice history. The AI companion, RAG, model
+                    calls, evaluation, and observability discussed here remain
+                    planned. Lesson IDs and completion fields in the examples
+                    are illustrative; current progress records caregiver
+                    practice. Educational material remains draft and subject to
+                    review.
+                  </p>
+                  <p>
+                    <a href="sonasteps.html"
+                      >See the current SonaSteps case study →</a
+                    >
+                  </p>
+                </aside>
+                <h2 id="start-with-cognitive-work-not-ai-features">
+                  Start with cognitive work, not AI features
+                </h2>
+                <p>A common AI product exercise starts with capabilities:</p>
+                <p>We could add chat.</p>
+                <p>We could summarize.</p>
+                <p>We could use RAG.</p>
+                <p>We could build an agent.</p>
+                <p>We could add recommendations.</p>
+                <p>That&#39;s backwards.</p>
+                <p>
+                  I prefer starting with the work the user is already doing.
+                </p>
+                <p>
+                  For a family using specialized educational material, that work
+                  might include trying to understand terminology, finding the
+                  right lesson, connecting one concept to another, remembering
+                  what they&#39;ve already covered, or figuring out how a lesson
+                  applies in ordinary life.
+                </p>
+                <p>Those are different problems.</p>
+                <p>And they don&#39;t all need the same technical solution.</p>
+                <p>Sometimes the answer is search.</p>
+                <p>Sometimes it&#39;s better information architecture.</p>
+                <p>Sometimes it&#39;s a deterministic recommendation.</p>
+                <p>Sometimes AI actually helps.</p>
+                <p>The useful question isn&#39;t:</p>
+                <blockquote>
+                  <p>“Where can we use an LLM?”</p>
+                </blockquote>
+                <p>It&#39;s:</p>
+                <blockquote>
+                  <p>
+                    <strong
+                      >“Where is ambiguity creating work for the user?”</strong
+                    >
+                  </p>
+                </blockquote>
+                <p>That&#39;s where language models become interesting.</p>
+                <h2 id="the-model-should-not-become-the-application">
+                  The model should not become the application
+                </h2>
+                <p>
+                  One of the biggest architectural mistakes I see in AI
+                  prototypes is giving the model responsibility for things
+                  normal software is better at.
+                </p>
+                <p>Suppose a family has completed lessons 1, 2, and 4.</p>
+                <p>The model should not “remember” that.</p>
+                <p>The application should.</p>
+                <p>
+                  Suppose the user isn&#39;t authorized to access another
+                  family&#39;s information.
+                </p>
+                <p>The model should not decide that.</p>
+                <p>The authorization layer should.</p>
+                <p>Suppose a curriculum defines the next available lesson.</p>
+                <p>The model doesn&#39;t need to invent the curriculum.</p>
+                <p>The application already has rules.</p>
+                <p>That leads to a principle I&#39;ve found useful:</p>
+                <p>
+                  <strong
+                    >Use AI for ambiguity. Use software for guarantees.</strong
+                  >
+                </p>
+                <p>The deterministic application owns things like:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Authentication
+Authorization
+User state
+Family state
+Lesson state
+Progress
+Permissions
+Content IDs
+Database writes
+Business rules
+Allowed actions
+</code></pre>
+                <p>The AI layer is better suited to things like:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Natural-language understanding
+Explanation
+Summarization
+Retrieval assistance
+Question answering
+Content discovery
+Generating contextual examples
+Interpreting user intent
+</code></pre>
+                <p>This separation isn&#39;t just architectural neatness.</p>
+                <p>It determines how much you can trust the system.</p>
+                <h2
+                  id="a-family-shouldn-t-need-to-speak-the-application-s-language"
+                >
+                  A family shouldn&#39;t need to speak the application&#39;s
+                  language
+                </h2>
+                <p>
+                  Traditional software makes users adapt to its information
+                  architecture.
+                </p>
+                <p>You need to know which menu contains the feature.</p>
+                <p>You need to know the terminology used by the application.</p>
+                <p>
+                  You need to know whether something is a lesson, resource,
+                  activity, module, or setting.
+                </p>
+                <p>Natural-language interfaces can invert some of that.</p>
+                <p>
+                  Instead of requiring the user to understand the navigation
+                  tree, they can say:
+                </p>
+                <blockquote>
+                  <p>“Where can I learn more about this?”</p>
+                </blockquote>
+                <p>or:</p>
+                <blockquote>
+                  <p>“What does this term mean?”</p>
+                </blockquote>
+                <p>or:</p>
+                <blockquote>
+                  <p>“Can you explain this lesson more simply?”</p>
+                </blockquote>
+                <p>The model doesn&#39;t have to own the answer.</p>
+                <p>It can help interpret the question.</p>
+                <p>That&#39;s a subtle but important difference.</p>
+                <p>For example:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Family question
+      ↓
+Intent understanding
+      ↓
+Application search / retrieval
+      ↓
+Approved SonaSteps content
+      ↓
+Model explanation
+      ↓
+Validated response
+      ↓
+Family
+</code></pre>
+                <p>
+                  The AI is functioning as an interface between human language
+                  and structured application knowledge.
+                </p>
+                <p>
+                  That&#39;s much more interesting to me than bolting a generic
+                  chatbot onto the corner of the screen.
+                </p>
+                <h2 id="rag-is-useful-when-the-knowledge-boundary-matters">
+                  RAG is useful when the knowledge boundary matters
+                </h2>
+                <p>
+                  Retrieval-augmented generation gets discussed so often that
+                  “we use RAG” can sound like an AI product strategy by itself.
+                </p>
+                <p>It isn&#39;t.</p>
+                <p>The useful question is:</p>
+                <p><strong>Why does this system need retrieval?</strong></p>
+                <p>For SonaSteps, one potential reason is straightforward.</p>
+                <p>
+                  If a family asks a question about SonaSteps educational
+                  content, I don&#39;t want the system treating a
+                  general-purpose model&#39;s training data as the authoritative
+                  source.
+                </p>
+                <p>
+                  I want the system to retrieve relevant approved content first.
+                </p>
+                <p>Conceptually:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Question
+   ↓
+Retrieve relevant material
+   ↓
+Build context
+   ↓
+Model receives:
+- user question
+- relevant approved material
+- response instructions
+   ↓
+Grounded answer
+   ↓
+Source references
+</code></pre>
+                <p>But even that diagram hides most of the engineering work.</p>
+                <p>Retrieval raises its own questions.</p>
+                <p>How is content divided?</p>
+                <p>What metadata is stored?</p>
+                <p>Can different content types be searched together?</p>
+                <p>
+                  Should lessons and product-support documentation live in the
+                  same retrieval domain?
+                </p>
+                <p>How do permissions affect retrieval?</p>
+                <p>What happens when retrieval returns nothing useful?</p>
+                <p>
+                  What happens when it returns something semantically similar
+                  but wrong?
+                </p>
+                <p>
+                  How do we evaluate whether the correct content was retrieved?
+                </p>
+                <p>The model is only one part of the quality problem.</p>
+                <p>
+                  A powerful model with bad context can still produce a
+                  confident bad answer.
+                </p>
+                <h2
+                  id="retrieval-and-generation-should-be-evaluated-separately"
+                >
+                  Retrieval and generation should be evaluated separately
+                </h2>
+                <p>This becomes especially important when debugging.</p>
+                <p>
+                  Suppose the user asks a question and receives a poor answer.
+                </p>
+                <p>There are at least two major possibilities.</p>
+                <p>
+                  The model may have received the correct information and
+                  generated a bad response.
+                </p>
+                <p>
+                  Or the retrieval layer may never have supplied the correct
+                  information in the first place.
+                </p>
+                <p>Those are different failures.</p>
+                <p>
+                  A useful AI evaluation system should therefore be able to ask:
+                </p>
+                <p>
+                  <strong>Retrieval:</strong> Did we retrieve the right source?
+                </p>
+                <p>
+                  <strong>Generation:</strong> Given the right source, did the
+                  model produce a grounded and useful answer?
+                </p>
+                <p>
+                  If you only evaluate the final response, you can spend hours
+                  changing prompts to fix a retrieval problem.
+                </p>
+                <p>
+                  That&#39;s one of the broader lessons I take from AI product
+                  design:
+                  <strong
+                    >observability has to extend into the AI pipeline.</strong
+                  >
+                </p>
+                <h2
+                  id="personalization-doesn-t-mean-sending-everything-to-the-model"
+                >
+                  Personalization doesn&#39;t mean sending everything to the
+                  model
+                </h2>
+                <p>
+                  SonaSteps becomes more interesting when the system can
+                  understand some application context.
+                </p>
+                <p>
+                  For example, perhaps the user is currently viewing a
+                  particular lesson.
+                </p>
+                <p>
+                  The AI doesn&#39;t need every piece of information the
+                  application has ever stored about the family.
+                </p>
+                <p>It may only need:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="json example"
+                ><code class="language-json">{
+  &quot;currentLesson&quot;: &quot;lesson_17&quot;,
+  &quot;section&quot;: &quot;activity_examples&quot;,
+  &quot;completedLessons&quot;: [&quot;lesson_12&quot;, &quot;lesson_14&quot;],
+  &quot;question&quot;: &quot;Can you explain this another way?&quot;
+}
+</code></pre>
+                <p>
+                  That is a better architecture than dumping a complete user
+                  record into a prompt because “more context is better.”
+                </p>
+                <p>Context has cost.</p>
+                <p>There is token cost.</p>
+                <p>Latency cost.</p>
+                <p>Privacy cost.</p>
+                <p>Relevance cost.</p>
+                <p>
+                  And sometimes quality cost: irrelevant context can make it
+                  harder for the model to focus on what actually matters.
+                </p>
+                <p>
+                  Context construction should therefore be an application
+                  concern.
+                </p>
+                <p>The system should deliberately decide:</p>
+                <p>
+                  <strong>What does the model need for this request?</strong>
+                </p>
+                <p>Not:</p>
+                <p><strong>What data can we possibly send it?</strong></p>
+                <h2 id="generated-examples-need-a-source-boundary">
+                  Generated examples need a source boundary
+                </h2>
+                <p>
+                  One family-facing idea I find interesting is helping translate
+                  approved learning material into understandable examples.
+                </p>
+                <p>Suppose a lesson explains a concept and the parent asks:</p>
+                <blockquote>
+                  <p>“Can you give me another example?”</p>
+                </blockquote>
+                <p>There are two things happening.</p>
+                <p>The lesson itself is source material.</p>
+                <p>The new example is generated material.</p>
+                <p>
+                  The interface should not pretend those are the same thing.
+                </p>
+                <p>I would rather expose that distinction.</p>
+                <p>For example:</p>
+                <p><strong>Based on:</strong> Lesson X, section Y</p>
+                <p>
+                  <strong>Example:</strong> Here&#39;s another way this concept
+                  might look during a normal family routine…
+                </p>
+                <p>That design choice helps preserve provenance.</p>
+                <p>The application can say, in effect:</p>
+                <p>
+                  <strong
+                    >This is the material we know. This is the explanation or
+                    example the AI created from it.</strong
+                  >
+                </p>
+                <p>
+                  That boundary becomes more important as AI interfaces move
+                  beyond simple question answering.
+                </p>
+                <h2 id="agents-are-really-about-controlled-tool-access">
+                  Agents are really about controlled tool access
+                </h2>
+                <p>
+                  “Agent” is another word that can hide a lot of architectural
+                  detail.
+                </p>
+                <p>
+                  An agent becomes more interesting when the model can do
+                  something.
+                </p>
+                <p>For SonaSteps, imagine the model interprets:</p>
+                <blockquote>
+                  <p>“Show me the lesson we were looking at yesterday.”</p>
+                </blockquote>
+                <p>The model might determine an intent:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="json example"
+                ><code class="language-json">{
+  &quot;intent&quot;: &quot;find_recent_lesson&quot;,
+  &quot;requiresTool&quot;: true
+}
+</code></pre>
+                <p>But the model should not query the database directly.</p>
+                <p>Instead:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Model
+  ↓
+requests permitted tool
+  ↓
+Application validates request
+  ↓
+Authorization check
+  ↓
+Application queries data
+  ↓
+Structured result
+  ↓
+Model / UI
+</code></pre>
+                <p>That pattern is much safer and easier to reason about.</p>
+                <p>The model proposes.</p>
+                <p>The application decides.</p>
+                <p>This becomes even more important for write operations.</p>
+                <p>Reading a lesson is different from changing user data.</p>
+                <p>Changing user data is different from sending a message.</p>
+                <p>
+                  Sending a message is different from making a high-impact
+                  decision.
+                </p>
+                <p>Autonomy shouldn&#39;t be binary.</p>
+                <p>A principle I like is:</p>
+                <p>
+                  <strong
+                    >Give AI autonomy proportional to the cost of being
+                    wrong.</strong
+                  >
+                </p>
+                <h2 id="human-in-the-loop-isn-t-a-weakness">
+                  Human-in-the-loop isn&#39;t a weakness
+                </h2>
+                <p>
+                  There&#39;s sometimes an assumption that the “best” AI product
+                  is the one that eliminates the human.
+                </p>
+                <p>I don&#39;t think that&#39;s a useful goal.</p>
+                <p>Sometimes the human is part of the correct architecture.</p>
+                <p>
+                  Especially when the system reaches the edge of its intended
+                  knowledge or authority.
+                </p>
+                <p>
+                  SonaSteps can potentially help someone understand educational
+                  material.
+                </p>
+                <p>
+                  That does not mean the model should become a medical
+                  professional or make individualized clinical decisions.
+                </p>
+                <p>Those are different responsibilities.</p>
+                <p>
+                  A well-designed system should know when its role changes from:
+                </p>
+                <p><strong>help explain</strong></p>
+                <p>to:</p>
+                <p><strong>this needs appropriate human expertise.</strong></p>
+                <p>That&#39;s not a failure of automation.</p>
+                <p>That&#39;s good product design.</p>
+                <h2 id="ai-safety-is-partly-an-architecture-problem">
+                  AI safety is partly an architecture problem
+                </h2>
+                <p>It&#39;s tempting to treat AI safety as a prompt:</p>
+                <blockquote>
+                  <p>“Do not provide medical advice.”</p>
+                </blockquote>
+                <p>Prompts matter, but they are only one layer.</p>
+                <p>Architecture can enforce stronger boundaries.</p>
+                <p>You can restrict available tools.</p>
+                <p>You can control retrieved sources.</p>
+                <p>You can limit the context supplied to the model.</p>
+                <p>You can validate structured output.</p>
+                <p>You can require deterministic authorization.</p>
+                <p>You can prevent arbitrary URL access.</p>
+                <p>
+                  You can separate educational knowledge from product-support
+                  knowledge.
+                </p>
+                <p>You can create escalation paths.</p>
+                <p>You can log failures.</p>
+                <p>You can evaluate known edge cases.</p>
+                <p>
+                  The more important the boundary, the less I want it enforced
+                  only by asking the model nicely.
+                </p>
+                <h2 id="ai-observability-is-product-infrastructure">
+                  AI observability is product infrastructure
+                </h2>
+                <p>Normal applications need observability.</p>
+                <p>AI applications need it too, but the questions change.</p>
+                <p>I&#39;d want to know things like:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Which feature invoked the model?
+Which model?
+What was the latency?
+What content was retrieved?
+How many sources?
+Was a tool called?
+Did the tool fail?
+Did schema validation fail?
+Did retrieval return nothing?
+How many tokens were used?
+Was the answer escalated?
+</code></pre>
+                <p>
+                  That doesn&#39;t mean indiscriminately logging every piece of
+                  family information.
+                </p>
+                <p>
+                  In fact, logging becomes another place where privacy matters.
+                </p>
+                <p>
+                  Operational telemetry and user content should be treated as
+                  different things.
+                </p>
+                <p>
+                  You want enough information to understand the system without
+                  creating a giant secondary store of sensitive information just
+                  because debugging is easier.
+                </p>
+                <h2 id="model-selection-should-come-after-the-task">
+                  Model selection should come after the task
+                </h2>
+                <p>There&#39;s another easy trap: starting with the model.</p>
+                <p>“We&#39;re going to use model X.”</p>
+                <p>Okay.</p>
+                <p>For what?</p>
+                <p>Different AI features may have different requirements.</p>
+                <p>
+                  Classification may need speed and structured output more than
+                  sophisticated reasoning.
+                </p>
+                <p>
+                  Content discovery may depend more heavily on retrieval
+                  quality.
+                </p>
+                <p>Explanation may require stronger language generation.</p>
+                <p>
+                  A more complex orchestration task may benefit from a different
+                  model.
+                </p>
+                <p>
+                  And every model decision has consequences for latency and
+                  cost.
+                </p>
+                <p>
+                  I don&#39;t think every AI feature automatically deserves the
+                  largest available model.
+                </p>
+                <p>The question should be:</p>
+                <p>
+                  <strong
+                    >What level of capability does this task require?</strong
+                  >
+                </p>
+                <p>Then evaluate models against that task.</p>
+                <h2 id="a-good-ai-interface-doesn-t-have-to-look-like-chat">
+                  A good AI interface doesn&#39;t have to look like chat
+                </h2>
+                <p>
+                  Chat is powerful because people already know how to use it.
+                </p>
+                <p>
+                  It&#39;s also easy for product teams to make chat the entire
+                  AI strategy.
+                </p>
+                <p>But some of the best interactions may be contextual.</p>
+                <p>Inside a lesson:</p>
+                <p><strong>Explain this</strong></p>
+                <p><strong>Give me another example</strong></p>
+                <p><strong>Ask about this lesson</strong></p>
+                <p>Inside search:</p>
+                <p>
+                  <strong>Describe what you&#39;re trying to understand</strong>
+                </p>
+                <p>Inside progress:</p>
+                <p>
+                  <strong>Help me understand what we&#39;ve covered</strong>
+                </p>
+                <p>
+                  Then perhaps there is a general “Ask SonaSteps” experience for
+                  questions that don&#39;t start from a specific page.
+                </p>
+                <p>
+                  AI can be a capability distributed throughout the product
+                  rather than a single floating bubble.
+                </p>
+                <h2 id="the-system-around-the-model-is-the-product">
+                  The system around the model is the product
+                </h2>
+                <p>
+                  The more I work through SonaSteps, the less interesting the
+                  raw model call becomes.
+                </p>
+                <p>Calling an LLM API is easy.</p>
+                <p>The product work is everything around it:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">User
+ ↓
+Product context
+ ↓
+Intent
+ ↓
+Retrieval
+ ↓
+Permissions
+ ↓
+Context construction
+ ↓
+Model
+ ↓
+Structured output
+ ↓
+Validation
+ ↓
+Tools
+ ↓
+Application state
+ ↓
+Observability
+ ↓
+User experience
+</code></pre>
+                <p>That&#39;s where the engineering decisions live.</p>
+                <p>It&#39;s also where trust lives.</p>
+                <p>
+                  SonaSteps has reinforced something I expect to carry into
+                  other AI products:
+                </p>
+                <p><strong>The model is not the product.</strong></p>
+                <p>
+                  The product is the system that determines when the model
+                  should be used, what it is allowed to know, what it is allowed
+                  to do, how its output is validated, and what happens when it
+                  is wrong.
+                </p>
+                <p>That&#39;s a much harder problem than adding a chat box.</p>
+                <p>It&#39;s also a much more interesting one.</p>
+              </div>
+              <div class="essay-end">
+                <p>
+                  Written by <a href="about.html">Lew Akil</a> — engineer,
+                  product builder, and technical storyteller.
+                </p>
+                <p>
+                  <a href="sonasteps.html">Explore SonaSteps →</a> &nbsp;
+                  <a href="writing.html">All writing →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="related-writing" aria-labelledby="keep-reading">
+        <div class="container">
+          <h2 id="keep-reading">Keep reading</h2>
+          <div class="related-grid">
+            <a class="related-card essay-poc" href="pocs-before-code.html"
+              ><img
+                src="img/writing/poc-before-code.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Experiments &amp; architecture</p>
+                <h3>How I Think About POCs Before Writing Code</h3>
+              </div></a
+            ><a
+              class="related-card essay-story"
+              href="technical-storytelling.html"
+              ><img
+                src="img/writing/technical-storytelling.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Engineering &amp; clarity</p>
+                <h3>Why Technical Storytelling Matters for Engineers</h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

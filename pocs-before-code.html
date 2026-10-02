@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>How I Think About POCs Before Writing Code | Lew Akil</title>
+    <meta
+      name="description"
+      content="A proof of concept should turn the riskiest assumption into evidence—and leave the team with a decision."
+    />
+    <link rel="canonical" href="https://lewakil.com/pocs-before-code.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta
+      property="og:title"
+      content="How I Think About POCs Before Writing Code"
+    />
+    <meta
+      property="og:description"
+      content="A proof of concept should turn the riskiest assumption into evidence—and leave the team with a decision."
+    />
+    <meta
+      property="og:url"
+      content="https://lewakil.com/pocs-before-code.html"
+    />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/writing/poc-before-code-social.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="A laboratory experiment tests one uncertain assumption and turns the result into evidence for a decision."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/writing.css" />
+    <script src="js/brand.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How I Think About POCs Before Writing Code",
+        "description": "A proof of concept should turn the riskiest assumption into evidence—and leave the team with a decision.",
+        "author": {
+          "@type": "Person",
+          "name": "Lew Akil",
+          "url": "https://lewakil.com/about.html"
+        },
+        "mainEntityOfPage": "https://lewakil.com/pocs-before-code.html",
+        "image": "https://lewakil.com/img/writing/poc-before-code-social.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body class="essay-poc">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html">Work</a
+          ><a href="writing.html" aria-current="page">Writing</a
+          ><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <header class="essay-hero" id="article-top">
+          <div class="container">
+            <a class="essay-back" href="writing.html#pocs-before-code"
+              ><span aria-hidden="true">←</span> Back to Writing</a
+            >
+            <div class="essay-hero-grid">
+              <div class="essay-hero-copy">
+                <p class="essay-kicker">Experiments &amp; architecture</p>
+                <h1 id="article-title">
+                  How I Think About POCs Before Writing Code
+                </h1>
+                <p class="essay-deck">
+                  A proof of concept should turn the riskiest assumption into
+                  evidence—and leave the team with a decision.
+                </p>
+                <div class="essay-meta">
+                  <img
+                    src="img/main_photo.jpg"
+                    alt=""
+                    width="36"
+                    height="36"
+                  /><span>By <a href="about.html">Lew Akil</a> · Essay</span>
+                </div>
+              </div>
+              <figure class="essay-art">
+                <img
+                  src="img/writing/poc-before-code.svg"
+                  alt="A laboratory experiment tests one uncertain assumption and turns the result into evidence for a decision."
+                  width="960"
+                  height="640"
+                  fetchpriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+        </header>
+        <div class="container essay-layout">
+          <aside class="essay-aside">
+            <p class="essay-toc-title">In this article</p>
+            <nav class="essay-toc" aria-label="Article sections">
+              <a href="#start-with-the-unknown">Start with the unknown</a
+              ><a href="#write-the-hypothesis">Write the hypothesis</a
+              ><a href="#a-poc-is-not-a-tiny-production-system"
+                >A POC is not a tiny production system</a
+              ><a href="#build-the-riskiest-thing-first"
+                >Build the riskiest thing first</a
+              ><a href="#separate-what-we-know-from-what-we-think-we-know"
+                >Separate what we know from what we think we know</a
+              ><a href="#success-criteria-should-exist-before-the-demo"
+                >Success criteria should exist before the demo</a
+              ><a href="#instrument-the-prototype">Instrument the prototype</a
+              ><a href="#prototype-architecture-still-matters"
+                >Prototype architecture still matters</a
+              ><a href="#document-the-shortcuts">Document the shortcuts</a
+              ><a href="#security-questions-should-appear-early"
+                >Security questions should appear early</a
+              ><a href="#the-same-applies-to-ai">The same applies to AI</a
+              ><a href="#the-output-of-a-poc-should-be-a-decision"
+                >The output of a POC should be a decision</a
+              ><a href="#don-t-turn-every-poc-into-a-product"
+                >Don't turn every POC into a product</a
+              ><a href="#what-i-want-before-i-start-coding"
+                >What I want before I start coding</a
+              >
+            </nav>
+            <a href="#article-top">Back to top ↑</a>
+          </aside>
+          <div>
+            <details class="essay-mobile-toc">
+              <summary>In this article · 14 sections</summary>
+              <nav class="essay-toc" aria-label="Article sections on mobile">
+                <a href="#start-with-the-unknown">Start with the unknown</a
+                ><a href="#write-the-hypothesis">Write the hypothesis</a
+                ><a href="#a-poc-is-not-a-tiny-production-system"
+                  >A POC is not a tiny production system</a
+                ><a href="#build-the-riskiest-thing-first"
+                  >Build the riskiest thing first</a
+                ><a href="#separate-what-we-know-from-what-we-think-we-know"
+                  >Separate what we know from what we think we know</a
+                ><a href="#success-criteria-should-exist-before-the-demo"
+                  >Success criteria should exist before the demo</a
+                ><a href="#instrument-the-prototype">Instrument the prototype</a
+                ><a href="#prototype-architecture-still-matters"
+                  >Prototype architecture still matters</a
+                ><a href="#document-the-shortcuts">Document the shortcuts</a
+                ><a href="#security-questions-should-appear-early"
+                  >Security questions should appear early</a
+                ><a href="#the-same-applies-to-ai">The same applies to AI</a
+                ><a href="#the-output-of-a-poc-should-be-a-decision"
+                  >The output of a POC should be a decision</a
+                ><a href="#don-t-turn-every-poc-into-a-product"
+                  >Don't turn every POC into a product</a
+                ><a href="#what-i-want-before-i-start-coding"
+                  >What I want before I start coding</a
+                >
+              </nav>
+            </details>
+            <div class="essay-prose">
+              <div data-draft>
+                <p>Proofs of concept often start too late.</p>
+                <p>Someone has an idea.</p>
+                <p>The team gets excited.</p>
+                <p>A repository gets created.</p>
+                <p>A framework gets selected.</p>
+                <p>Someone starts building the UI.</p>
+                <p>Two weeks later there is a polished demo.</p>
+                <p>Then someone asks:</p>
+                <p><strong>What exactly were we trying to prove?</strong></p>
+                <p>That&#39;s the question I think should come first.</p>
+                <p>A POC isn&#39;t just a smaller version of a product.</p>
+                <p>It&#39;s an experiment designed to remove uncertainty.</p>
+                <p>
+                  If you don&#39;t know what uncertainty you&#39;re trying to
+                  remove, it&#39;s easy to build a lot of software without
+                  learning very much.
+                </p>
+                <h2 id="start-with-the-unknown">Start with the unknown</h2>
+                <p>Before writing code, I want to know:</p>
+                <p>
+                  <strong
+                    >What don&#39;t we know that matters enough to test?</strong
+                  >
+                </p>
+                <p>
+                  Imagine a customer wants an integration between two systems.
+                </p>
+                <p>The uncertainty might be:</p>
+                <p>Can we authenticate against their API?</p>
+                <p>Can we retrieve the required data?</p>
+                <p>Can we transform it into our model?</p>
+                <p>Can their environment receive our webhook?</p>
+                <p>Can the API handle the required volume?</p>
+                <p>Can we satisfy the security constraints?</p>
+                <p>Those are very different POCs.</p>
+                <p>
+                  If the uncertainty is API authentication, building a polished
+                  dashboard doesn&#39;t prove anything useful.
+                </p>
+                <p>
+                  If the uncertainty is model quality, spending a week
+                  implementing account settings doesn&#39;t help.
+                </p>
+                <p>
+                  If the uncertainty is device connectivity, don&#39;t start by
+                  polishing the mobile interface.
+                </p>
+                <p>The riskiest assumption should shape the prototype.</p>
+                <h2 id="write-the-hypothesis">Write the hypothesis</h2>
+                <p>I like thinking about a POC as a technical hypothesis.</p>
+                <p>Something like:</p>
+                <blockquote>
+                  <p>
+                    Given valid customer credentials, our service can retrieve
+                    the required records from API X, transform them into our
+                    internal representation, and process them without manual
+                    intervention.
+                  </p>
+                </blockquote>
+                <p>Now we can test something.</p>
+                <p>Better still, define success.</p>
+                <p>For example:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Given:
+- valid sandbox credentials
+- representative records
+- documented API access
+
+Prove:
+- authentication succeeds
+- required fields are available
+- records can be retrieved
+- records can be mapped
+- errors can be detected
+- the expected downstream action can occur
+</code></pre>
+                <p>Now “it worked” has a meaning.</p>
+                <h2 id="a-poc-is-not-a-tiny-production-system">
+                  A POC is not a tiny production system
+                </h2>
+                <p>This distinction saves a lot of time.</p>
+                <p>Production systems may need:</p>
+                <p>
+                  authentication, authorization, observability, redundancy,
+                  scaling, deployment automation, accessibility, billing,
+                  analytics, support tooling, disaster recovery, extensive
+                  testing, and a long list of edge cases.
+                </p>
+                <p>A POC may not.</p>
+                <p>
+                  That doesn&#39;t mean the code should be incomprehensible.
+                </p>
+                <p>
+                  It means the prototype should invest in the parts necessary to
+                  answer the question.
+                </p>
+                <p>
+                  If we&#39;re proving whether a third-party API exposes the
+                  required data, I may not need a complete user-management
+                  system.
+                </p>
+                <p>
+                  If we&#39;re proving whether retrieval can find the correct
+                  documents, I don&#39;t need to build the final design system
+                  first.
+                </p>
+                <h2 id="build-the-riskiest-thing-first">
+                  Build the riskiest thing first
+                </h2>
+                <p>
+                  This is probably the biggest practical change I&#39;d make to
+                  many prototypes.
+                </p>
+                <p>
+                  Teams naturally gravitate toward the easiest visible work.
+                </p>
+                <p>UI is satisfying.</p>
+                <p>You can show progress.</p>
+                <p>Stakeholders can react to it.</p>
+                <p>
+                  But if the entire concept depends on something uncertain
+                  behind the UI, start there.
+                </p>
+                <p>Suppose you&#39;re building an AI application.</p>
+                <p>The risky assumption might be:</p>
+                <blockquote>
+                  <p>“The model can reliably classify these requests.”</p>
+                </blockquote>
+                <p>Test that with representative data first.</p>
+                <p>Or:</p>
+                <blockquote>
+                  <p>“RAG will retrieve the correct internal document.”</p>
+                </blockquote>
+                <p>
+                  Build the retrieval evaluation before the polished chat
+                  interface.
+                </p>
+                <p>Or:</p>
+                <blockquote>
+                  <p>
+                    “The customer&#39;s network will allow this connection.”
+                  </p>
+                </blockquote>
+                <p>Test the connection.</p>
+                <p>
+                  The POC should attack the assumption most capable of killing
+                  the idea.
+                </p>
+                <h2 id="separate-what-we-know-from-what-we-think-we-know">
+                  Separate what we know from what we think we know
+                </h2>
+                <p>
+                  A useful exercise before implementation is to classify
+                  assumptions.
+                </p>
+                <p>You have facts.</p>
+                <p>You have assumptions.</p>
+                <p>And you have unknowns.</p>
+                <p>Those categories are easy to blur.</p>
+                <p>“The API supports webhooks” may be documented.</p>
+                <p>
+                  “The customer&#39;s account has access to webhooks” may be an
+                  assumption.
+                </p>
+                <p>
+                  “The webhook payload contains the field we need” may still be
+                  unknown.
+                </p>
+                <p>That distinction matters.</p>
+                <p>
+                  A prototype should convert important unknowns into evidence.
+                </p>
+                <h2 id="success-criteria-should-exist-before-the-demo">
+                  Success criteria should exist before the demo
+                </h2>
+                <p>A weak POC success criterion is:</p>
+                <blockquote>
+                  <p>“Build a working demo.”</p>
+                </blockquote>
+                <p>A stronger criterion is:</p>
+                <blockquote>
+                  <p>
+                    “Demonstrate that a new record created in System A can be
+                    detected, transformed, and written to System B using the
+                    required fields.”
+                  </p>
+                </blockquote>
+                <p>Now the demo proves something.</p>
+                <p>For an AI retrieval POC:</p>
+                <blockquote>
+                  <p>
+                    “For a representative evaluation set, the retrieval layer
+                    should consistently surface the approved source containing
+                    the information required to answer each question.”
+                  </p>
+                </blockquote>
+                <p>Notice that this is different from:</p>
+                <blockquote>
+                  <p>“The chatbot gives good answers.”</p>
+                </blockquote>
+                <p>We&#39;re testing a specific layer.</p>
+                <p>That makes debugging easier too.</p>
+                <h2 id="instrument-the-prototype">Instrument the prototype</h2>
+                <p>
+                  POCs often have almost no observability because “it&#39;s just
+                  a prototype.”
+                </p>
+                <p>
+                  Then something fails during the evaluation and nobody knows
+                  why.
+                </p>
+                <p>You don&#39;t need a full production monitoring stack.</p>
+                <p>
+                  You do need enough visibility to understand the experiment.
+                </p>
+                <p>For an API integration:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Request ID
+Endpoint
+Response status
+Latency
+Transformation result
+Failure reason
+</code></pre>
+                <p>For an AI workflow:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Input / test case ID
+Retrieved sources
+Model
+Latency
+Structured output
+Validation result
+Tool result
+Failure state
+</code></pre>
+                <p>A POC is an experiment.</p>
+                <p>Experiments need evidence.</p>
+                <h2 id="prototype-architecture-still-matters">
+                  Prototype architecture still matters
+                </h2>
+                <p>Disposable doesn&#39;t have to mean chaotic.</p>
+                <p>
+                  A POC can use shortcuts while still expressing the intended
+                  system boundaries.
+                </p>
+                <p>Suppose I am testing an AI workflow.</p>
+                <p>I would rather have:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Application
+    ↓
+AI Service
+    ↓
+Provider Adapter
+</code></pre>
+                <p>
+                  than model-provider calls scattered through UI components.
+                </p>
+                <p>Why?</p>
+                <p>
+                  Because even in a prototype, architecture tells us something.
+                </p>
+                <p>Can we change the model?</p>
+                <p>Can we test the application without calling the model?</p>
+                <p>Can we add validation?</p>
+                <p>Can we observe requests in one place?</p>
+                <p>
+                  The POC shouldn&#39;t prematurely become production
+                  architecture.
+                </p>
+                <p>
+                  But it should help us learn about production architecture.
+                </p>
+                <h2 id="document-the-shortcuts">Document the shortcuts</h2>
+                <p>This is one of the most important POC artifacts.</p>
+                <p>Suppose the prototype uses:</p>
+                <ul>
+                  <li>hardcoded test users,</li>
+                  <li>a local database,</li>
+                  <li>manual secrets,</li>
+                  <li>no retry logic,</li>
+                  <li>a single model,</li>
+                  <li>simplified permissions,</li>
+                  <li>test data.</li>
+                </ul>
+                <p>That&#39;s fine if everyone understands it.</p>
+                <p>
+                  It&#39;s dangerous when a successful demo causes people to
+                  conclude:
+                </p>
+                <blockquote>
+                  <p>“We&#39;re basically done.”</p>
+                </blockquote>
+                <p>No.</p>
+                <p>You proved the concept.</p>
+                <p>You did not prove production readiness.</p>
+                <p>A good POC should end with two separate conclusions:</p>
+                <p><strong>What did we prove?</strong></p>
+                <p>and</p>
+                <p><strong>What remains before production?</strong></p>
+                <h2 id="security-questions-should-appear-early">
+                  Security questions should appear early
+                </h2>
+                <p>A prototype doesn&#39;t need every production control.</p>
+                <p>
+                  But if the entire concept depends on a security assumption,
+                  don&#39;t postpone that assumption until the end.
+                </p>
+                <p>Examples:</p>
+                <p>Can the customer authorize the integration?</p>
+                <p>Can we obtain the required scopes?</p>
+                <p>Can data legally or contractually leave the environment?</p>
+                <p>Does the identity model support the workflow?</p>
+                <p>Can tenant data remain isolated?</p>
+                <p>Does the provider retain submitted data?</p>
+                <p>
+                  If any of those answers can kill the architecture, they belong
+                  in the POC conversation.
+                </p>
+                <h2 id="the-same-applies-to-ai">The same applies to AI</h2>
+                <p>
+                  AI prototypes are especially easy to overestimate because the
+                  first demo can be so impressive.
+                </p>
+                <p>A model can answer ten handpicked questions beautifully.</p>
+                <p>That does not prove the system works.</p>
+                <p>What happens with ambiguous questions?</p>
+                <p>What happens with missing knowledge?</p>
+                <p>What happens when retrieval is wrong?</p>
+                <p>What happens when the model returns malformed output?</p>
+                <p>
+                  What happens when a user asks for something outside the
+                  intended scope?
+                </p>
+                <p>What happens when the model provider times out?</p>
+                <p>What happens when the prompt changes?</p>
+                <p>What happens when the input is adversarial?</p>
+                <p>What does each request cost?</p>
+                <p>How long does it take?</p>
+                <p>
+                  The POC doesn&#39;t necessarily have to solve all of those.
+                </p>
+                <p>But it should expose them.</p>
+                <h2 id="the-output-of-a-poc-should-be-a-decision">
+                  The output of a POC should be a decision
+                </h2>
+                <p>This is the part I think gets overlooked.</p>
+                <p>The artifact isn&#39;t really the prototype.</p>
+                <p>The artifact is the knowledge produced by the prototype.</p>
+                <p>At the end, I want to be able to say:</p>
+                <blockquote>
+                  <p>
+                    The integration is technically viable, but the customer
+                    needs a different API tier.
+                  </p>
+                </blockquote>
+                <p>Or:</p>
+                <blockquote>
+                  <p>
+                    Retrieval works well enough with structured search that we
+                    don&#39;t need a vector database yet.
+                  </p>
+                </blockquote>
+                <p>Or:</p>
+                <blockquote>
+                  <p>
+                    The model can perform the task, but latency makes it
+                    unsuitable for the synchronous workflow.
+                  </p>
+                </blockquote>
+                <p>Or:</p>
+                <blockquote>
+                  <p>
+                    The concept works, but the production security requirements
+                    change the architecture enough that we need another design
+                    pass.
+                  </p>
+                </blockquote>
+                <p>Or even:</p>
+                <blockquote>
+                  <p>This isn&#39;t worth building.</p>
+                </blockquote>
+                <p>That last answer is completely valid.</p>
+                <p>
+                  A POC that prevents six months of unnecessary engineering is
+                  successful.
+                </p>
+                <h2 id="don-t-turn-every-poc-into-a-product">
+                  Don&#39;t turn every POC into a product
+                </h2>
+                <p>
+                  There&#39;s organizational pressure once something is visible.
+                </p>
+                <p>
+                  People see a working prototype and immediately start asking:
+                </p>
+                <p>“When can customers use it?”</p>
+                <p>That&#39;s understandable.</p>
+                <p>
+                  But prototypes often hide the hardest production problems.
+                </p>
+                <p>The gap might include:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">POC
+ ↓
+Security
+ ↓
+Permissions
+ ↓
+Failure handling
+ ↓
+Observability
+ ↓
+Scale
+ ↓
+Data migration
+ ↓
+Accessibility
+ ↓
+Testing
+ ↓
+Deployment
+ ↓
+Support
+ ↓
+Production
+</code></pre>
+                <p>That gap can be larger than the prototype itself.</p>
+                <p>Recognizing it isn&#39;t pessimism.</p>
+                <p>It&#39;s engineering.</p>
+                <h2 id="what-i-want-before-i-start-coding">
+                  What I want before I start coding
+                </h2>
+                <p>I don&#39;t need a fifty-page specification.</p>
+                <p>I need clarity about a few things:</p>
+                <p>What uncertainty are we removing?</p>
+                <p>Why does it matter?</p>
+                <p>What assumption are we testing?</p>
+                <p>What evidence counts as success?</p>
+                <p>What is intentionally out of scope?</p>
+                <p>What could invalidate the approach?</p>
+                <p>What will we learn even if it fails?</p>
+                <p>
+                  Once those questions are clear, the code becomes easier to
+                  reason about.
+                </p>
+                <p>Because now the code has a job.</p>
+                <p>It&#39;s not there to prove that we can build something.</p>
+                <p>
+                  <strong
+                    >It&#39;s there to help us decide whether we should.</strong
+                  >
+                </p>
+              </div>
+              <div class="essay-end">
+                <p>
+                  Written by <a href="about.html">Lew Akil</a> — engineer,
+                  product builder, and technical storyteller.
+                </p>
+                <p>
+                  <a href="about.html">About Lew →</a> &nbsp;
+                  <a href="writing.html">All writing →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="related-writing" aria-labelledby="keep-reading">
+        <div class="container">
+          <h2 id="keep-reading">Keep reading</h2>
+          <div class="related-grid">
+            <a
+              class="related-card essay-story"
+              href="technical-storytelling.html"
+              ><img
+                src="img/writing/technical-storytelling.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Engineering &amp; clarity</p>
+                <h3>Why Technical Storytelling Matters for Engineers</h3>
+              </div></a
+            ><a class="related-card essay-sales" href="sales-engineering.html"
+              ><img
+                src="img/writing/sales-engineering.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Customers &amp; systems</p>
+                <h3>What Engineers Can Learn From Sales Engineering</h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>Why Technical Storytelling Matters for Engineers | Lew Akil</title>
+    <meta
+      name="description"
+      content="Diagrams, documentation, and demos help people share a mental model. Making systems understandable is part of building them."
+    />
+    <link
+      rel="canonical"
+      href="https://lewakil.com/technical-storytelling.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta
+      property="og:title"
+      content="Why Technical Storytelling Matters for Engineers"
+    />
+    <meta
+      property="og:description"
+      content="Diagrams, documentation, and demos help people share a mental model. Making systems understandable is part of building them."
+    />
+    <meta
+      property="og:url"
+      content="https://lewakil.com/technical-storytelling.html"
+    />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/writing/technical-storytelling-social.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="A highlighted route through a dark system blueprint resolves into a clear trigger, decision, and consequence."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/writing.css" />
+    <script src="js/brand.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why Technical Storytelling Matters for Engineers",
+        "description": "Diagrams, documentation, and demos help people share a mental model. Making systems understandable is part of building them.",
+        "author": {
+          "@type": "Person",
+          "name": "Lew Akil",
+          "url": "https://lewakil.com/about.html"
+        },
+        "mainEntityOfPage": "https://lewakil.com/technical-storytelling.html",
+        "image": "https://lewakil.com/img/writing/technical-storytelling-social.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body class="essay-story">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html">Work</a
+          ><a href="writing.html" aria-current="page">Writing</a
+          ><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <header class="essay-hero" id="article-top">
+          <div class="container">
+            <a class="essay-back" href="writing.html#technical-storytelling"
+              ><span aria-hidden="true">←</span> Back to Writing</a
+            >
+            <div class="essay-hero-grid">
+              <div class="essay-hero-copy">
+                <p class="essay-kicker">Engineering &amp; clarity</p>
+                <h1 id="article-title">
+                  Why Technical Storytelling Matters for Engineers
+                </h1>
+                <p class="essay-deck">
+                  Diagrams, documentation, and demos help people share a mental
+                  model. Making systems understandable is part of building them.
+                </p>
+                <div class="essay-meta">
+                  <img
+                    src="img/main_photo.jpg"
+                    alt=""
+                    width="36"
+                    height="36"
+                  /><span>By <a href="about.html">Lew Akil</a> · Essay</span>
+                </div>
+              </div>
+              <figure class="essay-art">
+                <img
+                  src="img/writing/technical-storytelling.svg"
+                  alt="A highlighted route through a dark system blueprint resolves into a clear trigger, decision, and consequence."
+                  width="960"
+                  height="640"
+                  fetchpriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+        </header>
+        <div class="container essay-layout">
+          <aside class="essay-aside">
+            <p class="essay-toc-title">In this article</p>
+            <nav class="essay-toc" aria-label="Article sections">
+              <a href="#storytelling-isn-t-decoration"
+                >Storytelling isn't decoration</a
+              ><a href="#architecture-diagrams-are-stories"
+                >Architecture diagrams are stories</a
+              ><a href="#sequence-matters">Sequence matters</a
+              ><a href="#club-swan-is-a-good-example"
+                >Club Swan is a good example</a
+              ><a href="#different-audiences-need-different-stories"
+                >Different audiences need different stories</a
+              ><a href="#clarity-can-expose-weak-thinking"
+                >Clarity can expose weak thinking</a
+              ><a href="#good-names-are-part-of-the-story"
+                >Good names are part of the story</a
+              ><a href="#explain-tradeoffs-not-just-decisions"
+                >Explain tradeoffs, not just decisions</a
+              ><a href="#ai-systems-make-this-even-more-important"
+                >AI systems make this even more important</a
+              ><a href="#technical-storytelling-improves-cross-functional-work"
+                >Technical storytelling improves cross-functional work</a
+              ><a href="#documentation-is-part-of-the-product"
+                >Documentation is part of the product</a
+              ><a href="#complexity-isn-t-the-same-as-sophistication"
+                >Complexity isn't the same as sophistication</a
+              ><a href="#building-is-only-part-of-engineering"
+                >Building is only part of engineering</a
+              >
+            </nav>
+            <a href="#article-top">Back to top ↑</a>
+          </aside>
+          <div>
+            <details class="essay-mobile-toc">
+              <summary>In this article · 13 sections</summary>
+              <nav class="essay-toc" aria-label="Article sections on mobile">
+                <a href="#storytelling-isn-t-decoration"
+                  >Storytelling isn't decoration</a
+                ><a href="#architecture-diagrams-are-stories"
+                  >Architecture diagrams are stories</a
+                ><a href="#sequence-matters">Sequence matters</a
+                ><a href="#club-swan-is-a-good-example"
+                  >Club Swan is a good example</a
+                ><a href="#different-audiences-need-different-stories"
+                  >Different audiences need different stories</a
+                ><a href="#clarity-can-expose-weak-thinking"
+                  >Clarity can expose weak thinking</a
+                ><a href="#good-names-are-part-of-the-story"
+                  >Good names are part of the story</a
+                ><a href="#explain-tradeoffs-not-just-decisions"
+                  >Explain tradeoffs, not just decisions</a
+                ><a href="#ai-systems-make-this-even-more-important"
+                  >AI systems make this even more important</a
+                ><a
+                  href="#technical-storytelling-improves-cross-functional-work"
+                  >Technical storytelling improves cross-functional work</a
+                ><a href="#documentation-is-part-of-the-product"
+                  >Documentation is part of the product</a
+                ><a href="#complexity-isn-t-the-same-as-sophistication"
+                  >Complexity isn't the same as sophistication</a
+                ><a href="#building-is-only-part-of-engineering"
+                  >Building is only part of engineering</a
+                >
+              </nav>
+            </details>
+            <div class="essay-prose">
+              <div data-draft>
+                <p>
+                  Engineers spend a lot of time learning how to build systems.
+                </p>
+                <p>
+                  We learn languages, frameworks, protocols, databases, cloud
+                  infrastructure, APIs, testing, architecture, deployment.
+                </p>
+                <p>Then at some point the job changes.</p>
+                <p>You&#39;re still expected to build.</p>
+                <p>But now you&#39;re also expected to explain.</p>
+                <p>Explain the architecture to another engineer.</p>
+                <p>Explain the tradeoff to a product manager.</p>
+                <p>Explain the integration to a customer.</p>
+                <p>Explain the failure to leadership.</p>
+                <p>Explain the security boundary to a reviewer.</p>
+                <p>
+                  Explain why a seemingly simple request is actually difficult.
+                </p>
+                <p>
+                  Explain why a complicated system is actually solving a simple
+                  problem.
+                </p>
+                <p>That&#39;s technical storytelling.</p>
+                <p>And I think it&#39;s an engineering skill.</p>
+                <h2 id="storytelling-isn-t-decoration">
+                  Storytelling isn&#39;t decoration
+                </h2>
+                <p>The word “storytelling” can make engineers suspicious.</p>
+                <p>It sounds like marketing.</p>
+                <p>I&#39;m not talking about adding drama to technical work.</p>
+                <p>
+                  I&#39;m talking about structuring information so another
+                  person can understand:
+                </p>
+                <p><strong>What problem exists?</strong></p>
+                <p><strong>Why does it matter?</strong></p>
+                <p><strong>How does the system work?</strong></p>
+                <p><strong>What decisions did we make?</strong></p>
+                <p><strong>What tradeoffs did we accept?</strong></p>
+                <p><strong>What happens next?</strong></p>
+                <p>That&#39;s storytelling.</p>
+                <p>
+                  And most good technical documentation already does some
+                  version of it.
+                </p>
+                <h2 id="architecture-diagrams-are-stories">
+                  Architecture diagrams are stories
+                </h2>
+                <p>Take an architecture diagram.</p>
+                <p>
+                  A bad one can contain every component and still explain
+                  nothing.
+                </p>
+                <p>Imagine thirty boxes:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">API Gateway
+Auth Service
+User Service
+Redis
+Kafka
+Postgres
+Worker
+Notification Service
+Search Service
+Model Gateway
+Vector Store
+...
+</code></pre>
+                <p>All technically accurate.</p>
+                <p>But what am I supposed to understand?</p>
+                <p>A useful architecture diagram gives me a path.</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">User
+ ↓
+Application
+ ↓
+API
+ ↓
+Core Services
+ ├── Database
+ ├── External Integration
+ └── AI Service
+          ↓
+       Model
+</code></pre>
+                <p>Now I can ask meaningful questions.</p>
+                <p>Where does authentication happen?</p>
+                <p>Where does state live?</p>
+                <p>Which calls leave our boundary?</p>
+                <p>What happens synchronously?</p>
+                <p>What happens asynchronously?</p>
+                <p>Which component owns the action?</p>
+                <p>The diagram isn&#39;t merely inventory.</p>
+                <p>It&#39;s explaining the system.</p>
+                <h2 id="sequence-matters">Sequence matters</h2>
+                <p>
+                  Technical explanations often fail because they start at the
+                  wrong level.
+                </p>
+                <p>Suppose I ask:</p>
+                <p>“How does your integration work?”</p>
+                <p>And the answer begins:</p>
+                <blockquote>
+                  <p>
+                    “We&#39;re using Node.js with an event-driven architecture
+                    and PostgreSQL…”
+                  </p>
+                </blockquote>
+                <p>That doesn&#39;t answer the question yet.</p>
+                <p>I&#39;d rather start with:</p>
+                <blockquote>
+                  <p>
+                    “When a customer completes a purchase, our backend receives
+                    the confirmed purchase event. We validate that the event is
+                    eligible, create a mint request, and then submit the
+                    corresponding transaction to the smart contract.”
+                  </p>
+                </blockquote>
+                <p>Now I have a mental model.</p>
+                <p>
+                  Then we can discuss Node, contracts, storage, queues, retries,
+                  or whatever implementation details matter.
+                </p>
+                <p>
+                  The technical details become easier to understand because they
+                  attach to a sequence.
+                </p>
+                <h2 id="club-swan-is-a-good-example">
+                  Club Swan is a good example
+                </h2>
+                <p>
+                  The interesting technical story behind Club Swan wasn&#39;t
+                  simply:
+                </p>
+                <blockquote>
+                  <p>“We used blockchain.”</p>
+                </blockquote>
+                <p>
+                  The more useful explanation is the relationship between the
+                  physical and digital systems.
+                </p>
+                <p>A prepaid card is purchased.</p>
+                <p>
+                  That real-world commercial event needs to become a controlled
+                  digital mint event.
+                </p>
+                <p>The system has to establish eligibility.</p>
+                <p>It has to authorize the mint.</p>
+                <p>It has to prevent accidental duplicate creation.</p>
+                <p>It has to create the ERC-721 token.</p>
+                <p>It has to associate metadata.</p>
+                <p>It has to support the wallet/digital experience.</p>
+                <p>So the architecture story becomes:</p>
+                <aside
+                  class="essay-context"
+                  data-editor-note
+                  aria-label="Club Swan architecture context"
+                >
+                  <strong>Club Swan architecture context</strong>
+                  <p>
+                    This is a simplified view of the project’s architecture.
+                    IPFS is shown as an evaluated metadata-storage option,
+                    rather than a verified production dependency.
+                  </p>
+                  <p>
+                    <a href="club-swan.html#architecture"
+                      >Explore the Club Swan architecture →</a
+                    >
+                  </p>
+                </aside>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">Card Purchase
+      ↓
+Application / Backend
+      ↓
+Mint Authorization
+      ↓
+ERC-721 Contract
+      ↓
+Blockchain
+      ↓
+Metadata / IPFS
+      ↓
+Wallet / Digital Experience
+</code></pre>
+                <p>
+                  Now concepts like idempotency, correlation IDs, mint
+                  permissions, metadata portability, and contract behavior make
+                  sense.
+                </p>
+                <p>They are solutions to problems in the story.</p>
+                <p>That&#39;s what technical storytelling does.</p>
+                <p>It gives technical decisions context.</p>
+                <h2 id="different-audiences-need-different-stories">
+                  Different audiences need different stories
+                </h2>
+                <p>One architecture can have multiple valid explanations.</p>
+                <p>To a smart-contract engineer, I might focus on:</p>
+                <p>
+                  contract behavior, mint authorization, token ownership,
+                  transaction state, failure handling.
+                </p>
+                <p>To a backend engineer:</p>
+                <p>
+                  purchase events, idempotency, correlation IDs, API boundaries,
+                  storage.
+                </p>
+                <p>To a product person:</p>
+                <p>
+                  what causes the NFT to exist, what the customer experiences,
+                  what happens when something fails.
+                </p>
+                <p>To leadership:</p>
+                <p>
+                  why the architecture exists, what risk it introduces, what it
+                  enables, what future capabilities it creates.
+                </p>
+                <p>
+                  None of those explanations is inherently dishonest or “dumbed
+                  down.”
+                </p>
+                <p>They operate at different levels of abstraction.</p>
+                <p>
+                  Being able to choose the correct level is part of technical
+                  communication.
+                </p>
+                <h2 id="clarity-can-expose-weak-thinking">
+                  Clarity can expose weak thinking
+                </h2>
+                <p>
+                  One reason explaining systems is valuable is that it reveals
+                  where our understanding is incomplete.
+                </p>
+                <p>It&#39;s easy to say:</p>
+                <blockquote>
+                  <p>“The agent handles it.”</p>
+                </blockquote>
+                <p>What does that mean?</p>
+                <p>What inputs does the agent receive?</p>
+                <p>What tools can it call?</p>
+                <p>Who authorizes those tools?</p>
+                <p>Where is application state stored?</p>
+                <p>What happens if the model returns invalid output?</p>
+                <p>What happens if the tool fails?</p>
+                <p>Can the model retry?</p>
+                <p>What gets logged?</p>
+                <p>Suddenly “the agent handles it” isn&#39;t enough.</p>
+                <p>
+                  Trying to explain the system forces architectural questions.
+                </p>
+                <p>That&#39;s why writing can be an engineering tool.</p>
+                <p>
+                  If I can&#39;t clearly explain which component owns a
+                  decision, maybe the architecture doesn&#39;t clearly own it
+                  either.
+                </p>
+                <h2 id="good-names-are-part-of-the-story">
+                  Good names are part of the story
+                </h2>
+                <p>This extends all the way down to code.</p>
+                <p>Consider:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="javascript example"
+                ><code class="language-javascript">processData();
+</code></pre>
+                <p>versus:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="javascript example"
+                ><code class="language-javascript">validateMintEligibility();
+authorizeMintRequest();
+publishTokenMetadata();
+</code></pre>
+                <p>The second version communicates the domain.</p>
+                <p>Naming creates a narrative inside the system.</p>
+                <p>The same applies to APIs.</p>
+                <p>The same applies to event names.</p>
+                <p>The same applies to database models.</p>
+                <p>The same applies to dashboards.</p>
+                <p>
+                  A well-designed system tells you something about what it does
+                  through its structure.
+                </p>
+                <h2 id="explain-tradeoffs-not-just-decisions">
+                  Explain tradeoffs, not just decisions
+                </h2>
+                <p>A weak architecture explanation says:</p>
+                <blockquote>
+                  <p>“We chose technology X.”</p>
+                </blockquote>
+                <p>A stronger one says:</p>
+                <blockquote>
+                  <p>
+                    “We chose X because we needed A and B, and we were willing
+                    to accept C.”
+                  </p>
+                </blockquote>
+                <p>That&#39;s much more useful.</p>
+                <p>Every meaningful technical decision has constraints.</p>
+                <p>SQL versus NoSQL.</p>
+                <p>Synchronous versus asynchronous.</p>
+                <p>Build versus buy.</p>
+                <p>Monolith versus services.</p>
+                <p>Managed model API versus self-hosting.</p>
+                <p>Vector retrieval versus structured search.</p>
+                <p>Webhooks versus polling.</p>
+                <p>
+                  You don&#39;t demonstrate technical maturity by pretending
+                  your choice had no downside.
+                </p>
+                <p>
+                  You demonstrate it by understanding why the downside was
+                  acceptable.
+                </p>
+                <h2 id="ai-systems-make-this-even-more-important">
+                  AI systems make this even more important
+                </h2>
+                <p>
+                  AI products create a communication problem because the model
+                  itself can feel magical.
+                </p>
+                <p>A user asks a question.</p>
+                <p>An answer appears.</p>
+                <p>The architecture between those two events can disappear.</p>
+                <p>
+                  But that&#39;s where many of the important product decisions
+                  live.
+                </p>
+                <p>For example:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">User question
+      ↓
+Intent detection
+      ↓
+Permission-aware context
+      ↓
+Retrieval
+      ↓
+Model
+      ↓
+Structured output
+      ↓
+Validation
+      ↓
+Permitted action
+</code></pre>
+                <p>That story immediately creates better questions.</p>
+                <p>What gets retrieved?</p>
+                <p>Where do permissions apply?</p>
+                <p>Can the model act directly?</p>
+                <p>What validates its output?</p>
+                <p>What happens when retrieval fails?</p>
+                <p>Without the story, everything becomes:</p>
+                <p><strong>AI did it.</strong></p>
+                <p>That&#39;s not an architecture.</p>
+                <h2 id="technical-storytelling-improves-cross-functional-work">
+                  Technical storytelling improves cross-functional work
+                </h2>
+                <p>Software rarely exists entirely inside engineering.</p>
+                <p>Product needs to understand constraints.</p>
+                <p>Sales needs to understand capabilities.</p>
+                <p>Security needs to understand boundaries.</p>
+                <p>Support needs to understand failure modes.</p>
+                <p>Customers need to understand integrations.</p>
+                <p>Leadership needs to understand risk and investment.</p>
+                <p>
+                  If the only people capable of understanding the system are the
+                  people who wrote it, the organization has a problem.
+                </p>
+                <p>
+                  Senior technical work often involves creating shared
+                  understanding across those boundaries.
+                </p>
+                <p>
+                  That doesn&#39;t mean every engineer needs to become a
+                  conference speaker.
+                </p>
+                <p>It means communication becomes part of system delivery.</p>
+                <h2 id="documentation-is-part-of-the-product">
+                  Documentation is part of the product
+                </h2>
+                <p>This becomes especially obvious with APIs.</p>
+                <p>
+                  An API can be technically excellent and still miserable to
+                  use.
+                </p>
+                <p>If developers cannot understand:</p>
+                <p>
+                  how to authenticate, how requests work, what errors mean, how
+                  retries work, what rate limits exist, what webhooks look like,
+                </p>
+                <p>then the integration experience is poor.</p>
+                <p>The code works.</p>
+                <p>The product doesn&#39;t.</p>
+                <p>
+                  Documentation, examples, diagrams, error messages, and demos
+                  are all interfaces between the technical system and the people
+                  trying to use it.
+                </p>
+                <h2 id="complexity-isn-t-the-same-as-sophistication">
+                  Complexity isn&#39;t the same as sophistication
+                </h2>
+                <p>
+                  Sometimes the strongest technical explanation is surprisingly
+                  simple.
+                </p>
+                <p>Not because the system is simple.</p>
+                <p>
+                  Because the person explaining it has figured out what matters.
+                </p>
+                <p>That&#39;s difficult.</p>
+                <p>Anyone can put forty services on a diagram.</p>
+                <p>
+                  It&#39;s harder to show the seven components someone needs in
+                  order to understand the architecture.
+                </p>
+                <p>Anyone can explain every implementation detail.</p>
+                <p>
+                  It&#39;s harder to choose the five details that explain the
+                  engineering decision.
+                </p>
+                <p>Clarity is compression.</p>
+                <p>
+                  You understand the system well enough to preserve the
+                  important information while removing the noise.
+                </p>
+                <h2 id="building-is-only-part-of-engineering">
+                  Building is only part of engineering
+                </h2>
+                <p>The ability to build complex systems matters.</p>
+                <p>
+                  But software engineering doesn&#39;t end when the code
+                  compiles.
+                </p>
+                <p>Someone has to understand the system.</p>
+                <p>Someone has to maintain it.</p>
+                <p>Someone has to approve it.</p>
+                <p>Someone has to integrate with it.</p>
+                <p>Someone has to operate it.</p>
+                <p>Someone has to decide whether to invest further in it.</p>
+                <p>
+                  Technical storytelling helps all of those people build the
+                  same mental model.
+                </p>
+                <p>
+                  That&#39;s why I don&#39;t see communication as something
+                  separate from engineering.
+                </p>
+                <p>
+                  At a certain level,
+                  <strong
+                    >making complex systems understandable is part of building
+                    them.</strong
+                  >
+                </p>
+              </div>
+              <div class="essay-end">
+                <p>
+                  Written by <a href="about.html">Lew Akil</a> — engineer,
+                  product builder, and technical storyteller.
+                </p>
+                <p>
+                  <a href="club-swan.html">Explore Club Swan →</a> &nbsp;
+                  <a href="writing.html">All writing →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="related-writing" aria-labelledby="keep-reading">
+        <div class="container">
+          <h2 id="keep-reading">Keep reading</h2>
+          <div class="related-grid">
+            <a class="related-card essay-sales" href="sales-engineering.html"
+              ><img
+                src="img/writing/sales-engineering.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Customers &amp; systems</p>
+                <h3>What Engineers Can Learn From Sales Engineering</h3>
+              </div></a
+            ><a class="related-card essay-demo" href="demo-business-story.html"
+              ><img
+                src="img/writing/demo-business-story.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Demos &amp; communication</p>
+                <h3>A Demo Is Not a Product Tour — It’s a Business Story</h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

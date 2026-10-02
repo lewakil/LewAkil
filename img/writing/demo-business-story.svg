@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="demo-title demo-desc">
+  <title id="demo-title">A technical demo as a business story</title>
+  <desc id="demo-desc">A quiet presentation stage is lit by a warm spotlight. Two speech bubbles frame a central screen: Tell, Show, Tell. A curved blue path on the screen moves from a fragmented starting point to a clear outcome. A script sits to one side and a concise result to the other, with a small audience in front. The illustration represents explaining the problem, demonstrating a purposeful workflow, and explaining what changed.</desc>
+  <defs>
+    <linearGradient id="spotlight" x1="480" y1="84" x2="480" y2="456" gradientUnits="userSpaceOnUse"><stop stop-color="#F8DE9F" stop-opacity=".72"/><stop offset="1" stop-color="#FFF2D7" stop-opacity=".12"/></linearGradient>
+    <marker id="story-arrow" viewBox="0 0 10 10" markerWidth="8" markerHeight="8" refX="8" refY="5" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;font-size:25px;font-weight:600;fill:#142C47}.line{fill:none;stroke:#142C47;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style>
+  </defs>
+  <rect width="960" height="640" fill="#F7F9FD"/>
+  <path d="M449 83H511L773 468H187Z" fill="url(#spotlight)"/>
+  <path d="M480 29V48" stroke="#142C47" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="480" cy="69" r="22" fill="#142C47"/>
+  <circle cx="480" cy="73" r="11" fill="#E1B86B"/>
+  <ellipse cx="480" cy="470" rx="342" ry="38" fill="#E3ECFC"/>
+  <path d="M215 482Q480 518 745 482" fill="none" stroke="#BDCEE8" stroke-width="2"/>
+
+  <path d="M259 171Q274 182 289 171V422Q273 434 259 422Z" fill="#DCE8FC"/>
+  <path d="M671 171Q686 182 701 171V422Q686 434 671 422Z" fill="#DCE8FC"/>
+  <path d="M273 179V417M686 179V417" stroke="#A5BEE7" stroke-width="2" stroke-linecap="round"/>
+  <rect x="304" y="170" width="352" height="258" rx="14" fill="#FFFFFF" stroke="#142C47" stroke-width="2.5"/>
+  <path d="M326 191H634" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M480 430V460M443 464H517" class="line"/>
+  <path d="M349 362C403 362 392 310 440 307C488 304 485 272 534 269C566 267 581 246 611 243" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round" marker-end="url(#story-arrow)"/>
+  <circle cx="351" cy="362" r="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="3" stroke-dasharray="4 5"/>
+  <circle cx="440" cy="307" r="7" fill="#B9D1FA" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="534" cy="269" r="7" fill="#B9D1FA" stroke="#2563EB" stroke-width="2"/>
+  <path d="M606 216V227M606 257V268M580 242H591M621 242H632" stroke="#D6A64F" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M340 385H388M405 385H448M465 385H502" stroke="#D7E2F1" stroke-width="3" stroke-linecap="round"/>
+  <text x="480" y="492" text-anchor="middle">Show</text>
+
+  <path d="M149 151H240Q257 151 257 168V205Q257 222 240 222H193L168 242V222H149Q132 222 132 205V168Q132 151 149 151Z" fill="#FFFFFF" stroke="#142C47" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="194" y="196" text-anchor="middle">Tell</text>
+  <path d="M720 151H811Q828 151 828 168V205Q828 222 811 222H792V242L767 222H720Q703 222 703 205V168Q703 151 720 151Z" fill="#FFF5DF" stroke="#D6A64F" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="765" y="196" text-anchor="middle">Tell</text>
+
+  <g transform="rotate(-9 193 377)">
+    <path d="M141 297H225L246 318V447H141Z" fill="#FFFFFF" stroke="#B7C7DE" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M225 297V318H246" fill="#EDF3FD" stroke="#B7C7DE" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M160 333H207M160 351H224M160 370H212M160 388H224" stroke="#AFC0D8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M160 413H195" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(9 768 377)">
+    <rect x="717" y="297" width="105" height="150" rx="7" fill="#FFFFFF" stroke="#B7C7DE" stroke-width="2"/>
+    <path d="M736 320H789" stroke="#E1B86B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M736 342H804M736 360H795" stroke="#B9C9DF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="769" cy="404" r="20" fill="#EFF6FF"/>
+    <path d="M758 404L767 412L781 396" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g fill="#142C47">
+    <circle cx="290" cy="550" r="11"/><path d="M265 591V578Q265 563 290 563Q315 563 315 578V591Z"/>
+    <circle cx="389" cy="562" r="11"/><path d="M364 604V590Q364 575 389 575Q414 575 414 590V604Z"/>
+    <circle cx="480" cy="550" r="11"/><path d="M455 591V578Q455 563 480 563Q505 563 505 578V591Z"/>
+    <circle cx="571" cy="562" r="11"/><path d="M546 604V590Q546 575 571 575Q596 575 596 590V604Z"/>
+    <circle cx="670" cy="550" r="11"/><path d="M645 591V578Q645 563 670 563Q695 563 695 578V591Z"/>
+  </g>
+</svg>

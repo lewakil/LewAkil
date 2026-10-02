@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>What Engineers Can Learn From Sales Engineering | Lew Akil</title>
+    <meta
+      name="description"
+      content="Discovery, integration work, and customer conversations connect engineering choices to the workflow they need to change."
+    />
+    <link rel="canonical" href="https://lewakil.com/sales-engineering.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta
+      property="og:title"
+      content="What Engineers Can Learn From Sales Engineering"
+    />
+    <meta
+      property="og:description"
+      content="Discovery, integration work, and customer conversations connect engineering choices to the workflow they need to change."
+    />
+    <meta
+      property="og:url"
+      content="https://lewakil.com/sales-engineering.html"
+    />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/writing/sales-engineering-social.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="A bridge connects customer discovery with technical systems and business value."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/writing.css" />
+    <script src="js/brand.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What Engineers Can Learn From Sales Engineering",
+        "description": "Discovery, integration work, and customer conversations connect engineering choices to the workflow they need to change.",
+        "author": {
+          "@type": "Person",
+          "name": "Lew Akil",
+          "url": "https://lewakil.com/about.html"
+        },
+        "mainEntityOfPage": "https://lewakil.com/sales-engineering.html",
+        "image": "https://lewakil.com/img/writing/sales-engineering-social.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body class="essay-sales">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html">Work</a
+          ><a href="writing.html" aria-current="page">Writing</a
+          ><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <header class="essay-hero" id="article-top">
+          <div class="container">
+            <a class="essay-back" href="writing.html#sales-engineering"
+              ><span aria-hidden="true">←</span> Back to Writing</a
+            >
+            <div class="essay-hero-grid">
+              <div class="essay-hero-copy">
+                <p class="essay-kicker">Customers &amp; systems</p>
+                <h1 id="article-title">
+                  What Engineers Can Learn From Sales Engineering
+                </h1>
+                <p class="essay-deck">
+                  Discovery, integration work, and customer conversations
+                  connect engineering choices to the workflow they need to
+                  change.
+                </p>
+                <div class="essay-meta">
+                  <img
+                    src="img/main_photo.jpg"
+                    alt=""
+                    width="36"
+                    height="36"
+                  /><span>By <a href="about.html">Lew Akil</a> · Essay</span>
+                </div>
+              </div>
+              <figure class="essay-art">
+                <img
+                  src="img/writing/sales-engineering.svg"
+                  alt="A bridge connects customer discovery with technical systems and business value."
+                  width="960"
+                  height="640"
+                  fetchpriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+        </header>
+        <div class="container essay-layout">
+          <aside class="essay-aside">
+            <p class="essay-toc-title">In this article</p>
+            <nav class="essay-toc" aria-label="Article sections">
+              <a href="#the-stated-requirement-isn-t-always-the-problem"
+                >The stated requirement isn't always the problem</a
+              ><a href="#customers-experience-workflows-not-architecture"
+                >Customers experience workflows, not architecture</a
+              ><a href="#discovery-is-an-engineering-skill"
+                >Discovery is an engineering skill</a
+              ><a href="#can-we-and-should-we-are-different-questions"
+                >“Can we?” and “Should we?” are different questions</a
+              ><a href="#pocs-should-prove-risk-not-impress-people"
+                >POCs should prove risk, not impress people</a
+              ><a href="#demos-reveal-usability-problems"
+                >Demos reveal usability problems</a
+              ><a href="#integrations-teach-you-where-products-really-end"
+                >Integrations teach you where products really end</a
+              ><a href="#communication-is-part-of-the-solution"
+                >Communication is part of the solution</a
+              ><a href="#good-engineers-learn-to-translate"
+                >Good engineers learn to translate</a
+              ><a href="#customer-objections-can-reveal-architectural-problems"
+                >Customer objections can reveal architectural problems</a
+              ><a href="#constraints-improve-prioritization"
+                >Constraints improve prioritization</a
+              ><a href="#engineering-decisions-have-business-consequences"
+                >Engineering decisions have business consequences</a
+              ><a
+                href="#sales-engineering-also-benefits-from-engineering-discipline"
+                >Sales engineering also benefits from engineering discipline</a
+              ><a href="#engineers-don-t-need-to-become-salespeople"
+                >Engineers don't need to become salespeople</a
+              >
+            </nav>
+            <a href="#article-top">Back to top ↑</a>
+          </aside>
+          <div>
+            <details class="essay-mobile-toc">
+              <summary>In this article · 14 sections</summary>
+              <nav class="essay-toc" aria-label="Article sections on mobile">
+                <a href="#the-stated-requirement-isn-t-always-the-problem"
+                  >The stated requirement isn't always the problem</a
+                ><a href="#customers-experience-workflows-not-architecture"
+                  >Customers experience workflows, not architecture</a
+                ><a href="#discovery-is-an-engineering-skill"
+                  >Discovery is an engineering skill</a
+                ><a href="#can-we-and-should-we-are-different-questions"
+                  >“Can we?” and “Should we?” are different questions</a
+                ><a href="#pocs-should-prove-risk-not-impress-people"
+                  >POCs should prove risk, not impress people</a
+                ><a href="#demos-reveal-usability-problems"
+                  >Demos reveal usability problems</a
+                ><a href="#integrations-teach-you-where-products-really-end"
+                  >Integrations teach you where products really end</a
+                ><a href="#communication-is-part-of-the-solution"
+                  >Communication is part of the solution</a
+                ><a href="#good-engineers-learn-to-translate"
+                  >Good engineers learn to translate</a
+                ><a
+                  href="#customer-objections-can-reveal-architectural-problems"
+                  >Customer objections can reveal architectural problems</a
+                ><a href="#constraints-improve-prioritization"
+                  >Constraints improve prioritization</a
+                ><a href="#engineering-decisions-have-business-consequences"
+                  >Engineering decisions have business consequences</a
+                ><a
+                  href="#sales-engineering-also-benefits-from-engineering-discipline"
+                  >Sales engineering also benefits from engineering
+                  discipline</a
+                ><a href="#engineers-don-t-need-to-become-salespeople"
+                  >Engineers don't need to become salespeople</a
+                >
+              </nav>
+            </details>
+            <div class="essay-prose">
+              <div data-draft>
+                <p>
+                  Software engineering and sales engineering are different jobs.
+                </p>
+                <p>They optimize for different things.</p>
+                <p>Software engineers spend much of their time asking:</p>
+                <p>How should this system work?</p>
+                <p>How should we build it?</p>
+                <p>How do we make it reliable?</p>
+                <p>How do we maintain it?</p>
+                <p>
+                  Customer-facing engineers have to ask another set of
+                  questions:
+                </p>
+                <p>Why does this matter to the customer?</p>
+                <p>What are they actually trying to accomplish?</p>
+                <p>Which technical constraint could stop the project?</p>
+                <p>How do we prove the solution works in their environment?</p>
+                <p>
+                  What information does the customer need before they can say
+                  yes?
+                </p>
+                <p>
+                  Working close to those questions changes how you look at
+                  engineering.
+                </p>
+                <p>I don&#39;t think engineers need to become salespeople.</p>
+                <p>
+                  But there are several habits from sales engineering that make
+                  engineers better product builders.
+                </p>
+                <h2 id="the-stated-requirement-isn-t-always-the-problem">
+                  The stated requirement isn&#39;t always the problem
+                </h2>
+                <p>A customer might say:</p>
+                <blockquote>
+                  <p>“We need an API.”</p>
+                </blockquote>
+                <p>That sounds like a requirement.</p>
+                <p>But it isn&#39;t enough information to design anything.</p>
+                <p>Why?</p>
+                <p>Maybe they need to synchronize customer records.</p>
+                <p>Maybe they need real-time notifications.</p>
+                <p>Maybe they need to export data for compliance.</p>
+                <p>Maybe they want to eliminate a manual process.</p>
+                <p>Maybe another vendor told them APIs are important.</p>
+                <p>Those are different problems.</p>
+                <p>So the useful response isn&#39;t immediately:</p>
+                <blockquote>
+                  <p>“Yes, we have an API.”</p>
+                </blockquote>
+                <p>It&#39;s:</p>
+                <blockquote>
+                  <p><strong>“What are you trying to do with it?”</strong></p>
+                </blockquote>
+                <p>That question is incredibly useful outside sales.</p>
+                <p>Engineers get solution-shaped requests constantly.</p>
+                <p>“We need Kafka.”</p>
+                <p>“We need microservices.”</p>
+                <p>“We need AI.”</p>
+                <p>“We need a webhook.”</p>
+                <p>“We need a mobile app.”</p>
+                <p>“We need real-time.”</p>
+                <p>Sometimes those are correct.</p>
+                <p>
+                  Sometimes they&#39;re someone&#39;s proposed implementation of
+                  a problem that hasn&#39;t been clearly articulated.
+                </p>
+                <p>
+                  Understanding the underlying workflow gives engineering more
+                  room to solve the right thing.
+                </p>
+                <h2 id="customers-experience-workflows-not-architecture">
+                  Customers experience workflows, not architecture
+                </h2>
+                <p>Engineering teams naturally see systems as components.</p>
+                <p>Users usually don&#39;t.</p>
+                <p>
+                  A customer doesn&#39;t care that five services coordinated
+                  successfully.
+                </p>
+                <p>
+                  They care that they clicked the button and the thing happened.
+                </p>
+                <p>They don&#39;t experience your database normalization.</p>
+                <p>They experience whether their data is correct.</p>
+                <p>They don&#39;t experience your queue architecture.</p>
+                <p>They experience whether the workflow completes.</p>
+                <p>They don&#39;t experience your API abstraction.</p>
+                <p>They experience whether the integration works.</p>
+                <p>This doesn&#39;t make architecture less important.</p>
+                <p>It explains why architecture matters.</p>
+                <p>
+                  Reliable infrastructure matters because it produces a reliable
+                  experience.
+                </p>
+                <h2 id="discovery-is-an-engineering-skill">
+                  Discovery is an engineering skill
+                </h2>
+                <p>Good discovery isn&#39;t just:</p>
+                <blockquote>
+                  <p>“What features do you want?”</p>
+                </blockquote>
+                <p>
+                  It&#39;s understanding the environment around the problem.
+                </p>
+                <p>Who uses the workflow?</p>
+                <p>What happens before it?</p>
+                <p>What happens after it?</p>
+                <p>Which systems participate?</p>
+                <p>What data moves?</p>
+                <p>What happens when it fails?</p>
+                <p>Who owns the failure?</p>
+                <p>How often does this happen?</p>
+                <p>What is manual today?</p>
+                <p>Which requirement is mandatory?</p>
+                <p>Which is preference?</p>
+                <p>What security constraints exist?</p>
+                <p>Those are engineering questions.</p>
+                <p>They&#39;re also discovery questions.</p>
+                <p>
+                  The earlier they&#39;re answered, the less likely engineering
+                  is to build around false assumptions.
+                </p>
+                <h2 id="can-we-and-should-we-are-different-questions">
+                  “Can we?” and “Should we?” are different questions
+                </h2>
+                <p>
+                  Engineers are good at answering whether something is
+                  technically possible.
+                </p>
+                <p>Sales engineering adds another dimension.</p>
+                <p>What does the capability unlock?</p>
+                <p>Suppose a customer asks for a new integration.</p>
+                <p>Engineering might estimate six weeks of work.</p>
+                <p>That&#39;s useful.</p>
+                <p>But the full decision includes more.</p>
+                <p>Is this one customer&#39;s unusual workflow?</p>
+                <p>Do many customers need it?</p>
+                <p>Does it unlock a new market?</p>
+                <p>Does it reduce support burden?</p>
+                <p>Does it create a maintenance obligation?</p>
+                <p>Does it require a new security model?</p>
+                <p>Could a generic capability solve the problem instead?</p>
+                <p>
+                  A technically valid solution isn&#39;t automatically a good
+                  product decision.
+                </p>
+                <p>
+                  Understanding the commercial context doesn&#39;t corrupt
+                  engineering.
+                </p>
+                <p>It gives engineering more information.</p>
+                <h2 id="pocs-should-prove-risk-not-impress-people">
+                  POCs should prove risk, not impress people
+                </h2>
+                <p>
+                  This is one place engineering and sales engineering should
+                  work extremely well together.
+                </p>
+                <p>A weak POC tries to make the customer say:</p>
+                <blockquote>
+                  <p>“Wow.”</p>
+                </blockquote>
+                <p>A strong POC tries to answer:</p>
+                <blockquote>
+                  <p>
+                    “Does the thing that could stop this project actually work?”
+                  </p>
+                </blockquote>
+                <p>If the concern is authentication, test authentication.</p>
+                <p>If it&#39;s data access, prove data access.</p>
+                <p>If it&#39;s latency, measure latency.</p>
+                <p>If it&#39;s model quality, evaluate the model.</p>
+                <p>
+                  If it&#39;s a security requirement, validate the security
+                  architecture.
+                </p>
+                <p>A beautiful interface can help communicate the result.</p>
+                <p>It should not hide the uncertainty.</p>
+                <p>
+                  The best customer-facing technical work reduces risk for both
+                  sides.
+                </p>
+                <h2 id="demos-reveal-usability-problems">
+                  Demos reveal usability problems
+                </h2>
+                <p>
+                  If you&#39;ve ever had to repeatedly demo the same workflow,
+                  you start noticing friction.
+                </p>
+                <p>You notice the screen that always requires explanation.</p>
+                <p>You notice the button nobody sees.</p>
+                <p>
+                  You notice the terminology customers interpret differently.
+                </p>
+                <p>You notice the workflow that takes eleven clicks.</p>
+                <p>You notice the question every customer asks.</p>
+                <p>That&#39;s useful product feedback.</p>
+                <p>A demo is a strange kind of usability test.</p>
+                <p>
+                  You&#39;re watching someone encounter the product through your
+                  explanation.
+                </p>
+                <p>
+                  If you need a three-minute monologue to explain one button,
+                  something may be wrong.
+                </p>
+                <p>
+                  If every audience asks the same question, maybe the product
+                  doesn&#39;t answer it clearly enough.
+                </p>
+                <p>
+                  If you always skip a certain workflow because it&#39;s too
+                  difficult to demonstrate, that&#39;s worth investigating.
+                </p>
+                <p>
+                  Customer-facing engineering creates a feedback loop into
+                  product design.
+                </p>
+                <h2 id="integrations-teach-you-where-products-really-end">
+                  Integrations teach you where products really end
+                </h2>
+                <p>A product diagram often has a nice clean boundary.</p>
+                <p>The customer&#39;s environment does not.</p>
+                <p>Their identity provider matters.</p>
+                <p>Their network matters.</p>
+                <p>Their data model matters.</p>
+                <p>Their CRM matters.</p>
+                <p>Their API gateway matters.</p>
+                <p>Their security team matters.</p>
+                <p>Their procurement requirements matter.</p>
+                <p>Their existing workflows matter.</p>
+                <p>
+                  An integration can be technically correct and still fail as a
+                  project because one of those boundaries was misunderstood.
+                </p>
+                <p>
+                  That&#39;s why customer-facing engineers tend to ask questions
+                  like:
+                </p>
+                <p>What system owns this data?</p>
+                <p>Which side initiates the request?</p>
+                <p>How does authentication work?</p>
+                <p>What happens when the endpoint is unavailable?</p>
+                <p>Can the customer retry?</p>
+                <p>Is the operation idempotent?</p>
+                <p>Who monitors failures?</p>
+                <p>Those questions aren&#39;t sales tricks.</p>
+                <p>They&#39;re systems engineering.</p>
+                <h2 id="communication-is-part-of-the-solution">
+                  Communication is part of the solution
+                </h2>
+                <p>
+                  Sometimes the technical solution works and the project still
+                  stalls.
+                </p>
+                <p>Why?</p>
+                <p>Because nobody understands it well enough to approve it.</p>
+                <p>Security doesn&#39;t understand the data flow.</p>
+                <p>The customer doesn&#39;t understand authentication.</p>
+                <p>Leadership doesn&#39;t understand the architecture.</p>
+                <p>Developers don&#39;t understand the API.</p>
+                <p>Operations doesn&#39;t understand failure handling.</p>
+                <p>The missing artifact may be a diagram.</p>
+                <p>Or a sequence diagram.</p>
+                <p>Or API documentation.</p>
+                <p>Or a sample payload.</p>
+                <p>Or a threat model.</p>
+                <p>Or a clear explanation.</p>
+                <p>
+                  That&#39;s something customer-facing engineering teaches
+                  quickly:
+                </p>
+                <p>
+                  <strong
+                    >A solution that cannot be understood can be almost as
+                    difficult to adopt as one that doesn&#39;t work.</strong
+                  >
+                </p>
+                <h2 id="good-engineers-learn-to-translate">
+                  Good engineers learn to translate
+                </h2>
+                <p>Consider this technical statement:</p>
+                <blockquote>
+                  <p>
+                    “The integration uses asynchronous webhook delivery with
+                    retry and idempotency controls.”
+                  </p>
+                </blockquote>
+                <p>An engineer understands that.</p>
+                <p>A different audience may need:</p>
+                <blockquote>
+                  <p>
+                    “If the receiving system is temporarily unavailable, we
+                    don&#39;t want the event to disappear or create duplicate
+                    records when it is retried.”
+                  </p>
+                </blockquote>
+                <p>Same architecture.</p>
+                <p>Different abstraction.</p>
+                <p>Translation isn&#39;t removing the technical truth.</p>
+                <p>
+                  It&#39;s connecting the technical mechanism to the consequence
+                  the listener cares about.
+                </p>
+                <p>
+                  That&#39;s a valuable skill whether you&#39;re speaking to a
+                  customer, product manager, executive, or another engineering
+                  team.
+                </p>
+                <h2 id="customer-objections-can-reveal-architectural-problems">
+                  Customer objections can reveal architectural problems
+                </h2>
+                <p>Not every objection is a product problem.</p>
+                <p>But some are signals.</p>
+                <p>“Can we audit who did this?”</p>
+                <p>“Where is this data stored?”</p>
+                <p>“What happens if the API goes down?”</p>
+                <p>“Can we restrict this by role?”</p>
+                <p>“How do we know the model didn&#39;t invent this?”</p>
+                <p>Those questions can reveal missing capabilities.</p>
+                <p>
+                  In an AI product, for example, the last question could lead to
+                  an entire architecture discussion around retrieval, citations,
+                  observability, and evaluation.
+                </p>
+                <p>The customer isn&#39;t necessarily asking for RAG.</p>
+                <p>They&#39;re asking for trust.</p>
+                <p>
+                  Engineering has to translate that concern into system design.
+                </p>
+                <h2 id="constraints-improve-prioritization">
+                  Constraints improve prioritization
+                </h2>
+                <p>
+                  Customer-facing work forces tradeoffs because time is always
+                  limited.
+                </p>
+                <p>You cannot demonstrate everything.</p>
+                <p>You cannot build every integration.</p>
+                <p>You cannot answer every edge case in the first POC.</p>
+                <p>You have to identify what actually determines success.</p>
+                <p>That mindset transfers directly to engineering.</p>
+                <p>What is the critical path?</p>
+                <p>What uncertainty matters?</p>
+                <p>What can wait?</p>
+                <p>What needs to be reliable?</p>
+                <p>What can be mocked?</p>
+                <p>What should be configurable?</p>
+                <p>What is genuinely required?</p>
+                <p>Constraint can create clarity.</p>
+                <h2 id="engineering-decisions-have-business-consequences">
+                  Engineering decisions have business consequences
+                </h2>
+                <p>
+                  Consider something as small as whether an API supports
+                  webhooks.
+                </p>
+                <p>
+                  From an engineering perspective, that&#39;s a technical
+                  capability.
+                </p>
+                <p>
+                  From the customer&#39;s perspective, it could determine
+                  whether a workflow is real-time or delayed.
+                </p>
+                <p>
+                  That may determine whether the product fits their process.
+                </p>
+                <p>
+                  Which may determine whether they can use the product at all.
+                </p>
+                <p>The same is true for:</p>
+                <p>SSO.</p>
+                <p>Audit logs.</p>
+                <p>API documentation.</p>
+                <p>Role-based permissions.</p>
+                <p>Data export.</p>
+                <p>Retry behavior.</p>
+                <p>Integration monitoring.</p>
+                <p>
+                  Sometimes a feature that looks boring in a roadmap is the
+                  thing standing between a product and a serious customer.
+                </p>
+                <p>
+                  Customer-facing experience helps engineers see that
+                  connection.
+                </p>
+                <h2
+                  id="sales-engineering-also-benefits-from-engineering-discipline"
+                >
+                  Sales engineering also benefits from engineering discipline
+                </h2>
+                <p>This goes both ways.</p>
+                <p>
+                  A technically impressive demo isn&#39;t enough if it can&#39;t
+                  survive implementation.
+                </p>
+                <p>
+                  A POC that ignores authentication isn&#39;t proof if
+                  authentication is the hardest requirement.
+                </p>
+                <p>
+                  An architecture diagram shouldn&#39;t imply capabilities the
+                  product doesn&#39;t have.
+                </p>
+                <p>
+                  A demo shouldn&#39;t make a prototype look like a production
+                  feature.
+                </p>
+                <p>
+                  A workaround shouldn&#39;t quietly become the long-term
+                  architecture.
+                </p>
+                <p>
+                  Customer-facing engineers are most useful when they preserve
+                  engineering reality while communicating business value.
+                </p>
+                <p>The goal isn&#39;t to say yes to everything.</p>
+                <p>Sometimes the most valuable answer is:</p>
+                <blockquote>
+                  <p>
+                    “We can&#39;t support that requirement with the current
+                    architecture.”
+                  </p>
+                </blockquote>
+                <p>Then explain why.</p>
+                <p>And perhaps identify what would need to change.</p>
+                <p>Credibility compounds.</p>
+                <h2 id="engineers-don-t-need-to-become-salespeople">
+                  Engineers don&#39;t need to become salespeople
+                </h2>
+                <p>That&#39;s not the lesson I take from sales engineering.</p>
+                <p>The lesson is that software exists in a larger system.</p>
+                <p>There is the technical system.</p>
+                <p>There is the user&#39;s workflow.</p>
+                <p>There is the customer&#39;s organization.</p>
+                <p>There are security constraints.</p>
+                <p>There are commercial constraints.</p>
+                <p>There are operational constraints.</p>
+                <p>
+                  There are humans trying to understand what the technology
+                  does.
+                </p>
+                <p>Engineering gets better when it can see all of them.</p>
+                <p>
+                  The strongest engineers I&#39;ve worked around don&#39;t just
+                  ask:
+                </p>
+                <p><strong>“Can we build this?”</strong></p>
+                <p>They also ask:</p>
+                <p><strong>“What problem are we solving?”</strong></p>
+                <p><strong>“Who experiences it?”</strong></p>
+                <p><strong>“What assumption are we making?”</strong></p>
+                <p><strong>“How will we prove it works?”</strong></p>
+                <p><strong>“What happens when it fails?”</strong></p>
+                <p><strong>“How will someone understand it?”</strong></p>
+                <p>
+                  <strong>“And what does solving it actually unlock?”</strong>
+                </p>
+                <p>
+                  You don&#39;t have to become a salesperson to ask those
+                  questions.
+                </p>
+                <p>
+                  You just have to remember that the system you&#39;re building
+                  eventually has to work for someone outside the engineering
+                  team.
+                </p>
+              </div>
+              <div class="essay-end">
+                <p>
+                  Written by <a href="about.html">Lew Akil</a> — engineer,
+                  product builder, and technical storyteller.
+                </p>
+                <p>
+                  <a href="about.html">About Lew →</a> &nbsp;
+                  <a href="writing.html">All writing →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="related-writing" aria-labelledby="keep-reading">
+        <div class="container">
+          <h2 id="keep-reading">Keep reading</h2>
+          <div class="related-grid">
+            <a class="related-card essay-demo" href="demo-business-story.html"
+              ><img
+                src="img/writing/demo-business-story.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Demos &amp; communication</p>
+                <h3>A Demo Is Not a Product Tour — It’s a Business Story</h3>
+              </div></a
+            ><a
+              class="related-card essay-sona"
+              href="sonasteps-ai-product-design.html"
+              ><img
+                src="img/writing/sonasteps-ai-design.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">AI &amp; product design</p>
+                <h3>
+                  What Building SonaSteps Taught Me About AI Product Design
+                </h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

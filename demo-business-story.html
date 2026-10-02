@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F8FAFC" />
+    <title>
+      A Demo Is Not a Product Tour — It’s a Business Story | Lew Akil
+    </title>
+    <meta
+      name="description"
+      content="A useful demo follows a problem through to an outcome. The interface is the evidence, and the story gives it meaning."
+    />
+    <link rel="canonical" href="https://lewakil.com/demo-business-story.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Lew Akil" />
+    <meta
+      property="og:title"
+      content="A Demo Is Not a Product Tour — It’s a Business Story"
+    />
+    <meta
+      property="og:description"
+      content="A useful demo follows a problem through to an outcome. The interface is the evidence, and the story gives it meaning."
+    />
+    <meta
+      property="og:url"
+      content="https://lewakil.com/demo-business-story.html"
+    />
+    <meta
+      property="og:image"
+      content="https://lewakil.com/img/writing/demo-business-story-social.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="A presentation stage lit around Tell, Show, and Tell: frame the problem, demonstrate the workflow, explain what changed."
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="img/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/brand.css" />
+    <link rel="stylesheet" href="css/writing.css" />
+    <script src="js/brand.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A Demo Is Not a Product Tour — It’s a Business Story",
+        "description": "A useful demo follows a problem through to an outcome. The interface is the evidence, and the story gives it meaning.",
+        "author": {
+          "@type": "Person",
+          "name": "Lew Akil",
+          "url": "https://lewakil.com/about.html"
+        },
+        "mainEntityOfPage": "https://lewakil.com/demo-business-story.html",
+        "image": "https://lewakil.com/img/writing/demo-business-story-social.png",
+        "inLanguage": "en"
+      }
+    </script>
+  </head>
+  <body class="essay-demo">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Lew Akil, home"
+          >LEW AKIL</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          hidden
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" /></svg
+          ><span>Menu</span>
+        </button>
+        <nav
+          class="primary-navigation"
+          id="primary-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="portfolio.html">Work</a
+          ><a href="writing.html" aria-current="page">Writing</a
+          ><a href="about.html">About</a
+          ><a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+            >Resume</a
+          ><a href="mailto:hire@lewakil.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <article aria-labelledby="article-title">
+        <header class="essay-hero" id="article-top">
+          <div class="container">
+            <a class="essay-back" href="writing.html#a-demo-is-a-business-story"
+              ><span aria-hidden="true">←</span> Back to Writing</a
+            >
+            <div class="essay-hero-grid">
+              <div class="essay-hero-copy">
+                <p class="essay-kicker">Demos &amp; communication</p>
+                <h1 id="article-title">
+                  A Demo Is Not a Product Tour — It’s a Business Story
+                </h1>
+                <p class="essay-deck">
+                  A useful demo follows a problem through to an outcome. The
+                  interface is the evidence, and the story gives it meaning.
+                </p>
+                <div class="essay-meta">
+                  <img
+                    src="img/main_photo.jpg"
+                    alt=""
+                    width="36"
+                    height="36"
+                  /><span>By <a href="about.html">Lew Akil</a> · Essay</span>
+                </div>
+              </div>
+              <figure class="essay-art">
+                <img
+                  src="img/writing/demo-business-story.svg"
+                  alt="A presentation stage lit around Tell, Show, and Tell: frame the problem, demonstrate the workflow, explain what changed."
+                  width="960"
+                  height="640"
+                  fetchpriority="high"
+                />
+              </figure>
+            </div>
+          </div>
+        </header>
+        <div class="container essay-layout">
+          <aside class="essay-aside">
+            <p class="essay-toc-title">In this article</p>
+            <nav class="essay-toc" aria-label="Article sections">
+              <a href="#start-with-the-problem-not-the-interface"
+                >Start with the problem, not the interface</a
+              ><a href="#features-are-evidence">Features are evidence</a
+              ><a
+                href="#tell-me-why-i-should-care-before-telling-me-how-it-works"
+                >Tell me why I should care before telling me how it works</a
+              ><a
+                href="#a-useful-structure-problem-to-context-to-decision-to-action-to-outcome"
+                >A useful structure: problem → context → decision → action →
+                outcome</a
+              ><a href="#tell-to-show-to-tell">Tell → Show → Tell</a
+              ><a href="#the-architecture-can-be-part-of-the-story"
+                >The architecture can be part of the story</a
+              ><a href="#don-t-confuse-technical-depth-with-technical-volume"
+                >Don't confuse technical depth with technical volume</a
+              ><a href="#adjust-the-abstraction-level"
+                >Adjust the abstraction level</a
+              ><a href="#demos-expose-product-problems"
+                >Demos expose product problems</a
+              ><a href="#don-t-fake-the-happy-path">Don't fake the happy path</a
+              ><a href="#the-best-demo-is-usually-narrower-than-you-think"
+                >The best demo is usually narrower than you think</a
+              ><a href="#the-product-isn-t-the-story"
+                >The product isn't the story</a
+              >
+            </nav>
+            <a href="#article-top">Back to top ↑</a>
+          </aside>
+          <div>
+            <details class="essay-mobile-toc">
+              <summary>In this article · 12 sections</summary>
+              <nav class="essay-toc" aria-label="Article sections on mobile">
+                <a href="#start-with-the-problem-not-the-interface"
+                  >Start with the problem, not the interface</a
+                ><a href="#features-are-evidence">Features are evidence</a
+                ><a
+                  href="#tell-me-why-i-should-care-before-telling-me-how-it-works"
+                  >Tell me why I should care before telling me how it works</a
+                ><a
+                  href="#a-useful-structure-problem-to-context-to-decision-to-action-to-outcome"
+                  >A useful structure: problem → context → decision → action →
+                  outcome</a
+                ><a href="#tell-to-show-to-tell">Tell → Show → Tell</a
+                ><a href="#the-architecture-can-be-part-of-the-story"
+                  >The architecture can be part of the story</a
+                ><a href="#don-t-confuse-technical-depth-with-technical-volume"
+                  >Don't confuse technical depth with technical volume</a
+                ><a href="#adjust-the-abstraction-level"
+                  >Adjust the abstraction level</a
+                ><a href="#demos-expose-product-problems"
+                  >Demos expose product problems</a
+                ><a href="#don-t-fake-the-happy-path"
+                  >Don't fake the happy path</a
+                ><a href="#the-best-demo-is-usually-narrower-than-you-think"
+                  >The best demo is usually narrower than you think</a
+                ><a href="#the-product-isn-t-the-story"
+                  >The product isn't the story</a
+                >
+              </nav>
+            </details>
+            <div class="essay-prose">
+              <div data-draft>
+                <p>A lot of technical demos are really product tours.</p>
+                <p>
+                  Someone shares their screen, opens the application, and starts
+                  moving through the navigation.
+                </p>
+                <p>“This is the dashboard.”</p>
+                <p>“Over here we have integrations.”</p>
+                <p>“If I click this, you can create a workflow.”</p>
+                <p>“This page shows analytics.”</p>
+                <p>“And under settings, you can configure…”</p>
+                <p>
+                  Twenty minutes later, the audience has seen a lot of software
+                  but may still have no idea why any of it matters.
+                </p>
+                <p>
+                  The problem usually isn&#39;t the product. The problem is the
+                  story.
+                </p>
+                <p>
+                  A good technical demo isn&#39;t a guided tour of everything
+                  the engineering team built. It is an explanation of how the
+                  product changes a situation for the person using it.
+                </p>
+                <p>
+                  That sounds like a small distinction. It completely changes
+                  how I think about demos.
+                </p>
+                <h2 id="start-with-the-problem-not-the-interface">
+                  Start with the problem, not the interface
+                </h2>
+                <p>
+                  Software teams naturally think in terms of features and
+                  components.
+                </p>
+                <p>
+                  We built authentication. We built integrations. We built
+                  search. We added an API. We created a dashboard.
+                </p>
+                <p>Those things matter when you&#39;re building the system.</p>
+                <p>
+                  They aren&#39;t necessarily the best way to explain the
+                  system.
+                </p>
+                <p>
+                  Imagine demonstrating a support platform. You could begin
+                  with:
+                </p>
+                <blockquote>
+                  <p>
+                    “This is the ticket dashboard. On the left are your queues.
+                    Across the top are your filters.”
+                  </p>
+                </blockquote>
+                <p>Or you could begin with:</p>
+                <blockquote>
+                  <p>
+                    “A customer reports that their Salesforce integration
+                    stopped syncing. The support engineer needs to figure out
+                    what happened, understand how serious it is, find the
+                    relevant troubleshooting information, and decide what to do
+                    next.”
+                  </p>
+                </blockquote>
+                <p>Now the dashboard has a reason to exist.</p>
+                <p>
+                  The audience knows what problem we&#39;re solving before
+                  seeing the solution.
+                </p>
+                <p>That creates a useful rule:</p>
+                <p>
+                  <strong
+                    >Don&#39;t make the UI carry the story. Give the UI a story
+                    to support.</strong
+                  >
+                </p>
+                <h2 id="features-are-evidence">Features are evidence</h2>
+                <p>This changed how I think about what belongs in a demo.</p>
+                <p>Suppose a product has twenty capabilities.</p>
+                <p>
+                  It doesn&#39;t follow that the demo should show twenty
+                  capabilities.
+                </p>
+                <p>If the story requires six of them, show six.</p>
+                <p>
+                  The remaining fourteen might be impressive engineering
+                  achievements, but adding them can make the demonstration
+                  worse.
+                </p>
+                <p>Think about a support scenario.</p>
+                <p>A customer reports an integration problem.</p>
+                <p>The application:</p>
+                <ol>
+                  <li>receives the issue,</li>
+                  <li>identifies the type of problem,</li>
+                  <li>surfaces integration context,</li>
+                  <li>retrieves relevant documentation,</li>
+                  <li>recommends a troubleshooting step,</li>
+                  <li>helps the support engineer act.</li>
+                </ol>
+                <p>
+                  Maybe the platform also has custom themes, reporting exports,
+                  notification settings, team administration, twenty
+                  integrations, and configurable dashboards.
+                </p>
+                <p>Those features may matter.</p>
+                <p>
+                  But unless they advance this particular story, they&#39;re
+                  distractions.
+                </p>
+                <p>
+                  The feature should appear because the audience needs it to
+                  understand what happens next.
+                </p>
+                <p>
+                  That makes the product itself evidence for the larger
+                  argument:
+                </p>
+                <p>
+                  <strong
+                    >This problem can be handled better. Here&#39;s how.</strong
+                  >
+                </p>
+                <h2
+                  id="tell-me-why-i-should-care-before-telling-me-how-it-works"
+                >
+                  Tell me why I should care before telling me how it works
+                </h2>
+                <p>
+                  Technical people sometimes resist this because it sounds like
+                  simplifying the engineering.
+                </p>
+                <p>I see it differently.</p>
+                <p>
+                  Good technical storytelling is about sequencing information.
+                </p>
+                <p>
+                  There is a difference between hiding complexity and
+                  introducing complexity at the right time.
+                </p>
+                <p>Consider an API platform.</p>
+                <p>You could begin a demo by showing:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="http example"
+                ><code class="language-http">POST /v1/events
+Authorization: Bearer &lt;token&gt;
+Content-Type: application/json
+</code></pre>
+                <p>
+                  and then spend five minutes explaining the request schema.
+                </p>
+                <p>That may be exactly what a developer eventually needs.</p>
+                <p>But the first question may be more fundamental:</p>
+                <p>
+                  <strong
+                    >Why would they send the event in the first place?</strong
+                  >
+                </p>
+                <p>
+                  Maybe the customer currently has to manually reconcile data
+                  between two systems every morning.
+                </p>
+                <p>Now we have a story.</p>
+                <p>The business problem is manual reconciliation.</p>
+                <p>The technical mechanism is an event-driven integration.</p>
+                <p>
+                  The API request becomes meaningful because the audience
+                  understands the workflow it changes.
+                </p>
+                <p>You can still go deep.</p>
+                <p>
+                  You can talk about authentication, retries, idempotency,
+                  webhooks, rate limits, failure handling, observability, and
+                  whatever else matters.
+                </p>
+                <p>
+                  But now those technical details exist inside a problem the
+                  audience understands.
+                </p>
+                <h2
+                  id="a-useful-structure-problem-to-context-to-decision-to-action-to-outcome"
+                >
+                  A useful structure: problem → context → decision → action →
+                  outcome
+                </h2>
+                <p>One structure I come back to is:</p>
+                <p>
+                  <strong
+                    >Problem → Context → Decision → Action → Outcome</strong
+                  >
+                </p>
+                <p>It works for surprisingly technical demos.</p>
+                <p>Take an integration-monitoring example.</p>
+                <p>
+                  <strong>Problem:</strong> A customer&#39;s billing integration
+                  has stopped processing events.
+                </p>
+                <p>
+                  <strong>Context:</strong> The support engineer can see the
+                  customer, integration, recent failures, timestamps, and
+                  affected workflow.
+                </p>
+                <p>
+                  <strong>Decision:</strong> The system identifies the failure
+                  pattern and surfaces the most relevant troubleshooting
+                  information.
+                </p>
+                <p>
+                  <strong>Action:</strong> The engineer inspects the failed
+                  webhook, verifies the configuration, and retries the event.
+                </p>
+                <p>
+                  <strong>Outcome:</strong> The workflow resumes without forcing
+                  the engineer to jump between multiple disconnected systems.
+                </p>
+                <p>Now every screen has a purpose.</p>
+                <p>
+                  You&#39;re not clicking around because the feature exists.
+                </p>
+                <p>
+                  You&#39;re moving through the product because the story
+                  requires the next piece of information.
+                </p>
+                <h2 id="tell-to-show-to-tell">Tell → Show → Tell</h2>
+                <p>Another structure I like is even simpler:</p>
+                <p><strong>Tell. Show. Tell.</strong></p>
+                <p>Tell the audience what problem we&#39;re about to solve.</p>
+                <p>Show the product solving it.</p>
+                <p>Tell them what changed.</p>
+                <p>For example:</p>
+                <blockquote>
+                  <p>
+                    “This support engineer just received an integration issue.
+                    Before they can respond, they need to understand what
+                    failed, how serious it is, and what they should do next.”
+                  </p>
+                </blockquote>
+                <p>Then demonstrate the workflow.</p>
+                <p>Afterwards:</p>
+                <blockquote>
+                  <p>
+                    “Instead of manually checking several systems, the engineer
+                    had the ticket, integration context, relevant knowledge, and
+                    next action in one workflow.”
+                  </p>
+                </blockquote>
+                <p>The last part matters.</p>
+                <p>Without it, demos often just stop.</p>
+                <p>The user clicks the final button and the presenter says:</p>
+                <blockquote>
+                  <p>“So… yeah. That&#39;s basically it.”</p>
+                </blockquote>
+                <p>
+                  Don&#39;t make the audience reconstruct the value themselves.
+                </p>
+                <p>Explain the before and after.</p>
+                <h2 id="the-architecture-can-be-part-of-the-story">
+                  The architecture can be part of the story
+                </h2>
+                <p>
+                  For technical audiences, I usually want to go one level
+                  deeper.
+                </p>
+                <p>A polished UI isn&#39;t enough.</p>
+                <p>
+                  If I&#39;m evaluating a serious product, I want to understand
+                  what is happening behind it.
+                </p>
+                <p>
+                  This is where an architecture diagram becomes part of the
+                  demo.
+                </p>
+                <p>
+                  Not a giant diagram with forty services and arrows going
+                  everywhere.
+                </p>
+                <p>A useful diagram.</p>
+                <p>For an AI application, for example:</p>
+                <pre
+                  tabindex="0"
+                  aria-label="Text diagram or example"
+                ><code class="language-text">User
+  ↓
+Application
+  ↓
+Request / Context Layer
+  ├── Application State
+  ├── Trusted Knowledge
+  └── Permitted Tools
+          ↓
+     AI Orchestration
+          ↓
+        Model
+          ↓
+      Validation
+          ↓
+       Response
+</code></pre>
+                <p>
+                  Now I can explain something important that the UI alone cannot
+                  show:
+                </p>
+                <p>The model isn&#39;t the application.</p>
+                <p>
+                  The application owns state, permissions, data, validation, and
+                  actions. The model handles the parts of the workflow where
+                  language understanding or probabilistic reasoning is useful.
+                </p>
+                <p>
+                  That may be one of the most important technical ideas in the
+                  product.
+                </p>
+                <p>A good demo should make room for it.</p>
+                <h2 id="don-t-confuse-technical-depth-with-technical-volume">
+                  Don&#39;t confuse technical depth with technical volume
+                </h2>
+                <p>
+                  A demo can contain a lot of technical information and still be
+                  shallow.
+                </p>
+                <p>Listing technologies is a good example.</p>
+                <blockquote>
+                  <p>
+                    “We&#39;re using React, Node, PostgreSQL, Redis, Kubernetes,
+                    OpenAI, LangChain, Kafka…”
+                  </p>
+                </blockquote>
+                <p>Okay.</p>
+                <p>Why?</p>
+                <p>What engineering problem required those decisions?</p>
+                <p>
+                  Technical depth comes from explaining
+                  <strong>relationships and tradeoffs</strong>, not reciting a
+                  stack.
+                </p>
+                <p>Instead of:</p>
+                <blockquote>
+                  <p>“We use a vector database.”</p>
+                </blockquote>
+                <p>I&#39;d rather hear:</p>
+                <blockquote>
+                  <p>
+                    “We don&#39;t want the model relying only on what it learned
+                    during training. When the user asks about our product&#39;s
+                    material, we retrieve the relevant approved content first
+                    and include it in the model context. That gives us a better
+                    grounding boundary and lets us associate the answer with its
+                    source.”
+                  </p>
+                </blockquote>
+                <p>Now I understand the engineering decision.</p>
+                <p>The technology is secondary.</p>
+                <h2 id="adjust-the-abstraction-level">
+                  Adjust the abstraction level
+                </h2>
+                <p>
+                  The same product can require completely different demos
+                  depending on the audience.
+                </p>
+                <p>An engineer might care about:</p>
+                <ul>
+                  <li>data flow,</li>
+                  <li>APIs,</li>
+                  <li>authentication,</li>
+                  <li>failure handling,</li>
+                  <li>consistency,</li>
+                  <li>observability,</li>
+                  <li>model behavior,</li>
+                  <li>deployment.</li>
+                </ul>
+                <p>A product leader might care about:</p>
+                <ul>
+                  <li>user workflow,</li>
+                  <li>adoption,</li>
+                  <li>friction,</li>
+                  <li>differentiation,</li>
+                  <li>roadmap,</li>
+                  <li>constraints.</li>
+                </ul>
+                <p>An executive may care about:</p>
+                <ul>
+                  <li>cost,</li>
+                  <li>risk,</li>
+                  <li>time,</li>
+                  <li>operational impact,</li>
+                  <li>strategic value.</li>
+                </ul>
+                <p>A customer may simply want to know:</p>
+                <p>
+                  <strong
+                    >Will this solve my problem without creating three new
+                    ones?</strong
+                  >
+                </p>
+                <p>
+                  Technical storytelling doesn&#39;t mean giving everyone the
+                  same explanation.
+                </p>
+                <p>
+                  It means understanding which details are necessary for this
+                  audience to understand the system.
+                </p>
+                <h2 id="demos-expose-product-problems">
+                  Demos expose product problems
+                </h2>
+                <p>There&#39;s another reason I like demos.</p>
+                <p>
+                  Preparing one forces you to experience the product as a
+                  sequence rather than a collection of features.
+                </p>
+                <p>That exposes problems.</p>
+                <p>
+                  If a workflow requires fifteen clicks, the demo makes that
+                  obvious.
+                </p>
+                <p>
+                  If a feature requires five minutes of explanation before
+                  anyone understands why it exists, that tells you something.
+                </p>
+                <p>If you constantly need to say:</p>
+                <blockquote>
+                  <p>“Ignore this part.”</p>
+                </blockquote>
+                <p>or:</p>
+                <blockquote>
+                  <p>“Normally this would happen automatically.”</p>
+                </blockquote>
+                <p>or:</p>
+                <blockquote>
+                  <p>“This isn&#39;t connected yet, but imagine…”</p>
+                </blockquote>
+                <p>you&#39;ve learned something about the product.</p>
+                <p>A demo can function as a lightweight product test.</p>
+                <p>You&#39;re asking:</p>
+                <p>
+                  <strong
+                    >Can I explain the value of this workflow clearly from
+                    beginning to end?</strong
+                  >
+                </p>
+                <p>
+                  If the answer is no, the problem may not be the presentation.
+                </p>
+                <p>It may be the product.</p>
+                <h2 id="don-t-fake-the-happy-path">
+                  Don&#39;t fake the happy path
+                </h2>
+                <p>
+                  A demo should be controlled. That doesn&#39;t mean it should
+                  misrepresent reality.
+                </p>
+                <p>
+                  If a system depends on an API call, what happens when that API
+                  fails?
+                </p>
+                <p>
+                  If an AI system recommends an action, what happens when its
+                  confidence is low?
+                </p>
+                <p>
+                  If a workflow updates another system, how do we know the
+                  update succeeded?
+                </p>
+                <p>
+                  You don&#39;t need to intentionally destroy every demo with
+                  failure scenarios.
+                </p>
+                <p>
+                  But for serious technical evaluations, showing that you&#39;ve
+                  thought about failure often creates more confidence than
+                  pretending failure doesn&#39;t exist.
+                </p>
+                <p>The happy path tells me the product works.</p>
+                <p>The failure path tells me the team understands systems.</p>
+                <h2 id="the-best-demo-is-usually-narrower-than-you-think">
+                  The best demo is usually narrower than you think
+                </h2>
+                <p>
+                  One of the hardest things about preparing a demo is deciding
+                  what not to show.
+                </p>
+                <p>People are proud of what they built.</p>
+                <p>They should be.</p>
+                <p>But a demo isn&#39;t a changelog.</p>
+                <p>The goal isn&#39;t:</p>
+                <blockquote>
+                  <p>“How much software can I fit into thirty minutes?”</p>
+                </blockquote>
+                <p>The goal is:</p>
+                <blockquote>
+                  <p>
+                    “What does this audience need to understand in order to see
+                    why this matters?”
+                  </p>
+                </blockquote>
+                <p>Those are very different questions.</p>
+                <p>
+                  A narrow, coherent workflow usually communicates more than a
+                  wide tour of disconnected features.
+                </p>
+                <h2 id="the-product-isn-t-the-story">
+                  The product isn&#39;t the story
+                </h2>
+                <p>The product matters.</p>
+                <p>The engineering matters.</p>
+                <p>The architecture matters.</p>
+                <p>
+                  But none of those things automatically create a compelling
+                  demo.
+                </p>
+                <p>The story is the transition:</p>
+                <p><strong>Something is difficult today.</strong></p>
+                <p><strong>Here is why.</strong></p>
+                <p><strong>Here is how the system approaches it.</strong></p>
+                <p>
+                  <strong
+                    >Here is what the user can do now that they couldn&#39;t do
+                    as easily before.</strong
+                  >
+                </p>
+                <p>The product is what makes that transition possible.</p>
+                <p>
+                  That&#39;s why I don&#39;t think of a demo as a product tour
+                  anymore.
+                </p>
+                <p>A product tour says:</p>
+                <p><strong>“Look at everything we built.”</strong></p>
+                <p>A good demo says:</p>
+                <p>
+                  <strong
+                    >“Here is a problem worth solving. Now let me show you how
+                    we approached it.”</strong
+                  >
+                </p>
+              </div>
+              <div class="essay-end">
+                <p>
+                  Written by <a href="about.html">Lew Akil</a> — engineer,
+                  product builder, and technical storyteller.
+                </p>
+                <p>
+                  <a href="about.html">About Lew →</a> &nbsp;
+                  <a href="writing.html">All writing →</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="related-writing" aria-labelledby="keep-reading">
+        <div class="container">
+          <h2 id="keep-reading">Keep reading</h2>
+          <div class="related-grid">
+            <a
+              class="related-card essay-sona"
+              href="sonasteps-ai-product-design.html"
+              ><img
+                src="img/writing/sonasteps-ai-design.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">AI &amp; product design</p>
+                <h3>
+                  What Building SonaSteps Taught Me About AI Product Design
+                </h3>
+              </div></a
+            ><a class="related-card essay-poc" href="pocs-before-code.html"
+              ><img
+                src="img/writing/poc-before-code.svg"
+                alt=""
+                width="960"
+                height="640"
+                loading="lazy"
+              />
+              <div>
+                <p class="journal-category">Experiments &amp; architecture</p>
+                <h3>How I Think About POCs Before Writing Code</h3>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="wordmark" href="index.html">LEW AKIL</a>
+            <p>Engineer · Product Builder · Technical Storyteller</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="portfolio.html">Work</a>
+            <a href="writing.html">Writing</a>
+            <a href="about.html">About</a>
+            <a
+              href="https://www.linkedin.com/in/LewAkil/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="./Lew_Akil_Resume.pdf" target="_blank" rel="noopener"
+              >Resume</a
+            >
+            <a href="mailto:hire@lewakil.com">Email</a>
+          </nav>
+        </div>
+        <p class="copyright">
+          © 2026 Lew Akil. Built by <a href="index.html">Lew Akil</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

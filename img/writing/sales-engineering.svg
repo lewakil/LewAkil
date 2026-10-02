@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="sales-title sales-desc">
+  <title id="sales-title">Sales engineering as a translation bridge</title>
+  <desc id="sales-desc">A suspension bridge connects a customer's discovery question with an understandable outcome. The bridge has visible supporting cables and a small interlocking mechanism beneath its deck, representing the technical system that makes the crossing possible. A blue signal crosses the bridge. Discovery, translation and value appear as the only labels. The illustration connects customer problems, engineering reality and business consequences.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:600;fill:#142E47}.line{fill:none;stroke:#142E47;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style>
+  <rect width="960" height="640" fill="#F5FAFC"/>
+  <circle cx="480" cy="288" r="228" fill="#EFF5FD"/>
+  <path d="M24 471C48 427 109 414 149 414C193 414 208 387 245 387L260 511H24Z" fill="#E0EAF8"/>
+  <path d="M936 471C912 427 851 414 811 414C767 414 752 387 715 387L700 511H936Z" fill="#E0F1F0"/>
+  <path d="M94 502C159 514 192 490 254 502C316 514 350 490 413 502C475 514 509 490 572 502C634 514 668 490 731 502C793 514 827 490 890 502" fill="none" stroke="#C3D9EE" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M170 529C232 541 266 517 329 529C391 541 425 517 488 529C550 541 584 517 647 529C709 541 743 517 806 529" fill="none" stroke="#D9E5F1" stroke-width="2.5" stroke-linecap="round"/>
+
+  <path d="M213 349H747" stroke="#142E47" stroke-width="7" stroke-linecap="round"/>
+  <path d="M213 367H747" stroke="#ABC0D8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M238 351V367M279 351V367M320 351V367M361 351V367M402 351V367M443 351V367M484 351V367M525 351V367M566 351V367M607 351V367M648 351V367M689 351V367M730 351V367" stroke="#ABC0D8" stroke-width="2"/>
+  <path d="M298 187V414M662 187V414" stroke="#142E47" stroke-width="6" stroke-linecap="round"/>
+  <path d="M283 412H313M647 412H677" stroke="#142E47" stroke-width="5" stroke-linecap="round"/>
+  <path d="M225 346L298 212Q480 344 662 212L735 346" fill="none" stroke="#142E47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M298 212Q480 344 662 212" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+  <path d="M335 236V348M373 256V348M412 270V348M452 279V348M490 283V348M529 279V348M568 267V348M607 250V348" stroke="#A2BADD" stroke-width="2"/>
+  <path d="M311 379Q480 483 649 379" fill="none" stroke="#D3E0F2" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="480" cy="349" r="14" fill="#2563EB" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M476 343L483 349L476 355" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(442 411)">
+    <path d="M-8-32H8L11-22L19-17L29-19L37-5L29 2L29 12L37 19L29 33L19 31L11 36L8 46H-8L-11 36L-19 31L-29 33L-37 19L-29 12V2L-37-5L-29-19L-19-17L-11-22Z" fill="#FFFFFF" stroke="#B3C7E2" stroke-width="2" stroke-linejoin="round"/>
+    <circle cy="7" r="16" fill="#ECF3FD" stroke="#2563EB" stroke-width="2.5"/>
+    <circle cy="7" r="5" fill="#2563EB"/>
+  </g>
+  <g transform="translate(520 420) scale(.72)">
+    <path d="M-8-32H8L11-22L19-17L29-19L37-5L29 2L29 12L37 19L29 33L19 31L11 36L8 46H-8L-11 36L-19 31L-29 33L-37 19L-29 12V2L-37-5L-29-19L-19-17L-11-22Z" fill="#FFFFFF" stroke="#B3C7E2" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cy="7" r="16" fill="#E4F3F1" stroke="#35958F" stroke-width="3"/>
+    <circle cy="7" r="5" fill="#35958F"/>
+  </g>
+
+  <path d="M101 136H223Q240 136 240 153V202Q240 219 223 219H203L180 239V219H101Q84 219 84 202V153Q84 136 101 136Z" fill="#FFFFFF" stroke="#142E47" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="162" y="190" text-anchor="middle" font-size="29">Why?</text>
+  <text x="162" y="279" text-anchor="middle">Discovery</text>
+  <g transform="rotate(5 806 177)">
+    <path d="M746 117H846L867 138V228H746Z" fill="#FFFFFF" stroke="#AACEC9" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M846 117V138H867" fill="#E4F3F1" stroke="#AACEC9" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M766 151H819M766 166H838" stroke="#B8D8D3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M781 194L794 207L823 178" fill="none" stroke="#35958F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="807" y="279" text-anchor="middle">Value</text>
+  <text x="480" y="578" text-anchor="middle">Translation</text>
+</svg>

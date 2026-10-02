@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">SonaSteps: trusted learning material and a carefully bounded AI layer</title>
+  <desc id="desc">Editorial illustration of the proposed SonaSteps AI direction for families and caregivers of children who are deaf or hard of hearing. A family asks for another explanation. An open book represents trusted educational material. Selected material passes into a bounded AI context that helps explain and navigate. A separate solid application foundation owns facts and permissions. This is an illustration of design principles and planned AI, not a product screenshot or claim of implemented functionality or clinical outcomes.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBF8F2"/><stop offset="1" stop-color="#F2F5EE"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFDF8"/>
+    </linearGradient>
+    <linearGradient id="context" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E5F1EC"/><stop offset="1" stop-color="#EFF5FA"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-30%" y="-30%" width="170%" height="180%">
+      <feDropShadow dx="0" dy="11" stdDeviation="14" flood-color="#47564A" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#2478A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#203D3E}
+      .label{font-size:22px;font-weight:600}.note{font-size:21px;fill:#56706F}.large{font-size:30px;font-weight:600}.white{fill:#FFFDF8}
+    </style>
+  </defs>
+  <rect width="960" height="640" fill="url(#paper)"/>
+  <circle cx="855" cy="34" r="238" fill="#E9EFE5" opacity="0.45"/>
+  <circle cx="23" cy="634" r="194" fill="#EFE4CE" opacity="0.38"/>
+  <path d="M62 97 H898" stroke="#D6DED3"/>
+  <text x="64" y="69" class="label" letter-spacing="2">SONASTEPS</text>
+  <text x="897" y="69" class="note" text-anchor="end">Planned AI direction</text>
+
+  <!-- A question is the human starting point, rather than a technology icon. -->
+  <g filter="url(#soft-shadow)">
+    <path d="M97 141 H341 Q363 141 363 163 V234 Q363 256 341 256 H174 L145 280 V256 H97 Q75 256 75 234 V163 Q75 141 97 141Z" fill="#FFFDF8" stroke="#DADFD3" stroke-width="1.5"/>
+  </g>
+  <text x="102" y="188" class="large">Explain this</text>
+  <text x="102" y="226" class="large">another way.</text>
+
+  <!-- The book is approved source material, not generated content. -->
+  <g filter="url(#soft-shadow)">
+    <path d="M180 337 Q269 304 391 339 Q503 304 584 333 L578 501 Q473 474 391 516 Q292 476 181 502Z" fill="#DACBB0"/>
+    <path d="M164 323 Q274 294 391 332 Q505 293 595 319 L587 487 Q481 464 391 504 Q291 466 169 488Z" fill="#E4D8C2" stroke="#CBBDA4" stroke-width="1.5"/>
+    <path d="M171 313 Q269 283 391 324 V491 Q278 455 175 477Z" fill="url(#page)" stroke="#D6D8CB" stroke-width="1.5"/>
+    <path d="M391 324 Q505 283 588 310 L581 477 Q483 456 391 491Z" fill="url(#page)" stroke="#D6D8CB" stroke-width="1.5"/>
+    <path d="M391 326 V490" stroke="#B9C2B1" stroke-width="2"/>
+    <path d="M200 346 Q273 331 358 352 M201 368 Q281 355 358 375 M202 393 Q274 380 333 392 M420 350 Q487 331 554 340 M420 373 Q487 354 552 363 M420 396 Q465 383 507 385" fill="none" stroke="#BCCABB" stroke-width="4" stroke-linecap="round"/>
+    <path d="M202 423 Q266 412 332 424" fill="none" stroke="#90B7AA" stroke-width="6" stroke-linecap="round"/>
+    <path d="M420 425 Q477 410 550 419" fill="none" stroke="#90B7AA" stroke-width="6" stroke-linecap="round"/>
+    <path d="M522 308 V368 L536 355 550 364 V305" fill="#B0CFC2"/>
+  </g>
+  <text x="381" y="552" class="label" text-anchor="middle">Trusted learning material</text>
+  <text x="381" y="583" class="note" text-anchor="middle">Lessons · resources · approved content</text>
+
+  <!-- Bounded context is intentionally smaller than the complete application. -->
+  <ellipse cx="702" cy="270" rx="169" ry="137" fill="url(#context)"/>
+  <ellipse cx="702" cy="270" rx="180" ry="148" fill="none" stroke="#83ADAC" stroke-width="1.7" stroke-dasharray="5 7"/>
+  <path d="M363 194 C442 194 445 175 530 205" fill="none" stroke="#2478A3" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M548 337 C583 337 588 305 588 272" fill="none" stroke="#2478A3" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="702" cy="204" r="25" fill="#FFFDF8" stroke="#93BABA" stroke-width="1.5"/>
+  <path d="M702 187 V221 M685 204 H719 M690 192 714 216 M690 216 714 192" fill="none" stroke="#397E86" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="702" y="270" class="large" text-anchor="middle">AI helps</text>
+  <text x="702" y="305" class="label" text-anchor="middle">explain + navigate</text>
+  <text x="702" y="358" class="note" text-anchor="middle">Permitted context</text>
+
+  <!-- Software retains factual ownership and authority. -->
+  <rect x="623" y="455" width="269" height="132" rx="20" fill="#203D3E"/>
+  <path d="M649 483 V501 M645 487 649 483 653 487 M674 483 V501 M670 497 674 501 678 497" fill="none" stroke="#B8DACA" stroke-width="1.7" stroke-linecap="round"/>
+  <text x="646" y="533" class="label white">Application owns</text>
+  <text x="646" y="565" class="note white">facts + permissions</text>
+  <path d="M756 455 V421" fill="none" stroke="#7B9C92" stroke-width="1.7" stroke-dasharray="4 5"/>
+</svg>

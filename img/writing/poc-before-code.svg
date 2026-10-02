@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="poc-title poc-desc">
+  <title id="poc-title">A proof of concept as a focused experiment</title>
+  <desc id="poc-desc">A hypothesis card feeds a single large laboratory flask. The flask contains a small controlled sample, and an observation sheet records evidence rather than a polished product interface. A branching decision beneath the sheet makes both proceeding and stopping valid outcomes. The illustration represents testing the riskiest assumption, collecting evidence, and using the result to decide whether to build.</desc>
+  <defs>
+    <linearGradient id="sample" x1="325" y1="330" x2="534" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#B6CCF5"/><stop offset="1" stop-color="#E4EAFE"/></linearGradient>
+    <marker id="experiment-arrow" viewBox="0 0 10 10" markerWidth="7" markerHeight="7" refX="8" refY="5" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;font-size:23px;font-weight:600;fill:#152D48}.line{fill:none;stroke:#152D48;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style>
+  </defs>
+  <rect width="960" height="640" fill="#F8F7FC"/>
+  <ellipse cx="450" cy="352" rx="235" ry="231" fill="#EFEDF9"/>
+  <path d="M117 526H854" stroke="#B8C4D8" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="442" cy="523" rx="163" ry="14" fill="#DBDDF0"/>
+  <g transform="rotate(-8 182 316)">
+    <path d="M112 223H239L259 244V405H112Z" fill="#FFFFFF" stroke="#C4CDDF" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M239 223V244H259" fill="#F0EDF9" stroke="#C4CDDF" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M139 366H215M139 383H197" stroke="#CBD4E3" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="184" cy="301" r="34" fill="#F2EFFA"/>
+    <path d="M172 291C172 275 199 275 199 291C199 300 185 300 185 311M185 322V324" fill="none" stroke="#8E78C5" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="185" y="196" text-anchor="middle">Hypothesis</text>
+  <path d="M261 309C291 291 318 280 346 280" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" marker-end="url(#experiment-arrow)"/>
+
+  <path d="M399 170V254L306 434C290 465 303 499 341 503H544C582 499 595 465 579 434L486 254V170" fill="#FFFFFF" stroke="#152D48" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M332 383C374 361 405 395 448 378C489 362 526 385 555 389L570 437C582 460 574 489 542 491H342C311 489 303 460 315 437Z" fill="url(#sample)"/>
+  <path d="M331 383C374 361 405 395 448 378C489 362 526 385 555 389" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="388" y="150" width="109" height="20" rx="6" fill="#FFFFFF" stroke="#152D48" stroke-width="3"/>
+  <path d="M415 185V253L326 431" fill="none" stroke="#DCE5F5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M485 290H505M492 314H518M501 338H531" stroke="#152D48" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="383" cy="426" r="13" fill="#8E78C5"/>
+  <circle cx="472" cy="435" r="9" fill="#ABC4EE" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="420" cy="460" r="7" fill="#8E78C5"/>
+  <circle cx="517" cy="469" r="11" fill="#CBBFE5"/>
+  <circle cx="441" cy="338" r="5" fill="#CBBFE5"/>
+  <circle cx="449" cy="312" r="3" fill="#CBBFE5"/>
+
+  <path d="M516 216C569 175 637 182 677 229" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" marker-end="url(#experiment-arrow)"/>
+  <text x="743" y="185" text-anchor="middle">Evidence</text>
+  <g transform="rotate(6 751 327)">
+    <path d="M671 216H810L831 237V431H671Z" fill="#FFFFFF" stroke="#C4CDDF" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M810 216V237H831" fill="#E8EDF8" stroke="#C4CDDF" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M694 255H754M694 273H788" stroke="#CBD4E3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M694 382V298M694 382H807" stroke="#A9B9D0" stroke-width="2" stroke-linecap="round"/>
+    <path d="M695 329H806" stroke="#8E78C5" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
+    <path d="M701 367C724 367 723 342 744 343C769 344 772 314 799 311" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="744" cy="343" r="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <circle cx="799" cy="311" r="5" fill="#2563EB"/>
+    <path d="M694 407H763" stroke="#CBD4E3" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <path d="M749 442V459M749 459H708V482M749 459H790V482" fill="none" stroke="#152D48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="708" cy="496" r="15" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <path d="M701 496L706 501L715 490" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="790" cy="496" r="15" fill="#FFFFFF" stroke="#8E78C5" stroke-width="2"/>
+  <path d="M785 491L795 501M795 491L785 501" stroke="#8E78C5" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="749" y="565" text-anchor="middle">Decision</text>
+</svg>
