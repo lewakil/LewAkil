@@ -68,32 +68,6 @@ When a project can be shared safely, I usually turn it into a demo, case study, 
 
 ---
 
-## 🧭 The Long Version
-
-```text
-Started tinkering with code at 15
-        ↓
-Web + application development
-        ↓
-Java / Spring / enterprise systems
-        ↓
-Banking software + integrations
-        ↓
-React / full-stack engineering
-        ↓
-Cloud + infrastructure
-        ↓
-APIs + customer integrations
-        ↓
-Architecture + technical demos
-        ↓
-AI / RAG / agentic systems
-        ↓
-Still building
-```
-
----
-
 ## 🛠️ What I Like Building
 
 - Full-stack applications
